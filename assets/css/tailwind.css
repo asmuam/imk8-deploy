@@ -160,6 +160,10 @@ abbr:where([title]) {
 /*
 Remove the default font size and weight for headings.
 */
+.small-logo {
+      width: 50px; /* Adjust the width as needed */
+      height: auto;
+    }
 
 h1,
 h2,
