@@ -13,6 +13,12 @@
 .navbar-family-font{
   font-family: "Jomhuria";
 }
+.text-jomhuria{
+  font-family: "Jomhuria";
+}
+.text-poppins{
+  font-family: "Poppins";
+}
 /* Preloader */
 .preloader {
   position: fixed;
@@ -165,9 +171,27 @@ abbr:where([title]) {
 Remove the default font size and weight for headings.
 */
 .small-logo {
-      width: 50px; /* Adjust the width as needed */
-      height: auto;
-    }
+  width: 50px; /* Adjust the width as needed */
+  height: auto;
+}
+
+.big-logo {
+  width: 500px; /* Adjust the width as needed */
+  height: auto;
+}
+
+.rem-logo{
+  width: 2.5rem;
+  height: 3rem;
+}
+
+@media (min-width: 540px){
+  .rem-logo{
+    width: 4.5rem;
+    height: 5rem;
+  }
+}
+
 
 h1,
 h2,
@@ -834,6 +858,11 @@ body {
   margin-right: 2rem;
 }
 
+.mx-4{
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -1470,6 +1499,11 @@ body {
 .bg-gray-1{
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+}
+
+.bg-gray-7{
+  --tw-text-opacity: 1;
+  background-color: rgb(206 212 218 / var(--tw-text-opacity));
 }
 
 .bg-primary{
