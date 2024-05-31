@@ -1,0 +1,29 @@
+[
+  {
+    "no": 1,
+    "walikota": "soedjono.jpg",
+    "namaWalikota": "Nama Walikota",
+    "masaJabatanWalikota": "(Masa Jabatan)",
+    "wakilWalikota": "soedjono.jpg",
+    "namaWakilWalikota": "Nama Wakil Walikota",
+    "masaJabatanWakilWalikota": "(Masa Jabatan)"
+  },
+  {
+    "no": 2,
+    "walikota": "andi-sukardi.jpg",
+    "namaWalikota": "Nama Walikota 2",
+    "masaJabatanWalikota": "(Masa Jabatan 2)",
+    "wakilWalikota": "andi-sukardi.jpg",
+    "namaWakilWalikota": "Nama Wakil Walikota 2",
+    "masaJabatanWakilWalikota": "(Masa Jabatan 2)"
+  },
+  {
+    "no": 3,
+    "walikota": "kailani.jpg",
+    "namaWalikota": "Nama Walikota 3",
+    "masaJabatanWalikota": "(Masa Jabatan 3)",
+    "wakilWalikota": "kailani.jpg",
+    "namaWakilWalikota": "Nama Wakil Walikota 3",
+    "masaJabatanWakilWalikota": "(Masa Jabatan 3)"
+  }
+]

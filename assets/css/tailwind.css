@@ -3169,3 +3169,7 @@ body {
     padding: 60px;
   }
 }
+
+.overflow-x-auto{
+  overflow-x: auto;
+}
