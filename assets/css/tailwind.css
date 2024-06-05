@@ -164,8 +164,8 @@ abbr:where([title]) {
 /*
 Remove the default font size and weight for headings.
 */
-.small-logo {
-      width: 50px; /* Adjust the width as needed */
+.large-logo {
+      width: 500px; /* Adjust the width as needed */
       height: auto;
     }
 
@@ -622,6 +622,7 @@ body {
   padding-right: 16px;
   padding-left: 16px;
 }
+
 
 @media (min-width: 540px){
   .container{
@@ -1087,6 +1088,10 @@ body {
 
 .w-60{
   width: 15rem;
+}
+
+.w-160{
+  width: 30rem;
 }
 
 .w-\[120px\]{
@@ -1771,6 +1776,10 @@ body {
   text-align: center;
 }
 
+.text-end{
+  text-align: right;
+}
+
 .text-2xl{
   font-size: 1.5rem;
   line-height: 2rem;
@@ -1781,6 +1790,10 @@ body {
   line-height: 2.25rem;
 }
 
+.text-pre4xl{
+  font-size: 2rem;
+  line-height: 1rem;
+}
 .text-4xl{
   font-size: 2.25rem;
   line-height: 2.5rem;

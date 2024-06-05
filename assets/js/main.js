@@ -27,11 +27,9 @@ function fadeout() {
     if(logo.length) {
       // === logo change
       if (ud_header.classList.contains("sticky")) {
-        document.querySelector(".header-logo").src =
-          "assets/images/logo/logo.svg"
+        document.querySelector(".header-logo").src="assets/images/logoBekasi.png"
       } else {
-        document.querySelector(".header-logo").src =
-          "assets/images/logo/logo-white.svg"
+        document.querySelector(".header-logo").src="assets/images/logoBekasi.png"
       }
     }
 
@@ -39,8 +37,7 @@ function fadeout() {
       if(logo.length) {
         // === logo change
         if (ud_header.classList.contains("sticky")) {
-          document.querySelector(".header-logo").src =
-            "assets/images/logo/logo-white.svg"
+          document.querySelector(".header-logo").src="assets/images/logoBekasi.png"
         } 
       }
     }
