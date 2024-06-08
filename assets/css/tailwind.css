@@ -19,6 +19,15 @@
 .text-poppins{
   font-family: "Poppins";
 }
+
+.inset-b25rem {
+  top: 0;
+  right: 0;
+  bottom: 2.5rem;
+  left: 0;
+}
+
+
 /* Preloader */
 .preloader {
   position: fixed;
@@ -873,6 +882,11 @@ body {
   margin-bottom: 0.25rem;
 }
 
+.my-4{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .my-\[6px\]{
   margin-top: 6px;
   margin-bottom: 6px;
@@ -1611,6 +1625,10 @@ body {
 
 .p-5{
   padding: 1.25rem;
+}
+
+.p-8{
+  padding: 2rem;
 }
 
 .px-1{
@@ -2518,6 +2536,16 @@ body {
     display: flex;
   }
 
+  .sm\:flex-col{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sm\:flex-row{
+    display: flex;
+    flex-direction: row;
+  }
+
   .sm\:h-\[160px\]{
     height: 160px;
   }
@@ -3101,6 +3129,14 @@ body {
 
   .xl\:w-1\/4{
     width: 25%;
+  }
+
+  .xl\:w-1\/2{
+    width: 50%;
+  }
+
+  .xl\:w-1\/5{
+    width: 20%;
   }
 
   .xl\:w-2\/12{
