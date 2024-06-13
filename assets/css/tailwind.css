@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jomhuria&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /*
 ! tailwindcss v3.3.5 | MIT License | https://tailwindcss.com
@@ -8,6 +9,24 @@
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
 */
+
+.navbar-family-font{
+  font-family: "Jomhuria";
+}
+.text-jomhuria{
+  font-family: "Jomhuria";
+}
+.text-poppins{
+  font-family: "Poppins";
+}
+
+.inset-b25rem {
+  top: 0;
+  right: 0;
+  bottom: 2.5rem;
+  left: 0;
+}
+
 
 /* Preloader */
 .preloader {
@@ -113,7 +132,7 @@ html {
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "poppins","jomhuria";
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -160,6 +179,28 @@ abbr:where([title]) {
 /*
 Remove the default font size and weight for headings.
 */
+.small-logo {
+  width: 50px; /* Adjust the width as needed */
+  height: auto;
+}
+
+.big-logo {
+  width: 500px; /* Adjust the width as needed */
+  height: auto;
+}
+
+.rem-logo{
+  width: 2.5rem;
+  height: 3rem;
+}
+
+@media (min-width: 540px){
+  .rem-logo{
+    width: 4.5rem;
+    height: 5rem;
+  }
+}
+
 
 h1,
 h2,
@@ -198,7 +239,7 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: "poppins","jomhuria";
   /* 1 */
   font-size: 1em;
   /* 2 */
@@ -504,7 +545,7 @@ video {
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "poppins","jomhuria";
 }
 
 *, ::before, ::after{
@@ -826,6 +867,11 @@ body {
   margin-right: 2rem;
 }
 
+.mx-4{
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -834,6 +880,11 @@ body {
 .my-1{
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
+}
+
+.my-4{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .my-\[6px\]{
@@ -1057,6 +1108,10 @@ body {
   height: 70px;
 }
 
+.h-70px{
+  height: 70px;
+}
+
 .h-full{
   height: 100%;
 }
@@ -1103,6 +1158,10 @@ body {
 
 .w-\[50px\]{
   width: 50px;
+}
+
+.w-\[52px\]{
+  width: 52px;
 }
 
 .w-\[70px\]{
@@ -1464,6 +1523,11 @@ body {
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
 
+.bg-gray-7{
+  --tw-text-opacity: 1;
+  background-color: rgb(206 212 218 / var(--tw-text-opacity));
+}
+
 .bg-primary{
   --tw-bg-opacity: 1;
   background-color: rgb(55 88 249 / var(--tw-bg-opacity));
@@ -1569,6 +1633,10 @@ body {
 
 .p-5{
   padding: 1.25rem;
+}
+
+.p-8{
+  padding: 2rem;
 }
 
 .px-1{
@@ -1711,6 +1779,11 @@ body {
   padding-bottom: 6px;
 }
 
+.py-\[16px\]{
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
 .pb-10{
   padding-bottom: 2.5rem;
 }
@@ -1757,6 +1830,10 @@ body {
 
 .pt-\[120px\]{
   padding-top: 120px;
+}
+
+.pl-6 {
+    padding-left: 1.5rem;
 }
 
 .text-center{
@@ -2319,6 +2396,16 @@ body {
   opacity: 0.7;
 }
 
+.hover\:bg-body-color:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(99 115 129 / var(--tw-bg-opacity));
+}
+
+.hover\:border-body-color:hover {
+    --tw-border-opacity: 1;
+    border-color: rgb(99 115 129 / var(--tw-border-opacity));
+}
+
 .focus\:border-primary:focus{
   --tw-border-opacity: 1;
   border-color: rgb(55 88 249 / var(--tw-border-opacity));
@@ -2474,6 +2561,16 @@ body {
 
   .sm\:flex{
     display: flex;
+  }
+
+  .sm\:flex-col{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sm\:flex-row{
+    display: flex;
+    flex-direction: row;
   }
 
   .sm\:h-\[160px\]{
@@ -3061,6 +3158,14 @@ body {
     width: 25%;
   }
 
+  .xl\:w-1\/2{
+    width: 50%;
+  }
+
+  .xl\:w-1\/5{
+    width: 20%;
+  }
+
   .xl\:w-2\/12{
     width: 16.666667%;
   }
@@ -3126,4 +3231,76 @@ body {
   .\32xl\:p-\[60px\]{
     padding: 60px;
   }
+}
+
+.overflow-x-auto{
+  overflow-x: auto;
+}
+
+/* untuk berita */
+.snap {
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.min-w-\[100vw\] {
+    min-width: 100vw;
+}
+
+
+.min-w-\[70vw\] {
+    min-width: 70vw;
+}
+
+.min-w-\[80vw\] {
+    min-width: 80vw;
+}
+
+.max-w-\[100vw\] {
+    max-width: 100vw;
+}
+
+.max-h-450 {
+    max-height: 450px;
+}
+
+.overflow-y-auto {
+    overflow-y: scroll
+}
+
+
+.z-10 {
+    z-index: 10;
+}
+
+.flex-no-wrap {
+  flex-wrap: nowrap;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+.chartSankey {
+  width: 1800px;
+  height: 900px;
+}
+
+.chart-container {
+      display: flex;
+      flex-direction: row;
+      overflow-x: scroll;
+      justify-content: center; /* Memusatkan secara horizontal */
 }
