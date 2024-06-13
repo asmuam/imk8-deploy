@@ -3293,7 +3293,7 @@ body {
   flex-shrink: 0;
 }
 
-.chart {
+.chartSankey {
   width: 1800px;
   height: 900px;
 }

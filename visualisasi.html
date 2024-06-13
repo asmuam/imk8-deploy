@@ -15,7 +15,6 @@
   <script>new WOW().init();</script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-sankey"></script>
-
 </head>
 
 <body>
@@ -423,7 +422,7 @@
   <!-- ====== struktur Start ====== -->
   <section id="contact" class="relative py-10">
     <div class="absolute top-0 left-0 -z-[1] w-full dark:bg-dark h-full"></div>
-    <div class="container px-4">
+    <div class="container px-4 dark:bg-dark">
       <div>
         <h1 class="my-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]">
             Dinamika Anggaran Pendapatan dan Belanja Daerah Kota Bekasi
@@ -436,8 +435,8 @@
         </h1>
       </div>
       <div id="chart-container" class="my-8 overflow-x-auto">
-        <div class="chart">
-            <canvas id="combinedSankey"></canvas>
+        <div class="chartSankey">
+            <canvas id="combinedSankey" class="bg-white"></canvas>
         </div>
         </div>
 

@@ -254,6 +254,8 @@ var textColor = (theme === 'dark') ? '#fff' : '#000'; // Tentukan warna teks ber
 
 // Opsi untuk chart Sankey
 const sankeyOptions = {
+    scaleFontColor: "#FFFFFF",
+    spriteText: true,
     responsive: true,
     maintainAspectRatio: false,
     plugins: {
@@ -262,12 +264,31 @@ const sankeyOptions = {
         },
         tooltip: {
             callbacks: {
-                label: function (tooltipItem) {
-                    var flow = tooltipItem.raw.flow;
-                    return formatFlow(flow);
+              label: function(tooltipItem) {
+                var dataset = tooltipItem.dataset;
+                var index = tooltipItem.dataIndex;
+                var data = dataset.data[index];
+                var flow = data.flow;
+                var label = '';
+
+                // Jika dataset adalah pendapatan (gunakan 'from')
+                if (dataset.label === 'Pendapatan') {
+                  var from = data.from;
+                  label = `${from}: ${formatFlow(flow)}`;
                 }
+                // Jika dataset adalah pengeluaran (gunakan 'to')
+                else if (dataset.label === 'Pengeluaran') {
+                  var to = data.to;
+                  label = `${to}: ${formatFlow(flow)}`;
+                }
+
+                return label;
+              }
             },
         },
+        datalabels: {
+          color: '#FFFF5F', // Color of the datalabels
+      },
     },
     scales: {},
     layout: {
@@ -276,7 +297,11 @@ const sankeyOptions = {
         align: 'justify' // Atur penyejajaran elemen Sankey (justify, center, atau end)
     },
     sankey: {
-        nodetextColor: textColor,
+        node: {
+          label: {
+            color: "ffff" // Gunakan warna teks berdasarkan variabel theme
+          }
+        },
         nodePadding: 15, // Atur padding antar node
         nodeWidth: 30, // Atur lebar node
         iterations: 32 // Jumlah iterasi untuk konvergensi layout Sankey
@@ -355,6 +380,7 @@ function getColorByNameR(name) {
     var combinedData = {
   datasets: [
     {
+      label: 'Pendapatan',
       labels: labels,
       data: pendapatanData,
       colorFrom: (c) => getColorByName(c.dataset.data[c.dataIndex].from),
@@ -403,45 +429,14 @@ function getColorByNameR(name) {
 };
 
 
-    var sankeyOptionsCombvar = {
-  responsive: false,
-  maintainAspectRatio: false,
-  plugins: {
-    legend: {
-      display: false,
-    },
-    tooltip: {
-      callbacks: {
-        label: function(tooltipItem) {
-          var flow = tooltipItem.raw.flow;
-          return formatFlow(flow);
-        }
-      }
-    },
-  },
-  scales: {},
-  layout: {
-    padding: {
-    },
-  },
-  sankey: {
-    node: {
-    },
-    link: {
-      color: {
-      },
-    },
-    columns: [
-    ],
-  },
-};
 
 // Inisialisasi chart Sankey
 var ctx = document.getElementById('combinedSankey').getContext('2d');
 var combinedSankey = new Chart(ctx, {
   type: 'sankey',
   data: combinedData,
-  options: sankeyOptions,
+  options: 
+    sankeyOptions,
 });
 
 

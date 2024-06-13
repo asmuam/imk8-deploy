@@ -18,9 +18,9 @@ function fotoPagination() {
         document.querySelectorAll('.pageFoto-btn').forEach(button => {
             if (parseInt(button.id.replace('pageFoto-', '')) === page) {
                 button.classList.add('bg-primary', 'text-white');
-                button.classList.remove('text-dark', 'hover:bg-gray-2');
+                button.classList.remove('text-dark', 'hover:bg-primary');
             } else {
-                button.classList.add('text-dark', 'hover:bg-gray-2');
+                button.classList.add('text-dark', 'hover:bg-primary');
                 button.classList.remove('bg-primary', 'text-white');
             }
         });
@@ -72,9 +72,9 @@ function videoPagination() {
         document.querySelectorAll('.pageVideo-btn').forEach(button => {
             if (parseInt(button.id.replace('pageVideo-', '')) === page) {
                 button.classList.add('bg-primary', 'text-white');
-                button.classList.remove('text-dark', 'hover:bg-gray-2');
+                button.classList.remove('text-dark', 'hover:bg-primary');
             } else {
-                button.classList.add('text-dark', 'hover:bg-gray-2');
+                button.classList.add('text-dark', 'hover:bg-primary');
                 button.classList.remove('bg-primary', 'text-white');
             }
         });

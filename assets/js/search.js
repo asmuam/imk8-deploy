@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 const noResultsHTML = `
                     <div class="w-full px-4 text-center">
-                        <p class="text-lg">Tidak ada berita terkait "<strong>${query}</strong>".</p>
+                        <p class="text-lg dark:text-white">Tidak ada berita terkait "<strong>${query}</strong>".</p>
                     </div>
                 `;
                 searchResultsElement.insertAdjacentHTML('beforeend', noResultsHTML);
@@ -171,50 +171,53 @@ document.addEventListener('DOMContentLoaded', function() {
         paginationList.appendChild(prevPageListItem);
 
         // Generate pagination links
-        for (let i = 1; i <= totalPages; i++) {
-            const pageListItem = document.createElement('li');
-            pageListItem.className = 'px-1';
-            const pageLink = document.createElement('a');
-            pageLink.id = `pageSearch-${i}`;
-            pageLink.className = 'flex items-center justify-center text-base bg-transparent border rounded-md hover:border-primary hover:bg-primary h-[34px] w-[34px] border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 hover:text-white dark:hover:border-primary dark:hover:text-white';
-            pageLink.textContent = i;
-            pageLink.addEventListener('click', function() {
-                currentPage = i;
-                displayResults(currentPage);
-                updateActivePageLink();
-            });
-            pageListItem.appendChild(pageLink);
-            paginationList.appendChild(pageListItem);
-        }
-
-        // Create li element for next page link
-        const nextPageListItem = document.createElement('li');
-        nextPageListItem.className = 'px-1';
-        const nextPageLink = document.createElement('a');
-        nextPageLink.id = 'nextSearch';
-        nextPageLink.className = 'flex items-center justify-center text-base bg-transparent border rounded-md hover:border-primary hover:bg-primary h-[34px] w-[34px] border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 hover:text-white dark:hover:border-primary dark:hover:text-white';
-        nextPageLink.innerHTML = `
-            <span>
-                <svg width="8" height="15" viewBox="0 0 8 15" class="fill-current stroke-current">
-                    <path d="M0.870212 13.0861L0.870097 13.086L0.865602 13.0912C0.685237 13.3017 0.684716 13.6312 0.895299 13.8418C0.989374 13.9359 1.13704 13.9951 1.26387 13.9951C1.42264 13.9951 1.5463 13.9279 1.65431 13.8199L1.65436 13.82L1.65771 13.8164L7.16979 7.93248C7.16985 7.93243 7.1699 7.93237 7.16996 7.93231C7.59769 7.47923 7.59387 6.73477 7.17253 6.26385L7.17256 6.26382L7.17002 6.26111L1.65752 0.398611L1.65757 0.398563L1.65431 0.395299C1.454 0.194997 1.11779 0.150934 0.895299 0.373424C0.695526 0.573197 0.651169 0.908167 0.871667 1.13067L6.37922 6.98791C6.4442 7.06886 6.43141 7.17481 6.38592 7.2203L6.38587 7.22025L6.38271 7.22361L0.870212 13.0861Z" stroke-width="0.3" />
-                </svg>
-            </span>
-        `;
-        nextPageLink.addEventListener('click', function() {
-            if (currentPage < totalPages) {
-                currentPage++;
-                displayResults(currentPage);
-                updateActivePageLink();
+        if (filteredResults.length > 0) {
+                for (let i = 1; i <= totalPages; i++) {
+                const pageListItem = document.createElement('li');
+                pageListItem.className = 'px-1';
+                const pageLink = document.createElement('a');
+                pageLink.id = `pageSearch-${i}`;
+                pageLink.className = 'flex items-center justify-center text-base bg-transparent border rounded-md hover:border-primary hover:bg-primary h-[34px] w-[34px] border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 hover:text-white dark:hover:border-primary dark:hover:text-white';
+                pageLink.textContent = i;
+                pageLink.addEventListener('click', function() {
+                    currentPage = i;
+                    displayResults(currentPage);
+                    updateActivePageLink();
+                });
+                pageListItem.appendChild(pageLink);
+                paginationList.appendChild(pageListItem);
             }
-        });
-        nextPageListItem.appendChild(nextPageLink);
-        paginationList.appendChild(nextPageListItem);
 
-        // Append pagination list to container
-        paginationContainer.appendChild(paginationList);
+            // Create li element for next page link
+            const nextPageListItem = document.createElement('li');
+            nextPageListItem.className = 'px-1';
+            const nextPageLink = document.createElement('a');
+            nextPageLink.id = 'nextSearch';
+            nextPageLink.className = 'flex items-center justify-center text-base bg-transparent border rounded-md hover:border-primary hover:bg-primary h-[34px] w-[34px] border-stroke dark:border-dark-3 text-body-color dark:text-dark-6 hover:text-white dark:hover:border-primary dark:hover:text-white';
+            nextPageLink.innerHTML = `
+                <span>
+                    <svg width="8" height="15" viewBox="0 0 8 15" class="fill-current stroke-current">
+                        <path d="M0.870212 13.0861L0.870097 13.086L0.865602 13.0912C0.685237 13.3017 0.684716 13.6312 0.895299 13.8418C0.989374 13.9359 1.13704 13.9951 1.26387 13.9951C1.42264 13.9951 1.5463 13.9279 1.65431 13.8199L1.65436 13.82L1.65771 13.8164L7.16979 7.93248C7.16985 7.93243 7.1699 7.93237 7.16996 7.93231C7.59769 7.47923 7.59387 6.73477 7.17253 6.26385L7.17256 6.26382L7.17002 6.26111L1.65752 0.398611L1.65757 0.398563L1.65431 0.395299C1.454 0.194997 1.11779 0.150934 0.895299 0.373424C0.695526 0.573197 0.651169 0.908167 0.871667 1.13067L6.37922 6.98791C6.4442 7.06886 6.43141 7.17481 6.38592 7.2203L6.38587 7.22025L6.38271 7.22361L0.870212 13.0861Z" stroke-width="0.3" />
+                    </svg>
+                </span>
+            `;
+            nextPageLink.addEventListener('click', function() {
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    displayResults(currentPage);
+                    updateActivePageLink();
+                }
+            });
+            nextPageListItem.appendChild(nextPageLink);
+            paginationList.appendChild(nextPageListItem);
 
-        // Add pagination container after search results
-        searchResultsElement.insertAdjacentElement('afterend', paginationContainer);
+            // Append pagination list to container
+            paginationContainer.appendChild(paginationList);
+
+            // Add pagination container after search results
+            searchResultsElement.insertAdjacentElement('afterend', paginationContainer);
+
+        }
 
         // Function to highlight query in result title
         function highlightQuery(title, query) {
