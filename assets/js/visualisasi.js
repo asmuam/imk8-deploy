@@ -122,17 +122,17 @@ function populateTableStruktur() {
     data_opd.forEach(function(item) {
         // Buat sebuah <tr> baru
         var row = document.createElement('tr');
-            row.className = "  border-b dark:border-dark h-70px";
+            row.className = "border-b dark:border-dark h-70px";
 
         // Buat sebuah <td> untuk nama OPD dan tambahkan teks nama_opd ke dalamnya
         var namaOpdCell = document.createElement('td');
         namaOpdCell.textContent = item.nama_dokumen;
-        namaOpdCell.className = "w-2/3 mx-8 text-dark dark:bg-dark dark:text-white dark:border-dark dark:text-dark-7 py-5 px-11 text-base font-medium ";
+        namaOpdCell.className = " mx-8 text-dark dark:bg-dark dark:text-white dark:border-dark dark:text-dark-7 py-5 px-11 text-base font-medium ";
         row.appendChild(namaOpdCell);
 
         // Buat sebuah <td> untuk link dan tambahkan tombol ke dalamnya
         var linkCell = document.createElement('td');
-        linkCell.className = "w-1/3 px-11 mx-8 py-5 flex justify-end";
+        linkCell.className = " px-11  py-5 flex justify-end";
         var linkButton = document.createElement('a');
         linkButton.href = item.link;
         linkButton.className = "bg-secondary -secondaryborder rounded-full inline-flex  py-3 px-7 text-base font-medium text-white hover:bg-[#0BB489] hover:border-[#0BB489] disabled:bg-gray-3 disabled:border-gray-3 disabled:text-dark-5";

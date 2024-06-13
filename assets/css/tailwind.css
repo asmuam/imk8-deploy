@@ -798,9 +798,14 @@ body {
   top: 50%;
 }
 
+.top-1\/4{
+  top: 25%;
+}
+
 .top-4{
   top: 1rem;
 }
+
 
 .top-\[60px\]{
   top: 60px;
@@ -1709,6 +1714,11 @@ body {
   padding-bottom: 0.125rem;
 }
 
+.py-4{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .py-10{
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
@@ -2350,10 +2360,10 @@ body {
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-primary:hover{
+/* .hover\:bg-primary:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(55 88 249 / var(--tw-bg-opacity));
-}
+} */
 
 .hover\:bg-white:hover{
   --tw-bg-opacity: 1;
@@ -2383,11 +2393,6 @@ body {
   color: rgb(55 88 249 / var(--tw-text-opacity));
 }
 
-.hover\:text-white:hover{
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
 .hover\:underline:hover{
   text-decoration-line: underline;
 }
@@ -2404,6 +2409,18 @@ body {
 .hover\:border-body-color:hover {
     --tw-border-opacity: 1;
     border-color: rgb(99 115 129 / var(--tw-border-opacity));
+}
+
+@media (hover: hover){
+    .hover\:bg-primary:hover{
+      --tw-bg-opacity: 1;
+      background-color: rgb(55 88 249 / var(--tw-bg-opacity));
+    }
+
+    .hover\:text-white:hover{
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
 }
 
 .focus\:border-primary:focus{
