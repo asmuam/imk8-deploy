@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  </head>
+  <body class="font-sans antialiased">
+    <!-- Header -->
+    <header class="bg-blue-700 text-white p-4 flex justify-between items-center">
+      <div class="flex items-center">
+        <img src="logo_url" alt="Logo" class="h-10 mr-2" />
+        <span class="text-xl font-bold">Pemerintah Kota Bekasi</span>
+      </div>
+      <nav>
+        <ul class="flex space-x-4">
+          <li><a href="#" class="hover:underline">Beranda</a></li>
+          <li><a href="#" class="hover:underline">Berita</a></li>
+          <li><a href="#" class="hover:underline">Layanan</a></li>
+          <li><a href="#" class="hover:underline">Kontak</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-cover bg-center h-screen" style="background-image: url('hero_image_url')">
+      <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+        <div class="text-center text-white">
+          <h1 class="text-4xl font-bold">Pemerintah Kota Bekasi</h1>
+          <p class="mt-4">Apa yang ingin Anda cari?</p>
+          <input type="text" placeholder="Cari..." class="mt-4 px-4 py-2 rounded-full text-black" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Portal Section -->
+    <section class="py-8">
+      <div class="container mx-auto text-center">
+        <div class="grid grid-cols-3 md:grid-cols-6 gap-4">
+          <div class="flex flex-col items-center">
+            <img src="icon_url" alt="Icon" class="h-10 mb-2" />
+            <span>CCTV</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <img src="icon_url" alt="Icon" class="h-10 mb-2" />
+            <span>SIM</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <img src="icon_url" alt="Icon" class="h-10 mb-2" />
+            <span>Perizinan</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <img src="icon_url" alt="Icon" class="h-10 mb-2" />
+            <span>Info Pajak</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <img src="icon_url" alt="Icon" class="h-10 mb-2" />
+            <span>QnA</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <img src="icon_url" alt="Icon" class="h-10 mb-2" />
+            <span>Web PRO</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Berita Terkini Section -->
+    <section class="py-8 bg-gray-100">
+      <div class="container mx-auto">
+        <h2 class="text-2xl font-bold mb-4">Berita Terkini</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-white p-4 rounded-lg shadow-md">
+            <h3 class="text-xl font-bold">Judul Berita 1</h3>
+            <p class="mt-2">Isi singkat berita...</p>
+            <a href="#" class="text-blue-600 hover:underline mt-4 inline-block">Baca Selengkapnya</a>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow-md">
+            <h3 class="text-xl font-bold">Judul Berita 2</h3>
+            <p class="mt-2">Isi singkat berita...</p>
+            <a href="#" class="text-blue-600 hover:underline mt-4 inline-block">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pengunjung Section -->
+    <section class="py-8">
+      <div class="container mx-auto text-center">
+        <h2 class="text-2xl font-bold mb-4">Pengunjung</h2>
+        <div class="flex justify-center space-x-8">
+          <div class="flex flex-col items-center">
+            <span class="text-4xl font-bold">127</span>
+            <span>Pengunjung Online</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <span class="text-4xl font-bold">310</span>
+            <span>Pengunjung Hari Ini</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <span class="text-4xl font-bold">12579</span>
+            <span>Total Pengunjung</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-700 text-white p-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <div>
+          <p>&copy; 2024 Pemerintah Kota Bekasi</p>
+        </div>
+        <div>
+          <ul class="flex space-x-4">
+            <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+            <li><a href="#" class="hover:underline">Terms of Service</a></li>
+            <li><a href="#" class="hover:underline">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
