@@ -254,8 +254,6 @@ var textColor = (theme === 'dark') ? '#fff' : '#000'; // Tentukan warna teks ber
 
 // Opsi untuk chart Sankey
 const sankeyOptions = {
-    scaleFontColor: "#FFFFFF",
-    spriteText: true,
     responsive: true,
     maintainAspectRatio: false,
     plugins: {
@@ -287,7 +285,7 @@ const sankeyOptions = {
             },
         },
         datalabels: {
-          color: '#FFFF5F', // Color of the datalabels
+          color: '#FFFF5F', // Color of the datalabels G guna
       },
     },
     scales: {},
@@ -302,9 +300,9 @@ const sankeyOptions = {
             color: "ffff" // Gunakan warna teks berdasarkan variabel theme
           }
         },
-        nodePadding: 15, // Atur padding antar node
-        nodeWidth: 30, // Atur lebar node
-        iterations: 32 // Jumlah iterasi untuk konvergensi layout Sankey
+        // nodePadding: 15, // Atur padding antar node
+        // nodeWidth: 30, // Atur lebar node
+        // iterations: 32 // Jumlah iterasi untuk konvergensi layout Sankey
     }
 };
 
@@ -397,20 +395,35 @@ function getColorByNameR(name) {
       data: pengeluaranData,
       colorFrom: (c) => getColorByNameR(c.dataset.data[c.dataIndex].from),
       colorTo: (c) => getColorByNameR(c.dataset.data[c.dataIndex].to),
-      priority: { // define if you have priorities
-        "Belanja Daerah": 1,
+      priority: {
+        "Jumlah Pengeluaran": 1,
+        "Belanja Daerah": 1, // Same priority as Jumlah Pengeluaran
+        "Belanja Operasi": 2,
+        "Belanja Modal": 2,
+        "Belanja Tidak Terduga": 2,
+        "Belanja Transfer": 2,
+        "Pengeluaran Pembiayaan": 2,
+        "Belanja Pegawai": 3,
+        "Belanja Barang dan Jasa": 3,
+        "Belanja Subsidi": 3,
+        "Belanja Hibah": 3,
+        "Belanja Bantuan Sosial": 3,
+        "Belanja Modal Tanah": 3,
+        "Belanja Modal Peralatan dan Mesin": 3,
+        "Belanja Modal Gedung dan Bangunan": 3,
+        "Belanja Modal Jalan, Jaringan, dan Irigasi": 3,
+        "Belanja Modal Aset Tetap Lainnya": 3,
+        "Belanja Modal Aset Lainnya": 3,
+        "Penyertaan Modal Daerah": 3,
       },
       column: {
-        "Belanja Tidak Terduga": 1,
-        "Belanja Transfer": 1,
-        "Sisa Lebih Perhitungan Anggaran Tahun Sebelumnya": 1,
         "Jumlah Pengeluaran": 4,
         "Belanja Daerah": 5,
         "Belanja Operasi": 6,
         "Belanja Modal": 6,
         "Belanja Tidak Terduga": 6,
         "Belanja Transfer": 6,
-        "Pengeluaran Pembiayaan": 6,
+        "Pengeluaran Pembiayaan": 5,
         "Belanja Pegawai": 7,
         "Belanja Barang dan Jasa": 7,
         "Belanja Subsidi": 7,
@@ -422,7 +435,7 @@ function getColorByNameR(name) {
         "Belanja Modal Jalan, Jaringan, dan Irigasi": 7,
         "Belanja Modal Aset Tetap Lainnya": 7,
         "Belanja Modal Aset Lainnya": 7,
-        "Penyertaan Modal Daerah": 7,
+        "Penyertaan Modal Daerah": 6,
       },
     },
   ]
