@@ -19,6 +19,23 @@
 .text-poppins{
   font-family: "Poppins";
 }
+
+.italic{
+  font-style: italic;
+}
+.bold{
+  font-style: bold;
+}
+.justify {
+  text-align: justify;
+}
+
+.label {
+  width: 100px; /* Atur sesuai kebutuhan Anda */
+  display: inline-block;
+  font-weight: bold;
+}
+
 /* Preloader */
 .preloader {
   position: fixed;

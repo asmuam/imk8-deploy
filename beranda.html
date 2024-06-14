@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beranda</title>
+    <link
+      rel="shortcut icon"
+      href="assets/images/logoBekasi.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/tailwind.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-ksm0ba0g9oMVR4n5Cq0l2w0Do0DpFnlcp6+0QQ4KuMgs4U9wChF3wYmrAnx8X+9T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- ==== WOW JS ==== -->
+    <script src="assets/js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <style>
+      .carousel-container {
+        position: relative;
+      }
+
+      .carousel-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .carousel-button.left {
+        left: -1rem;
+      }
+
+      .carousel-button.right {
+        right: -1rem;
+      }
+
+      @media (min-width: 768px) {
+        .carousel-button.left {
+          left: -2rem;
+        }
+
+        .carousel-button.right {
+          right: -2rem;
+        }
+      }
+    </style>
+
+  </head>
+  <body>
+    <!-- Preloader -->
+    <!-- <div class="preloader">
+      <div class="preloader-inner">
+          <div class="preloader-icon">
+              <span></span>
+              <span></span>
+          </div>
+      </div>
+  </div> -->
+  <!-- /End Preloader -->
+
+  <div
+      class="navbar-family-font ud-header absolute left-0 top-0 z-40 flex w-full items-center bg-transparent"
+    >
+      <div class="container">
+        <div class="relative flex items-center justify-center">
+          <div class="w-60 max-w-full">
+            <a href="index.html" class="navbar-logo block w-full py-5 items-center" style="display: flex; justify-content: center; align-items: center;">
+              <img src="assets/images/logoBekasi.png" alt="logo" class="header-logo rem-logo items-center" />
+            </a> 
+          </div>
+          
+        
+          <div class="flex w-full items-center justify-center">
+            <div class="w-full">
+              <button
+                id="navbarToggler"
+                class="absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
+              >
+                <span
+                  class="relative my-[6px] block h-[2px] w-[30px] bg-white"
+                ></span>
+                <span
+                  class="relative my-[6px] block h-[2px] w-[30px] bg-white"
+                ></span>
+                <span
+                  class="relative my-[6px] block h-[2px] w-[30px] bg-white"
+                ></span>
+              </button>
+              <nav
+                id="navbarCollapse"
+                class="pb-4"
+              > 
+              <br/>
+                 <ul class="flex align-items justify-between"> 
+                  <!-- beranda -->
+                  <li class="submenu-item group relative">
+                    <a
+                      href="blog-grids.html"
+                      class="relative flex items-center justify-between text-pre4xl font-medium text-dark group-hover:text-primary dark:text-white lg:inline-flex lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70"
+                    >
+                      Beranda
+                    </a>
+                  </li>
+                  <li class="submenu-item group relative">
+                    <a
+                      href="javascript:void(0)"
+                      class="relative flex items-center justify-between text-pre4xl font-medium text-dark group-hover:text-primary dark:text-white lg:inline-flex lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70"
+                    >
+                      Tentang Kami
+
+                      <svg
+                        class="ml-2 fill-current"
+                        width="16"
+                        height="20"
+                        viewBox="0 0 16 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7.99999 14.9C7.84999 14.9 7.72499 14.85 7.59999 14.75L1.84999 9.10005C1.62499 8.87505 1.62499 8.52505 1.84999 8.30005C2.07499 8.07505 2.42499 8.07505 2.64999 8.30005L7.99999 13.525L13.35 8.25005C13.575 8.02505 13.925 8.02505 14.15 8.25005C14.375 8.47505 14.375 8.82505 14.15 9.05005L8.39999 14.7C8.27499 14.825 8.14999 14.9 7.99999 14.9Z"
+                        />
+                      </svg>
+                    </a>
+                    <div
+                      class="submenu relative top-full hidden w-[250px] rounded-sm bg-white transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full"
+                    >
+                      <a
+                        href="about.html"
+                        class="block rounded px-4 py-[10px] text-2xl text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
+                      >
+                        Sejarah
+                      </a>
+                      <a
+                        href="pricing.html"
+                        class="block rounded px-4 py-[10px] text-2xl text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
+                      >
+                        Lambang
+                      </a>
+                      <a
+                        href="contact.html"
+                        class="block rounded px-4 py-[10px] text-2xl text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
+                      >
+                        Kondisi Geografi
+                      </a>
+                      <a
+                        href="blog-grids.html"
+                        class="block rounded px-4 py-[10px] text-2xl text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
+                      >
+                        Sejarah Walikota & wakil
+                      </a>
+                      <a
+                        href="blog-details.html"
+                        class="block rounded px-4 py-[10px] text-2xl text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
+                      >
+                        Bangunan bersejarah
+                      </a>
+                    </div>
+                  </li>
+                  <!-- pemerintahan -->
+                  <li class="submenu-item group relative">
+                    <a
+                      href="javascript:void(0)"
+                      class="relative flex items-center justify-between text-pre4xl font-medium text-dark group-hover:text-primary dark:text-white lg:inline-flex lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70"
+                    >
+                      Pemerintahan
+
+                      <svg
+                        class="ml-2 fill-current"
+                        width="16"
+                        height="20"
+                        viewBox="0 0 16 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7.99999 14.9C7.84999 14.9 7.72499 14.85 7.59999 14.75L1.84999 9.10005C1.62499 8.87505 1.62499 8.52505 1.84999 8.30005C2.07499 8.07505 2.42499 8.07505 2.64999 8.30005L7.99999 13.525L13.35 8.25005C13.575 8.02505 13.925 8.02505 14.15 8.25005C14.375 8.47505 14.375 8.82505 14.15 9.05005L8.39999 14.7C8.27499 14.825 8.14999 14.9 7.99999 14.9Z"
+                        />
+                      </svg>
+                    </a>
+                    <div
+                      class="submenu relative left-0 top-full hidden w-[250px] rounded-sm bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full"
+                    >
+                      <a
+                        href="about.html"
+                        class="block rounded px-4 py-[10px] text-2xl text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
+                      >
+                        Visi Misi
+                      </a>
+                      <a
+                        href="pricing.html"
+                        class="block rounded px-4 py-[10px] text-2xl text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
+                      >
+                        Struktur Organisasi
+                      </a>
+                      <a
+                        href="contact.html"
+                        class="block rounded px-4 py-[10px] text-2xl text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
+                      >
+                        Daftar Pejabat Struktural
+                      </a>
+                      <a
+                        href="contact.html"
+                        class="block rounded px-4 py-[10px] text-2xl text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
+                      >
+                        Data Wilayah Kecamatan & Kelurahan
+                      </a>
+                    </div>
+                  </li>
+                  <!-- Regulasi -->
+                  <li class="submenu-item group relative">
+                    <a
+                      href="javascript:void(0)"
+                      class="0relative flex items-center justify-between text-pre4xl font-medium text-dark group-hover:text-primary dark:text-white lg:inline-flex lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70"
+                    >
+                      Regulasi
+
+                      <svg
+                        class="ml-2 fill-current"
+                        width="16"
+                        height="20"
+                        viewBox="0 0 16 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7.99999 14.9C7.84999 14.9 7.72499 14.85 7.59999 14.75L1.84999 9.10005C1.62499 8.87505 1.62499 8.52505 1.84999 8.30005C2.07499 8.07505 2.42499 8.07505 2.64999 8.30005L7.99999 13.525L13.35 8.25005C13.575 8.02505 13.925 8.02505 14.15 8.25005C14.375 8.47505 14.375 8.82505 14.15 9.05005L8.39999 14.7C8.27499 14.825 8.14999 14.9 7.99999 14.9Z"
+                        />
+                      </svg>
+                    </a>
+                    <div
+                      class="submenu relative left-0 top-full hidden w-[250px] rounded-sm bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full"
+                    >
+                      <a
+                        href="about.html"
+                        class="block rounded px-4 py-[10px] text-2xl text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
+                      >
+                        Peraturan Daerah
+                      </a>
+                      <a
+                        href="pricing.html"
+                        class="block rounded px-4 py-[10px] text-2xl text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
+                      >
+                        Peraturan Wali Kota
+                      </a>
+                      <a
+                        href="contact.html"
+                        class="block rounded px-4 py-[10px] text-2xl text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
+                      >
+                        Keputusan Wali Kota
+                      </a>
+                    </div>
+                  </li>
+<!-- media -->
+                  <li class="submenu-item group relative">
+                    <a
+                      href="blog-grids.html"
+                      class="relative flex items-center justify-between text-pre4xl font-medium text-dark group-hover:text-primary dark:text-white lg:inline-flex lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70"
+                    >
+                      Media
+                    </a>
+                  </li>
+                  <!-- informasi -->
+                  <li class="submenu-item group relative">
+                    <a
+                      href="javascript:void(0)"
+                      class="relative flex items-center justify-between text-pre4xl font-medium text-dark group-hover:text-primary dark:text-white lg:inline-flex lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70"
+                    >
+                      Informasi
+
+                      <svg
+                        class="ml-2 fill-current"
+                        width="16"
+                        height="20"
+                        viewBox="0 0 16 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7.99999 14.9C7.84999 14.9 7.72499 14.85 7.59999 14.75L1.84999 9.10005C1.62499 8.87505 1.62499 8.52505 1.84999 8.30005C2.07499 8.07505 2.42499 8.07505 2.64999 8.30005L7.99999 13.525L13.35 8.25005C13.575 8.02505 13.925 8.02505 14.15 8.25005C14.375 8.47505 14.375 8.82505 14.15 9.05005L8.39999 14.7C8.27499 14.825 8.14999 14.9 7.99999 14.9Z"
+                        />
+                      </svg>
+                    </a>
+                    <div
+                      class="submenu relative left-0 top-full hidden w-[250px] rounded-sm bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full"
+                    >
+                      <a
+                        href="about.html"
+                        class="block rounded px-4 py-[10px] text-2xl text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
+                      >
+                        Realisasi Keuangan dan Pembangunan
+                      </a>
+                      <a
+                        href="pricing.html"
+                        class="block rounded px-4 py-[10px] text-2xl text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
+                      >
+                        Open Data
+                      </a>
+                      <a
+                        href="contact.html"
+                        class="block rounded px-4 py-[10px] text-2xl text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
+                      >
+                        Transparansi dan Anggaran
+                      </a>
+                      <a
+                        href="contact.html"
+                        class="block rounded px-4 py-[10px] text-2xl text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
+                      >
+                        TKDN
+                      </a>
+                      <a
+                        href="contact.html"
+                        class="block rounded px-4 py-[10px] text-2xl text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
+                      >
+                        RLPPD
+                      </a>
+                      <a
+                        href="contact.html"
+                        class="block rounded px-4 py-[10px] text-2xl text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
+                      >
+                        COVID-19
+                      </a>
+                    </div>
+                  </li>
+                  <!-- lhkpn -->
+                  <li class="submenu-item group relative">
+                    <a
+                      href="blog-grids.html"
+                      class="relative flex items-center justify-between text-pre4xl font-medium text-dark group-hover:text-primary dark:text-white lg:inline-flex lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70"
+                    >
+                      LHKPN
+                    </a>
+                  </li>
+  
+                    </div>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </div>       
+            
+    <div class="relative">
+      <img src="assets/images/beranda/beranda.png" alt="Example Image" class="w-full p-2 rounded-xl" style="height: 500px" />
+
+      <div class="absolute inset-0 flex items-center justify-center flex-col">
+        <div class="text-3xl md:text-5xl text-white font-semibold flex justify-center flex-col text-center">
+          <h3>Pemerintah Kota</h3>
+          <h2 class="text-4xl md:text-6xl font-bold">Bekasi</h2>
+        </div>
+
+        <label class="relative block mt-6 w-full max-w-md mx-auto">
+          <span class="sr-only">Search</span>
+          <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+            <svg class="h-5 w-5 fill-red-800" viewBox="0 0 20 20">bd</svg>
+          </span>
+          <input
+            class="placeholder:italic placeholder:text-slate-600 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
+            placeholder="Apa yang anda cari?"
+            type="text"
+            name="search"
+          />
+        </label>
+      </div>
+    </div>
+
+    <!-- Portal Section -->
+    <section class="py-8">
+      <!-- Title with underline -->
+      <h2 class="text-3xl font-bold mb-2 ml-4 md:ml-10">Portal</h2>
+      <hr class="border-2 border-gray-800 mb-4 w-20 ml-4 md:ml-10" />
+      <div class="container mx-auto text-center relative carousel-container">
+        <button id="prevBtn" class="carousel-button left bg-gray-300 text-gray-700 hover:bg-gray-400 h-10 w-10 md:h-12 md:w-12 flex items-center justify-center rounded-full shadow-lg">
+          <img src="assets/images/beranda/arrow.svg" alt="" />
+        </button>
+        <button id="nextBtn" class="carousel-button right bg-gray-300 text-gray-700 hover:bg-gray-400 h-10 w-10 md:h-12 md:w-12 flex items-center justify-center rounded-full shadow-lg">
+          <img src="assets/images/beranda/arrow.svg" alt="" />
+        </button>
+        <div class="overflow-hidden">
+          <div id="portalItems" class="flex transition-transform duration-300">
+            <a href="cctv_url" class="flex-shrink-0 w-1/2 sm:w-1/3 md:w-1/5 p-2">
+              <div class="flex flex-col items-center border-gray-300 border-2 border-gray-600 p-2 rounded-xl">
+                <img src="assets/images/beranda/camera.svg" alt="Icon" class="h-10 mb-2" />
+                <span>CCTV</span>
+              </div>
+            </a>
+            <a href="sim_url" class="flex-shrink-0 w-1/2 sm:w-1/3 md:w-1/5 p-2">
+              <div class="flex flex-col items-center border-gray-300 border-2 border-gray-600 p-2 rounded-xl">
+                <img src="assets/images/beranda/taxes.svg" alt="Icon" class="h-10 mb-2" />
+                <span>SIM</span>
+              </div>
+            </a>
+            <a href="perizinan_url" class="flex-shrink-0 w-1/2 sm:w-1/3 md:w-1/5 p-2">
+              <div class="flex flex-col items-center border-gray-300 border-2 border-gray-600 p-2 rounded-xl">
+                <img src="assets/images/beranda/phone.svg" alt="Icon" class="h-10 mb-2" />
+                <span>Perizinan</span>
+              </div>
+            </a>
+            <a href="info_pajak_url" class="flex-shrink-0 w-1/2 sm:w-1/3 md:w-1/5 p-2">
+              <div class="flex flex-col items-center border-gray-300 border-2 border-gray-600 p-2 rounded-xl">
+                <img src="assets/images/beranda//megaphone.svg" alt="Icon" class="h-10 mb-2" />
+                <span>Info Pajak</span>
+              </div>
+            </a>
+            <a href="qna_url" class="flex-shrink-0 w-1/2 sm:w-1/3 md:w-1/5 p-2">
+              <div class="flex flex-col items-center border-gray-300 border-2 border-gray-600 p-2 rounded-xl">
+                <img src="assets/images/beranda//building.svg" alt="Icon" class="h-10 mb-2" />
+                <span>QnA</span>
+              </div>
+            </a>
+            <a href="web_pro_url" class="flex-shrink-0 w-1/2 sm:w-1/3 md:w-1/5 p-2">
+              <div class="flex flex-col items-center border-gray-300 border-2 border-gray-600 p-2 rounded-xl">
+                <img src="assets/images/beranda/icon_url" alt="Icon" class="h-10 mb-2" />
+                <span>Web PRO</span>
+              </div>
+            </a>
+            <!-- Tambahkan item tambahan di sini -->
+            <a href="item7_url" class="flex-shrink-0 w-1/2 sm:w-1/3 md:w-1/5 p-2">
+              <div class="flex flex-col items-center border-gray-300 border-2 border-gray-600 p-2 rounded-xl">
+                <img src="assets/images/beranda/icon_url" alt="Icon" class="h-10 mb-2" />
+                <span>Item 7</span>
+              </div>
+            </a>
+            <a href="item8_url" class="flex-shrink-0 w-1/2 sm:w-1/3 md:w-1/5 p-2">
+              <div class="flex flex-col items-center border-gray-300 border-2 border-gray-600 p-2 rounded-xl">
+                <img src="assets/images/beranda/icon_url" alt="Icon" class="h-10 mb-2" />
+                <span>Item 8</span>
+              </div>
+            </a>
+            <!-- Tambahkan item tambahan sebanyak yang diperlukan -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="carousel relative overflow-hidden w-full max-w-4xl mx-auto mt-10">
+      <h2 class="text-3xl font-bold mb-2">Berita Terkini</h2>
+      <hr class="border-2 border-gray-800 mb-4 w-20" />
+      <div class="carousel-inner relative w-full h-64 md:h-96 overflow-hidden flex">
+        <!-- Slide 1 -->
+        <div class="carousel-item absolute w-full h-full transition-opacity duration-500 ease-in-out flex opacity-100">
+          <img src="assets/images/beranda/berita-1.jpeg.jpg" class="block w-1/2 h-full object-cover" />
+          <div class="w-1/2 p-4 bg-red-500 text-white">
+            <h2 class="text-xl font-bold mb-2">Judul Artikel 1</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto iusto suscipit exercitationem reprehenderit illum maxime animi. Perferendis recusandae maxime voluptates vel. Corrupti quia illum dolorum commodi quibusdam
+              libero dolore iusto excepturi similique, dolores nesciunt eos maxime perferendis incidunt praesentium fugiat. Eum reiciendis libero aperiam repudiandae laborum asperiores? Unde, error fugiat?
+            </p>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="carousel-item absolute w-full h-full transition-opacity duration-500 ease-in-out flex opacity-0">
+          <img src="assets/images/beranda/berita-2.jpeg.jpg" class="block w-1/2 h-full object-cover" />
+          <div class="w-1/2 p-4 bg-blue-500 text-white">
+            <h2 class="text-xl font-bold mb-2">Judul Artikel 2</h2>
+            <p>
+              Ini adalah deskripsi singkat untuk artikel kedua. Teks ini berada di sebelah kanan gambar. Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur deleniti perferendis quod, tempore voluptatibus iste libero id itaque
+              sit sapiente, repudiandae earum. Eligendi, quae qui. Asperiores minima temporibus illum et.
+            </p>
+          </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="carousel-item absolute w-full h-full transition-opacity duration-500 ease-in-out flex opacity-0">
+          <img src="assets/images/beranda/berita-3.jpeg.jpg" class="block w-1/2 h-full object-cover" />
+          <div class="w-1/2 p-4 bg-green-500 text-white">
+            <h2 class="text-xl font-bold mb-2">Judul Artikel 3</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ratione itaque deserunt inventore sit sapiente neque assumenda voluptas sint nesciunt? Culpa laudantium consequuntur eligendi exercitationem velit saepe possimus
+              suscipit ipsum officiis unde nemo nam ullam porro excepturi voluptatum ipsam nulla rerum eveniet earum, veniam quis?
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Indicators -->
+      <div class="carousel-indicators absolute bottom-0 left-0 right-0 flex justify-center mb-4 space-x-2">
+        <button class="indicator w-3 h-3 bg-white rounded-full" data-slide="0"></button>
+        <button class="indicator w-3 h-3 bg-white opacity-50 rounded-full" data-slide="1"></button>
+        <button class="indicator w-3 h-3 bg-white opacity-50 rounded-full" data-slide="2"></button>
+      </div>
+    </div>
+
+    <section class="py-8">
+      <div class="container mx-auto">
+        <h2 class="text-3xl font-bold mb-2 ml-4 md:ml-10">Portal</h2>
+        <hr class="border-2 border-gray-800 mb-4 w-20 ml-4 md:ml-10" />
+        <div class="flex flex-wrap justify-center space-x-4 space-y-4 md:space-y-0">
+          <div class="flex flex-col items-center w-1/2 md:w-auto">
+            <div class="flex items-center justify-center h-20 w-20 md:h-28 md:w-28 rounded-full bg-gray-200 mb-2">
+              <span class="text-2xl md:text-4xl font-bold">127</span>
+            </div>
+            <span>Pengunjung Online</span>
+          </div>
+          <div class="flex flex-col items-center w-1/2 md:w-auto">
+            <div class="flex items-center justify-center h-20 w-20 md:h-28 md:w-28 rounded-full bg-gray-200 mb-2">
+              <span class="text-2xl md:text-4xl font-bold">310</span>
+            </div>
+            <span>Pengunjung Hari Ini</span>
+          </div>
+          <div class="flex flex-col items-center w-1/2 md:w-auto">
+            <div class="flex items-center justify-center h-20 w-20 md:h-28 md:w-28 rounded-full bg-gray-200 mb-2">
+              <span class="text-2xl md:text-4xl font-bold">12579</span>
+            </div>
+            <span>Total Pengunjung</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const portalItems = document.getElementById("portalItems");
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
+        let currentIndex = 0;
+        const itemWidth = portalItems.firstElementChild.clientWidth;
+        const totalItems = portalItems.childElementCount;
+        const visibleItems = 5; // Hanya menampilkan 5 item
+        let isAnimating = false;
+
+        function updateButtons() {
+          prevBtn.disabled = currentIndex === 0;
+          nextBtn.disabled = currentIndex >= totalItems - visibleItems;
+        }
+
+        function moveItems() {
+          isAnimating = true;
+          portalItems.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+          setTimeout(() => {
+            isAnimating = false;
+          }, 300); // Match with transition duration
+        }
+
+        prevBtn.addEventListener("click", function () {
+          if (currentIndex > 0 && !isAnimating) {
+            currentIndex--;
+            moveItems();
+            updateButtons();
+          }
+        });
+
+        nextBtn.addEventListener("click", function () {
+          if (currentIndex < totalItems - visibleItems && !isAnimating) {
+            currentIndex++;
+            moveItems();
+            updateButtons();
+          }
+        });
+
+        updateButtons(); // Initial update to set button states
+
+        // Prevent clicks on links while animating
+        portalItems.querySelectorAll("a").forEach((anchor) => {
+          anchor.addEventListener("click", function (event) {
+            if (isAnimating) {
+              event.preventDefault();
+            }
+          });
+        });
+      });
+
+      // JavaScript untuk membuat carousel bergerak otomatis
+      document.addEventListener("DOMContentLoaded", () => {
+        const items = document.querySelectorAll(".carousel-item");
+        const indicators = document.querySelectorAll(".indicator");
+        let currentIndex = 0;
+        const interval = 5000; // 5 detik
+
+        const showSlide = (index) => {
+          items.forEach((item, i) => {
+            item.style.opacity = i === index ? "1" : "0";
+            indicators[i].classList.toggle("opacity-50", i !== index);
+          });
+        };
+
+        const nextSlide = () => {
+          currentIndex = (currentIndex + 1) % items.length;
+          showSlide(currentIndex);
+        };
+
+        indicators.forEach((indicator, index) => {
+          indicator.addEventListener("click", () => {
+            currentIndex = index;
+            showSlide(currentIndex);
+          });
+        });
+
+        showSlide(currentIndex); // Menampilkan slide pertama
+        setInterval(nextSlide, interval); // Pindah slide tiap 5 detik
+      });
+    </script>
+  </body>
+</html>
