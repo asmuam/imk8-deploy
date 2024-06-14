@@ -9,15 +9,12 @@
   <link rel="shortcut icon"href="assets/images/logoBekasi.png" type="image/x-icon" />
   <link rel="stylesheet" href="assets/css/animate.css" />
   <link rel="stylesheet" href="assets/css/tailwind.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 
   <!-- ==== WOW JS ==== -->
   <script src="assets/js/wow.min.js"></script>
-  <script>
-    new WOW().init();
-  </script>
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.0/dist/cdn.min.js"></script>
-
+  <script>new WOW().init();</script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-sankey"></script>
 </head>
 
 <body>
@@ -51,8 +48,8 @@
             </button>
             <nav id="navbarCollapse"
               class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white dark:bg-dark-2 py-5 shadow-lg lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent dark:lg:bg-transparent lg:py-0 lg:px-4 lg:shadow-none xl:px-6">
-              <ul class="blcok lg:flex">
-                <li class="group relative text-center">
+              <ul class="blcok lg:flex 2xl:ml-20">
+                <li class="group relative">
                   <a
                     href="blog-grids.html"
                     class="ud-menu-scroll mx-8 flex py-2 text-4xl font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-body-color dark:lg:text-dark-6 lg:group-hover:opacity-70 xl:ml-10"
@@ -397,7 +394,7 @@
                               />
                         </svg>
                     </span>
-                      Tentang Kami
+                      Informasi
                   </a>
                   <span class="text-body-color dark:text-dark-6 px-3"> / </span>
                 </li>
@@ -406,7 +403,7 @@
                       href="javascript:void(0)"
                       class="text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary text-base font-medium"
                       >
-                  RLPPD
+                  Transparansi
                   </a>
                 </li>
             </ul>
@@ -415,82 +412,61 @@
         </div>
           <div class="w-full px-4">
             <h1 class="mt-1 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]">
-            RINGKASAN LAPORAN PENYELENGGARAAN PEMERINTAHAN DAERAH (RLPPD)
-        </h1>
+              Transparansi Anggaran</h1>
           </div>
       </div>
     </div>
   </div>
   <!-- ====== Banner Section End -->
 
-<!-- ====== rlppd Start ====== -->
-<section id="contact" class="relative py-10">
-  <div class="absolute top-0 left-0 -z-[1] w-full dark:bg-dark h-full"></div>
-  <div class="absolute top-0 left-0 -z-[1] h-1/2 w-full bg-[#E9F9FF] dark:bg-dark-700 lg:h-[45%] xl:h-1/2"></div>
-  <div class="container px-4 w-full">
-  <div class="py-8"
-        x-data="{
-        dropdownOpen: false,
-        selectedYear: '2023',
-        links: {
-          '2019': 'https://drive.google.com/file/d/117K5sBBAzc520MlAmC46FSVsPsJusG5W/preview',
-          '2022': 'https://drive.google.com/file/d/1jWlxH0rNZKFinXFo-3JjpGbBDqFwngUp/preview',
-          '2023': 'https://drive.google.com/file/d/1OMeO_R2MG3kRjlTBcaO59Et-FWJFBBpr/preview'
-        }
-      }"
-      @click.outside="dropdownOpen = false">
-    <div>
-    <div
-      class="relative mb-8 inline-block text-left"
-    >
-      <button
-        @click="dropdownOpen = !dropdownOpen"
-        class="bg-primary flex items-center rounded-[5px] px-5 py-[13px] text-base font-medium text-white"
-      >
-      <span x-text="`RLPPD ${selectedYear}`"></span>
-        <span class="pl-4">
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 20 20"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            class="fill-current"
-          >
-            <path
-              d="M10 14.25C9.8125 14.25 9.65625 14.1875 9.5 14.0625L2.3125 7C2.03125 6.71875 2.03125 6.28125 2.3125 6C2.59375 5.71875 3.03125 5.71875 3.3125 6L10 12.5312L16.6875 5.9375C16.9688 5.65625 17.4063 5.65625 17.6875 5.9375C17.9687 6.21875 17.9687 6.65625 17.6875 6.9375L10.5 14C10.3437 14.1563 10.1875 14.25 10 14.25Z"
-            />
-          </svg>
-        </span>
-      </button>
-      <div
-        :class="dropdownOpen ? 'top-full opacity-100 visible' : 'top-[110%] invisible opacity-0'"
-        class="shadow-1 absolute left-0 z-40 mt-2 w-full rounded-md bg-white py-[10px] transition-all"
-      >
-        <ul>
-          <li @click="selectedYear = '2019'; dropdownOpen = false" class="px-4 py-2 cursor-pointer hover:bg-gray-200">RLPPD 2019</li>
-          <li @click="selectedYear = '2022'; dropdownOpen = false" class="px-4 py-2 cursor-pointer hover:bg-gray-200">RLPPD 2022</li>
-          <li @click="selectedYear = '2023'; dropdownOpen = false" class="px-4 py-2 cursor-pointer hover:bg-gray-200">RLPPD 2023</li>
-        </ul>
+  <!-- ====== struktur Start ====== -->
+  <section id="contact" class="relative py-10">
+    <div class="absolute top-0 left-0 -z-[1] w-full dark:bg-dark h-full"></div>
+    <div class="container px-4 dark:bg-dark">
+      <div>
+        <h1 class="my-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]">
+            Dinamika Anggaran Pendapatan dan Belanja Daerah Kota Bekasi
+        </h1>
+            <canvas id="apbdChart" width="800" height="500"></canvas>
+      </div>
+      <div>
+        <h1 class="my-4 mt-12 text-center text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]">
+            Aliran Pendapatan dan Pengeluaran APBD Kota Bekasi 2024
+        </h1>
+      </div>
+      <div id="chart-container" class="my-8 overflow-x-auto">
+        <div class="chartSankey">
+            <canvas id="combinedSankey" class="bg-white"></canvas>
+        </div>
+        </div>
+
+      </div>
+      <div>
+        <div class="container px-4">
+            <h1 class="my-4 mt-12 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]">
+                Dokumen Terkait
+            </h1>
+                         <!-- ====== Table Section Start -->
+            <section class="bg-white dark:bg-dark mt-8">
+            <div class="container mx-auto h-auto">
+                <div class="flex flex-wrap -mx-4 h-auto">
+                    <div class="w-full px-4 max-h-450 overflow-y-auto">
+                      <div class="max-w-full">
+                        <table class="w-full">
+                            <tbody id="daftar-opd" class="max-w-full">
+                            </tbody>
+                        </table>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            </section>
+            <!-- ====== Table Section End -->
+        </div>
       </div>
     </div>
-      <!-- <button>
-        <i class="fa-solid fa-download mr-3"></i>
-      </button> -->
-    </div>
-    <div class="flex flex-wrap justify-center w-full">
-    <div class="flex justify-center w-full"> 
-      <iframe 
-        :src="links[selectedYear]" 
-        allow="autoplay" 
-        class="w-full ml-2"
-        height="640"
-      ></iframe>
-    </div>
-    </div>
-  </div>
-  </div>
-
+  </section>
+  <!-- ====== struktur End ====== -->
 
 <!-- ====== Footer Section Start -->
     <footer
@@ -943,6 +919,6 @@
 
   <!-- ====== All Scripts -->
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/table.js"></script>
+  <script src="assets/js/visualisasi.js"></script>
 </body>
 </html>

@@ -11,13 +11,13 @@
   <link rel="stylesheet" href="assets/css/tailwind.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 
+
   <!-- ==== WOW JS ==== -->
   <script src="assets/js/wow.min.js"></script>
   <script>
     new WOW().init();
   </script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.0/dist/cdn.min.js"></script>
-
 </head>
 
 <body>
@@ -397,16 +397,7 @@
                               />
                         </svg>
                     </span>
-                      Tentang Kami
-                  </a>
-                  <span class="text-body-color dark:text-dark-6 px-3"> / </span>
-                </li>
-                <li class="flex items-center">
-                  <a
-                      href="javascript:void(0)"
-                      class="text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary text-base font-medium"
-                      >
-                  RLPPD
+                      Media
                   </a>
                 </li>
             </ul>
@@ -415,7 +406,7 @@
         </div>
           <div class="w-full px-4">
             <h1 class="mt-1 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]">
-            RINGKASAN LAPORAN PENYELENGGARAAN PEMERINTAHAN DAERAH (RLPPD)
+            MEDIA
         </h1>
           </div>
       </div>
@@ -423,73 +414,601 @@
   </div>
   <!-- ====== Banner Section End -->
 
-<!-- ====== rlppd Start ====== -->
-<section id="contact" class="relative py-10">
+<!-- ====== media Start ====== -->
+<section id="contact" class="relative">
   <div class="absolute top-0 left-0 -z-[1] w-full dark:bg-dark h-full"></div>
-  <div class="absolute top-0 left-0 -z-[1] h-1/2 w-full bg-[#E9F9FF] dark:bg-dark-700 lg:h-[45%] xl:h-1/2"></div>
   <div class="container px-4 w-full">
-  <div class="py-8"
-        x-data="{
-        dropdownOpen: false,
-        selectedYear: '2023',
-        links: {
-          '2019': 'https://drive.google.com/file/d/117K5sBBAzc520MlAmC46FSVsPsJusG5W/preview',
-          '2022': 'https://drive.google.com/file/d/1jWlxH0rNZKFinXFo-3JjpGbBDqFwngUp/preview',
-          '2023': 'https://drive.google.com/file/d/1OMeO_R2MG3kRjlTBcaO59Et-FWJFBBpr/preview'
-        }
-      }"
-      @click.outside="dropdownOpen = false">
+  <div>
     <div>
     <div
-      class="relative mb-8 inline-block text-left"
-    >
-      <button
-        @click="dropdownOpen = !dropdownOpen"
-        class="bg-primary flex items-center rounded-[5px] px-5 py-[13px] text-base font-medium text-white"
+   x-data="
+   {
+   openTab: 1,
+   activeClasses: 'bg-primary text-white',
+   inactiveClasses: 'text-body-color hover:bg-primary hover:text-white',
+   }
+   "
+   x-init="fotoPagination()"
+   class="w-full mb-14"
+   >
+   <div
+      class="flex flex-wrap flex-col py-3 px-4 sm:flex-row justify-center"
       >
-      <span x-text="`RLPPD ${selectedYear}`"></span>
-        <span class="pl-4">
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 20 20"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            class="fill-current"
-          >
-            <path
-              d="M10 14.25C9.8125 14.25 9.65625 14.1875 9.5 14.0625L2.3125 7C2.03125 6.71875 2.03125 6.28125 2.3125 6C2.59375 5.71875 3.03125 5.71875 3.3125 6L10 12.5312L16.6875 5.9375C16.9688 5.65625 17.4063 5.65625 17.6875 5.9375C17.9687 6.21875 17.9687 6.65625 17.6875 6.9375L10.5 14C10.3437 14.1563 10.1875 14.25 10 14.25Z"
-            />
-          </svg>
-        </span>
-      </button>
+      <a
+         href="javascript:void(0)"
+         @click="openTab = 1 ; fotoPagination()"
+         :class="openTab === 1 ? activeClasses : inactiveClasses"
+         class="px-4 py-3 text-sm font-medium rounded-md md:text-base lg:px-6"
+         >
+      Foto
+      </a>
+      <a
+         href="javascript:void(0)"
+         @click="openTab = 2; videoPagination()"
+         :class="openTab === 2 ? activeClasses : inactiveClasses"
+         class="px-4 py-3 text-sm font-medium rounded-md md:text-base lg:px-6"
+         >
+      Video
+      </a>
+   </div>
+   <div>
       <div
-        :class="dropdownOpen ? 'top-full opacity-100 visible' : 'top-[110%] invisible opacity-0'"
-        class="shadow-1 absolute left-0 z-40 mt-2 w-full rounded-md bg-white py-[10px] transition-all"
-      >
-        <ul>
-          <li @click="selectedYear = '2019'; dropdownOpen = false" class="px-4 py-2 cursor-pointer hover:bg-gray-200">RLPPD 2019</li>
-          <li @click="selectedYear = '2022'; dropdownOpen = false" class="px-4 py-2 cursor-pointer hover:bg-gray-200">RLPPD 2022</li>
-          <li @click="selectedYear = '2023'; dropdownOpen = false" class="px-4 py-2 cursor-pointer hover:bg-gray-200">RLPPD 2023</li>
-        </ul>
+         x-show="openTab === 1"
+         class="p-6 text-base leading-relaxed text-body-color "
+         >
+        <div>
+            <!-- konten foto -->
+            <!-- ====== Cards Section Start -->
+            <section class="bg-gray-2 pb-10 lg:pb-20" x-data="{ modalOpen: false, modalImage: '' }">
+            <div id="pageFoto-1" class="pageFoto hidden">
+                <div class="container mx-auto">
+                <div class="flex flex-wrap -mx-4">
+                    <div class="w-full px-4 md:w-1/2 xl:w-1/5">
+                        <div
+                        class="mb-10 overflow-hidden duration-300 bg-white rounded-lg shadow-1 hover:shadow-3 "
+                        @click="modalOpen = true; modalImage = 'https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-01.jpg'"
+                        >
+                        <img
+                            src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-01.jpg"
+                            alt="image"
+                            class="w-full"
+                            />
+                        <div class="p-4 text-center sm:p-9 md:p-7 xl:p-9">
+                            <p
+                                class="text-base leading-relaxed text-body-color"
+                                >
+                                Lorem ipsum dolor sit amet pretium consectetur adipiscing
+                                elit. Lorem consectetur adipiscing elit.
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="w-full px-4 md:w-1/2 xl:w-1/5">
+                        <div
+                        class="mb-10 overflow-hidden duration-300 bg-white rounded-lg shadow-1 hover:shadow-3 "
+                        @click="modalOpen = true; modalImage = 'https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-02.jpg'"
+                        >
+                        <img
+                            src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-02.jpg"
+                            alt="image"
+                            class="w-full"
+                            />
+                        <div class="p-4 text-center sm:p-9 md:p-7 xl:p-9">
+                            <p class="text-base leading-relaxed text-body-color">
+                                Lorem ipsum dolor sit amet pretium consectetur adipiscing
+                                elit. Lorem consectetur adipiscing elit.
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="w-full px-4 md:w-1/2 xl:w-1/5">
+                        <div
+                        class="mb-10 overflow-hidden duration-300 bg-white rounded-lg shadow-1 hover:shadow-3 "
+                        >
+                        <img
+                            src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-03.jpg"
+                            alt="image"
+                            class="w-full"
+                            />
+                        <div class="p-4 text-center sm:p-9 md:p-7 xl:p-9">
+                            <p class="text-base leading-relaxed text-body-color">
+                                Lorem ipsum dolor sit amet pretium consectetur adipiscing
+                                elit. Lorem consectetur adipiscing elit.
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="w-full px-4 md:w-1/2 xl:w-1/5">
+                        <div
+                        class="mb-10 overflow-hidden duration-300 bg-white rounded-lg shadow-1 hover:shadow-3 "
+                        >
+                        <img
+                            src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-03.jpg"
+                            alt="image"
+                            class="w-full"
+                            />
+                        <div class="p-4 text-center sm:p-9 md:p-7 xl:p-9">
+                            <p class="text-base leading-relaxed text-body-color ">
+                                Lorem ipsum dolor sit amet pretium consectetur adipiscing
+                                elit. Lorem consectetur adipiscing elit.
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="w-full px-4 md:w-1/2 xl:w-1/5">
+                        <div
+                        class="mb-10 overflow-hidden duration-300 bg-white rounded-lg shadow-1 hover:shadow-3 "
+                        >
+                        <img
+                            src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-03.jpg"
+                            alt="image"
+                            class="w-full"
+                            />
+                        <div class="p-4 text-center sm:p-9 md:p-7 xl:p-9">
+                            <p class="text-base leading-relaxed text-body-color">
+                                Lorem ipsum dolor sit amet pretium consectetur adipiscing
+                                elit. Lorem consectetur adipiscing elit.
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="w-full px-4 md:w-1/2 xl:w-1/5">
+                        <div
+                        class="mb-10 overflow-hidden duration-300 bg-white rounded-lg shadow-1 hover:shadow-3 "
+                        >
+                        <img
+                            src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-03.jpg"
+                            alt="image"
+                            class="w-full"
+                            />
+                        <div class="p-4 text-center sm:p-9 md:p-7 xl:p-9">
+                            <p class="text-base leading-relaxed text-body-color">
+                                Lorem ipsum dolor sit amet pretium consectetur adipiscing
+                                elit. Lorem consectetur adipiscing elit.
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="w-full px-4 md:w-1/2 xl:w-1/5">
+                        <div
+                        class="mb-10 overflow-hidden duration-300 bg-white rounded-lg shadow-1 hover:shadow-3 "
+                        >
+                        <img
+                            src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-03.jpg"
+                            alt="image"
+                            class="w-full"
+                            />
+                        <div class="p-4 text-center sm:p-9 md:p-7 xl:p-9">
+                            <p class="text-base leading-relaxed text-body-color">
+                                Lorem ipsum dolor sit amet pretium consectetur adipiscing
+                                elit. Lorem consectetur adipiscing elit.
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="w-full px-4 md:w-1/2 xl:w-1/5">
+                        <div
+                        class="mb-10 overflow-hidden duration-300 bg-white rounded-lg shadow-1 hover:shadow-3 "
+                        >
+                        <img
+                            src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-03.jpg"
+                            alt="image"
+                            class="w-full"
+                            />
+                        <div class="p-4 text-center sm:p-9 md:p-7 xl:p-9">
+                            <p class="text-base leading-relaxed text-body-color">
+                                Lorem ipsum dolor sit amet pretium consectetur adipiscing
+                                elit. Lorem consectetur adipiscing elit.
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="w-full px-4 md:w-1/2 xl:w-1/5">
+                        <div
+                        class="mb-10 overflow-hidden duration-300 bg-white rounded-lg shadow-1 hover:shadow-3 "
+                        >
+                        <img
+                            src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-03.jpg"
+                            alt="image"
+                            class="w-full"
+                            />
+                        <div class="p-4 text-center sm:p-9 md:p-7 xl:p-9">
+                            <p class="text-base leading-relaxed text-body-color">
+                                Lorem ipsum dolor sit amet pretium consectetur adipiscing
+                                elit. Lorem consectetur adipiscing elit.
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="w-full px-4 md:w-1/2 xl:w-1/5">
+                        <div
+                        class="mb-10 overflow-hidden duration-300 bg-white rounded-lg shadow-1 hover:shadow-3 "
+                        >
+                        <img
+                            src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-03.jpg"
+                            alt="image"
+                            class="w-full"
+                            />
+                        <div class="p-4 text-center sm:p-9 md:p-7 xl:p-9">
+                            <p class="text-base leading-relaxed text-body-color">
+                                Lorem ipsum dolor sit amet pretium consectetur adipiscing
+                                elit. Lorem consectetur adipiscing elit.
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="w-full px-4 md:w-1/2 xl:w-1/5">
+                        <div
+                        class="mb-10 overflow-hidden duration-300 bg-white rounded-lg shadow-1 hover:shadow-3 "
+                        >
+                        <img
+                            src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-03.jpg"
+                            alt="image"
+                            class="w-full"
+                            />
+                        <div class="p-4 text-center sm:p-9 md:p-7 xl:p-9">
+                            <p class="text-base leading-relaxed text-body-color">
+                                Lorem ipsum dolor sit amet pretium consectetur adipiscing
+                                elit. Lorem consectetur adipiscing elit.
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div id="pageFoto-2" class="pageFoto hidden">
+                <div class="container mx-auto">
+                <div class="flex flex-wrap -mx-4">
+                    <div class="w-full px-4 md:w-1/2 xl:w-1/5">
+                        <div
+                        class="mb-10 overflow-hidden duration-300 bg-white rounded-lg shadow-1 hover:shadow-3 "
+                        @click="modalOpen = true; modalImage = 'https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-03.jpg'"
+                        >
+                        <img
+                            src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-03.jpg"
+                            alt="image"
+                            class="w-full"
+                            />
+                        <div class="p-4 text-center sm:p-9 md:p-7 xl:p-9">
+                            <p
+                                class="text-base leading-relaxed text-body-color"
+                                >
+                                Lorem ipsum dolor sit amet pretium consectetur adipiscing
+                                elit. Lorem consectetur adipiscing elit.
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="w-full px-4 md:w-1/2 xl:w-1/5">
+                        <div
+                        class="mb-10 overflow-hidden duration-300 bg-white rounded-lg shadow-1 hover:shadow-3 "
+                        @click="modalOpen = true; modalImage = 'https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-02.jpg'"
+                        >
+                        <img
+                            src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-02.jpg"
+                            alt="image"
+                            class="w-full"
+                            />
+                        <div class="p-4 text-center sm:p-9 md:p-7 xl:p-9">
+                            <p class="text-base leading-relaxed text-body-color">
+                                Lorem ipsum dolor sit amet pretium consectetur adipiscing
+                                elit. Lorem consectetur adipiscing elit.
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="w-full px-4 md:w-1/2 xl:w-1/5">
+                        <div
+                        class="mb-10 overflow-hidden duration-300 bg-white rounded-lg shadow-1 hover:shadow-3 "
+                        >
+                        <img
+                            src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-03.jpg"
+                            alt="image"
+                            class="w-full"
+                            />
+                        <div class="p-4 text-center sm:p-9 md:p-7 xl:p-9">
+                            <p class="text-base leading-relaxed text-body-color">
+                                Lorem ipsum dolor sit amet pretium consectetur adipiscing
+                                elit. Lorem consectetur adipiscing elit.
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="w-full px-4 md:w-1/2 xl:w-1/5">
+                        <div
+                        class="mb-10 overflow-hidden duration-300 bg-white rounded-lg shadow-1 hover:shadow-3 "
+                        >
+                        <img
+                            src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-03.jpg"
+                            alt="image"
+                            class="w-full"
+                            />
+                        <div class="p-4 text-center sm:p-9 md:p-7 xl:p-9">
+                            <p class="text-base leading-relaxed text-body-color ">
+                                Lorem ipsum dolor sit amet pretium consectetur adipiscing
+                                elit. Lorem consectetur adipiscing elit.
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="w-full px-4 md:w-1/2 xl:w-1/5">
+                        <div
+                        class="mb-10 overflow-hidden duration-300 bg-white rounded-lg shadow-1 hover:shadow-3 "
+                        >
+                        <img
+                            src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-03.jpg"
+                            alt="image"
+                            class="w-full"
+                            />
+                        <div class="p-4 text-center sm:p-9 md:p-7 xl:p-9">
+                            <p class="text-base leading-relaxed text-body-color">
+                                Lorem ipsum dolor sit amet pretium consectetur adipiscing
+                                elit. Lorem consectetur adipiscing elit.
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="w-full px-4 md:w-1/2 xl:w-1/5">
+                        <div
+                        class="mb-10 overflow-hidden duration-300 bg-white rounded-lg shadow-1 hover:shadow-3 "
+                        >
+                        <img
+                            src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-03.jpg"
+                            alt="image"
+                            class="w-full"
+                            />
+                        <div class="p-4 text-center sm:p-9 md:p-7 xl:p-9">
+                            <p class="text-base leading-relaxed text-body-color">
+                                Lorem ipsum dolor sit amet pretium consectetur adipiscing
+                                elit. Lorem consectetur adipiscing elit.
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="w-full px-4 md:w-1/2 xl:w-1/5">
+                        <div
+                        class="mb-10 overflow-hidden duration-300 bg-white rounded-lg shadow-1 hover:shadow-3 "
+                        >
+                        <img
+                            src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-03.jpg"
+                            alt="image"
+                            class="w-full"
+                            />
+                        <div class="p-4 text-center sm:p-9 md:p-7 xl:p-9">
+                            <p class="text-base leading-relaxed text-body-color">
+                                Lorem ipsum dolor sit amet pretium consectetur adipiscing
+                                elit. Lorem consectetur adipiscing elit.
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            
+            <!-- ====== Pagination Section Start -->
+            <div class="bg-white dark:bg-dark py-10 text-center ">
+            <div
+                class="inline-flex gap-1 rounded-full border border-stroke p-3 "
+            >
+                <ul class="flex items-center gap-1">
+                <li>
+                    <button
+                    id="prevFoto"
+                    class="flex h-10 min-w-10 items-center justify-center rounded-full px-2 dark:text-white text-dark hover:text-white hover:bg-primary"
+                    >
+                    <svg
+                        width="20"
+                        height="21"
+                        viewBox="0 0 20 21"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                        d="M17.5 9.8125H4.15625L9.46875 4.40625C9.75 4.125 9.75 3.6875 9.46875 3.40625C9.1875 3.125 8.75 3.125 8.46875 3.40625L2 9.96875C1.71875 10.25 1.71875 10.6875 2 10.9688L8.46875 17.5312C8.59375 17.6562 8.78125 17.75 8.96875 17.75C9.15625 17.75 9.3125 17.6875 9.46875 17.5625C9.75 17.2812 9.75 16.8438 9.46875 16.5625L4.1875 11.2188H17.5C17.875 11.2188 18.1875 10.9062 18.1875 10.5312C18.1875 10.125 17.875 9.8125 17.5 9.8125Z"
+                        fill="currentColor"
+                        />
+                    </svg>
+                    </button>
+                </li>
+                <li>
+                    <button
+                    id="pageFoto-1"
+                    class="pageFoto-btn flex h-10 min-w-10 items-center justify-center rounded-full dark:text-white hover:text-white bg-primary hover:bg-primary px-2 text-white "
+                    >
+                    1
+                    </button>
+                </li>
+                <li>
+                    <button
+                    id="pageFoto-2"
+                    class="pageFoto-btn flex h-10 min-w-10 items-center justify-center rounded-full dark:text-white hover:text-white px-2 text-dark hover:bg-primary"
+                    >
+                    2
+                    </button>
+                </li>
+
+                <li>
+                    <button
+                    id="nextFoto"
+                    class="flex h-10 min-w-10 items-center justify-center rounded-full px-2 text-dark dark:text-white hover:text-white hover:bg-primary "
+                    >
+                    <svg
+                        width="20"
+                        height="21"
+                        viewBox="0 0 20 21"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                        d="M18 10L11.5312 3.4375C11.25 3.15625 10.8125 3.15625 10.5312 3.4375C10.25 3.71875 10.25 4.15625 10.5312 4.4375L15.7812 9.78125H2.5C2.125 9.78125 1.8125 10.0937 1.8125 10.4688C1.8125 10.8438 2.125 11.1875 2.5 11.1875H15.8437L10.5312 16.5938C10.25 16.875 10.25 17.3125 10.5312 17.5938C10.6562 17.7188 10.8437 17.7812 11.0312 17.7812C11.2187 17.7812 11.4062 17.7188 11.5312 17.5625L18 11C18.2812 10.7187 18.2812 10.2812 18 10Z"
+                        fill="currentColor"
+                        />
+                    </svg>
+                    </button>
+                </li>
+                </ul>
+            </div>
+            </div>
+            <!-- ====== Pagination Section End -->
+                <!-- Modal Overlay -->
+            <div x-show="modalOpen"       
+            x-transition
+            class="fixed top-0 left-0 flex z-10 items-center justify-center w-full h-full min-h-screen px-4 py-5 bg-dark/90 rounded">
+                <div                     
+                class="h-full w-full inset-0 z-50 flex items-center justify-center p-2 overflow-hidden bg-dark bg-opacity-20">
+                    <img :src="modalImage" alt="Modal Image" @click.outside="modalOpen = false">
+                </div>
+            </div>
+            </section>
+            <!-- ====== Cards Section End -->
+        </div>
       </div>
-    </div>
-      <!-- <button>
-        <i class="fa-solid fa-download mr-3"></i>
-      </button> -->
-    </div>
-    <div class="flex flex-wrap justify-center w-full">
-    <div class="flex justify-center w-full"> 
-      <iframe 
-        :src="links[selectedYear]" 
-        allow="autoplay" 
-        class="w-full ml-2"
-        height="640"
-      ></iframe>
-    </div>
+      <div
+         x-show="openTab === 2"
+         class="p-6 text-base leading-relaxed text-body-color "
+         >
+        <div>
+            <!-- konten video -->
+            <!-- ====== Cards Section Start -->
+            <section x-data="{ modalOpen: false, modalVideo: '' }" class="bg-gray-2 pb-10 lg:pb-20">
+            <div id="pageVideo-1" class="pageVideo hidden">
+            <div class="container mx-auto">
+                <div class="flex flex-wrap -mx-4">
+                    <div class="w-full px-4 md:w-1/2 xl:w-1/5">
+                        <div class="mb-10 overflow-hidden bg-white rounded-lg shadow-1 hover:shadow-3 relative"
+                            @click="modalOpen = true; modalVideo = 'https://www.youtube.com/embed/zmKZYhLY6jM?si=XaMlOEcjlJOpW3lW?rel=0&enablejsapi=1'">
+                            <img
+                                src="https://img.youtube.com/vi/zmKZYhLY6jM/maxresdefault.jpg"
+                                alt="image"
+                                class="w-full"
+                            />
+                            <!-- Tombol Play -->
+                            <button class="absolute inset-b25rem flex items-center justify-center">
+                                <i class="fas fa-play-circle text-5xl"></i>
+                            </button>
+                            <div class="p-4 text-center sm:p-9 md:p-7 xl:p-9">
+                                <p class="text-base leading-relaxed text-body-color">
+                                    Lorem ipsum dolor sit amet pretium consectetur adipiscing elit. Lorem consectetur adipiscing elit.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            </div>
+            <div id="pageVideo-2" class="pageVideo hidden">
+                           <div class="container mx-auto">
+                <div class="flex flex-wrap -mx-4">
+                    <div class="w-full px-4 md:w-1/2 xl:w-1/5">
+                        <div class="mb-10 overflow-hidden bg-white rounded-lg shadow-1 hover:shadow-3 relative"
+                            @click="modalOpen = true; modalVideo = 'https://www.youtube.com/embed/wYjY74zgcLY?si=qX5fOQnJyk4O9r8d?rel=0&enablejsapi=1'">
+                            <img
+                                src="https://img.youtube.com/vi/wYjY74zgcLY/maxresdefault.jpg"
+                                alt="image"
+                                class="w-full"
+                            />
+                            <!-- Tombol Play -->
+                            <button class="absolute inset-b25rem flex items-center justify-center">
+                                <i class="fas fa-play-circle text-5xl"></i>
+                            </button>
+                            <div class="p-4 text-center sm:p-9 md:p-7 xl:p-9">
+                                <p class="text-base leading-relaxed text-body-color">
+                                    Lorem ipsum dolor sit amet pretium consectetur adipiscing elit. Lorem consectetur adipiscing elit.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            </div>
+                        <!-- ====== Pagination Section Start -->
+            <div class="bg-white dark:bg-dark py-10 text-center ">
+            <div
+                class="inline-flex gap-1 rounded-full border border-stroke p-3 "
+            >
+                <ul class="flex items-center gap-1">
+                <li>
+                    <button
+                    id="prevVideo"
+                    class="flex h-10 min-w-10 items-center justify-center rounded-full px-2 text-dark dark:text-white hover:text-white hover:bg-primary "
+                    >
+                    <svg
+                        width="20"
+                        height="21"
+                        viewBox="0 0 20 21"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                        d="M17.5 9.8125H4.15625L9.46875 4.40625C9.75 4.125 9.75 3.6875 9.46875 3.40625C9.1875 3.125 8.75 3.125 8.46875 3.40625L2 9.96875C1.71875 10.25 1.71875 10.6875 2 10.9688L8.46875 17.5312C8.59375 17.6562 8.78125 17.75 8.96875 17.75C9.15625 17.75 9.3125 17.6875 9.46875 17.5625C9.75 17.2812 9.75 16.8438 9.46875 16.5625L4.1875 11.2188H17.5C17.875 11.2188 18.1875 10.9062 18.1875 10.5312C18.1875 10.125 17.875 9.8125 17.5 9.8125Z"
+                        fill="currentColor"
+                        />
+                    </svg>
+                    </button>
+                </li>
+                <li>
+                    <button
+                    id="pageVideo-1"
+                    class="pageVideo-btn flex h-10 min-w-10 items-center justify-center rounded-full bg-primary px-2 text-dark dark:text-white hover:text-white hover:bg-primary "
+                    >
+                    1
+                    </button>
+                </li>
+                <li>
+                    <button
+                    id="pageVideo-2"
+                    class="pageVideo-btn flex h-10 min-w-10 items-center justify-center rounded-full px-2 text-dark dark:text-white hover:text-white hover:bg-primary"
+                    >
+                    2
+                    </button>
+                </li>
+
+                <li>
+                    <button
+                    id="nextVideo"
+                    class="flex h-10 min-w-10 items-center justify-center rounded-full px-2 text-dark dark:text-white hover:text-white hover:bg-primary "
+                    >
+                    <svg
+                        width="20"
+                        height="21"
+                        viewBox="0 0 20 21"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                        d="M18 10L11.5312 3.4375C11.25 3.15625 10.8125 3.15625 10.5312 3.4375C10.25 3.71875 10.25 4.15625 10.5312 4.4375L15.7812 9.78125H2.5C2.125 9.78125 1.8125 10.0937 1.8125 10.4688C1.8125 10.8438 2.125 11.1875 2.5 11.1875H15.8437L10.5312 16.5938C10.25 16.875 10.25 17.3125 10.5312 17.5938C10.6562 17.7188 10.8437 17.7812 11.0312 17.7812C11.2187 17.7812 11.4062 17.7188 11.5312 17.5625L18 11C18.2812 10.7187 18.2812 10.2812 18 10Z"
+                        fill="currentColor"
+                        />
+                    </svg>
+                    </button>
+                </li>
+                </ul>
+            </div>
+            </div>
+            <!-- ====== Pagination Section End -->
+            <!-- Modal Overlay -->
+            <div x-show="modalOpen"       
+            x-transition
+            class="fixed top-0 left-0 flex z-10 items-center justify-center w-full h-full min-h-screen px-4 py-5 bg-dark/90 rounded">
+                <div                     
+                class="h-full w-full inset-0 z-50 flex items-center justify-center p-2 overflow-hidden bg-dark bg-opacity-20">
+                    <iframe id="modalVideo" @click.outside="closeModalAndPauseVideo" width="560" height="315" :src="modalVideo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+            </section>
+            <!-- ====== Cards Section End -->
+        </div>
+      </div>
+   </div>
+</div>
     </div>
   </div>
   </div>
+<!-- ====== media end ====== -->
 
 
 <!-- ====== Footer Section Start -->
@@ -943,6 +1462,6 @@
 
   <!-- ====== All Scripts -->
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/table.js"></script>
+  <script src="assets/js/media.js"></script>
 </body>
 </html>
