@@ -15,6 +15,9 @@
   <script>new WOW().init();</script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-sankey"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@1.2.1/dist/chartjs-plugin-zoom.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
 </head>
 
 <body>
@@ -361,7 +364,7 @@
   <!-- ====== Navbar Section End -->
 
   <!-- ====== Banner Section Start -->
-  <div class="relative z-10 overflow-hidden pt-[120px] pb-[60px] md:pt-[130px] lg:pt-[160px] dark:bg-dark">
+  <div class="relative z-10 overflow-hidden pt-[120px] pb-5 md:pt-[130px] lg:pt-[160px] dark:bg-dark">
     <div
       class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-stroke/0 via-stroke dark:via-dark-3 to-stroke/0">
     </div>
@@ -420,17 +423,17 @@
   <!-- ====== Banner Section End -->
 
   <!-- ====== viz Start ====== -->
-  <section id="contact" class="relative py-10">
+  <section id="contact" class="relative py-0.5 pb-10">
     <div class="absolute top-0 left-0 -z-[1] w-full dark:bg-dark h-full"></div>
     <div class="container px-4 dark:bg-dark">
       <div>
-        <h1 class="my-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]">
+        <h1 class="my-4 text-2xl font-bold text-dark dark:text-white md:leading-[1.2]">
             Dinamika Anggaran Pendapatan dan Belanja Daerah Kota Bekasi
         </h1>
             <canvas id="apbdChart" width="800" height="500"></canvas>
       </div>
       <div>
-        <h1 class="my-4 mt-12 text-center text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]">
+        <h1 class="my-4 mt-12 text-center text-2xl font-bold text-dark dark:text-white md:leading-[1.2]">
             Aliran Pendapatan dan Pengeluaran APBD Kota Bekasi 2024
         </h1>
       </div>
@@ -438,12 +441,19 @@
         <div class="chartSankey">
             <canvas id="combinedSankey" class="bg-white"></canvas>
         </div>
+      </div> 
+      <br>
+      <!-- <div id="chart-container" class="my-8 overflow-x-auto">
+        <div class="chartSankey2">
+            <div id="sankeyChart" class="">
         </div>
+      </div>  -->
+    </div>
 
       </div>
       <div>
         <div class="container px-4">
-            <h1 class="my-4 mt-12 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]">
+            <h1 class="my-4 mt-12 text-2xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]">
                 Dokumen Terkait
             </h1>
                          <!-- ====== Table Section Start -->

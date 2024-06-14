@@ -3344,7 +3344,12 @@ body {
 
 .chartSankey {
   width: 1800px;
-  height: 900px;
+  height: 100vh;
+}
+
+.chartSankey2 {
+  width: 100vw;
+  height: 100vh;
 }
 
 .chart-container {
