@@ -1850,6 +1850,10 @@ body {
   padding-bottom: 60px;
 }
 
+.pb-\[30px\]{
+  padding-bottom: 30px;
+}
+
 .pr-16{
   padding-right: 4rem;
 }
@@ -1864,6 +1868,10 @@ body {
 
 .pt-\[120px\]{
   padding-top: 120px;
+}
+
+.pt-\[90px\]{
+  padding-top: 90px;
 }
 
 .pl-6 {
@@ -2116,6 +2124,11 @@ body {
 .ring-primary{
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(55 88 249 / var(--tw-ring-opacity));
+}
+
+.ring-black{
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(0 0 0 / var(--tw-ring-opacity));
 }
 
 .blur{
@@ -2686,6 +2699,10 @@ body {
   .sm\:py-12{
     padding-top: 3rem;
     padding-bottom: 3rem;
+  }
+
+    .sm\:pt-\[120px\]{
+    padding-top: 120px
   }
 
   .sm\:text-2xl{
