@@ -147,7 +147,7 @@ html {
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: "poppins","jomhuria";
+  font-family: "Poppins","Jomhuria";
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -258,7 +258,7 @@ code,
 kbd,
 samp,
 pre {
-  font-family: "poppins","jomhuria";
+  font-family: "Poppins","Jomhuria";
   /* 1 */
   font-size: 1em;
   /* 2 */
@@ -564,7 +564,7 @@ video {
 }
 
 body {
-  font-family: "poppins","jomhuria";
+  font-family: "Poppins","Jomhuria";
 }
 
 *, ::before, ::after{
