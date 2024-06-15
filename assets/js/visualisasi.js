@@ -1,3 +1,7 @@
+var theme = localStorage.getItem('theme') || 'light'; // Ambil tema dari localStorage
+var textColor = (theme === 'dark') ? '#fff' : '#000'; // Tentukan warna teks berdasarkan tema
+
+
 // Variabel data JSON
 
 var data_opd = [
@@ -122,17 +126,17 @@ function populateTableStruktur() {
     data_opd.forEach(function(item) {
         // Buat sebuah <tr> baru
         var row = document.createElement('tr');
-            row.className = "  border-b dark:border-dark h-70px";
+            row.className = "border-b dark:border-dark h-70px";
 
         // Buat sebuah <td> untuk nama OPD dan tambahkan teks nama_opd ke dalamnya
         var namaOpdCell = document.createElement('td');
         namaOpdCell.textContent = item.nama_dokumen;
-        namaOpdCell.className = "w-2/3 mx-8 text-dark dark:bg-dark dark:text-white dark:border-dark dark:text-dark-7 py-5 px-11 text-base font-medium ";
+        namaOpdCell.className = " mx-8 text-dark dark:bg-dark dark:text-white dark:border-dark dark:text-dark-7 py-5 px-11 text-base font-medium ";
         row.appendChild(namaOpdCell);
 
         // Buat sebuah <td> untuk link dan tambahkan tombol ke dalamnya
         var linkCell = document.createElement('td');
-        linkCell.className = "w-1/3 px-11 mx-8 py-5 flex justify-end";
+        linkCell.className = " px-11  py-5 flex justify-end";
         var linkButton = document.createElement('a');
         linkButton.href = item.link;
         linkButton.className = "bg-secondary -secondaryborder rounded-full inline-flex  py-3 px-7 text-base font-medium text-white hover:bg-[#0BB489] hover:border-[#0BB489] disabled:bg-gray-3 disabled:border-gray-3 disabled:text-dark-5";
@@ -218,6 +222,9 @@ document.addEventListener("DOMContentLoaded", function() {
             plugins: {
                 legend: {
                     position: 'top',
+                    labels: {
+                        color: textColor // Mengatur warna teks legend
+                    }
                 },
                 tooltip: {
                     mode: 'index',
@@ -229,14 +236,22 @@ document.addEventListener("DOMContentLoaded", function() {
                     display: true,
                     title: {
                         display: true,
-                        text: 'Tahun'
+                        text: 'Tahun',
+                        color: textColor // Mengatur warna teks title x-axis
+                    },
+                    ticks:{
+                      color: textColor
                     }
                 },
                 y: {
                     display: true,
                     title: {
                         display: true,
-                        text: 'Triliun Rupiah'
+                        text: 'Triliun Rupiah',
+                        color: textColor // Mengatur warna teks title x-axis
+                    },
+                    ticks:{
+                      color: textColor
                     }
                 }
             }
@@ -248,17 +263,34 @@ document.addEventListener("DOMContentLoaded", function() {
 // sankey
 // pakai cleanNumericString jika data ada pemisah ribuan (.)
 
+const adjustLabelFontSize = (chart) => {
+    const zoomScale = chart.$zoom._scaleRange.x || 1;
+    const fontSize = 14 / zoomScale; // Adjust base size 14 as needed
+    chart.options.sankey.node.label.font.size = fontSize;
+    chart.update();
+};
 
-var theme = localStorage.getItem('theme') || 'light'; // Ambil tema dari localStorage
-var textColor = (theme === 'dark') ? '#fff' : '#000'; // Tentukan warna teks berdasarkan tema
 
 // Opsi untuk chart Sankey
 const sankeyOptions = {
-    scaleFontColor: "#FFFFFF",
-    spriteText: true,
     responsive: true,
     maintainAspectRatio: false,
     plugins: {
+        // zoom: {
+        //     pan: {
+        //         enabled: false,
+        //         mode: 'xy'
+        //     },
+        //     zoom: {
+        //         wheel: {
+        //             enabled: true,
+        //         },
+        //         pinch: {
+        //             enabled: true
+        //         },
+        //         mode: 'xy'
+        //     }
+        // },
         legend: {
             display: false,
         },
@@ -287,7 +319,7 @@ const sankeyOptions = {
             },
         },
         datalabels: {
-          color: '#FFFF5F', // Color of the datalabels
+          color: '#FFFF5F', // Color of the datalabels G guna
       },
     },
     scales: {},
@@ -298,13 +330,13 @@ const sankeyOptions = {
     },
     sankey: {
         node: {
-          label: {
-            color: "ffff" // Gunakan warna teks berdasarkan variabel theme
-          }
-        },
-        nodePadding: 15, // Atur padding antar node
-        nodeWidth: 30, // Atur lebar node
-        iterations: 32 // Jumlah iterasi untuk konvergensi layout Sankey
+            label: {
+                color: "#fff",
+                font: {
+                    size: 14, // Initial font size
+                }
+            }
+        }
     }
 };
 
@@ -314,14 +346,13 @@ const pendapatanData = [
     { from: "Retribusi Daerah", to: "Pendapatan Asli Daerah (PAD)", flow: 459318088567 },
     { from: "Hasil Pengelolaan Kekayaan Daerah yang Dipisahkan", to: "Pendapatan Asli Daerah (PAD)", flow: 14399150000 },
     { from: "Lain-lain PAD yang Sah", to: "Pendapatan Asli Daerah (PAD)", flow: 42691573000 },
+    { from: "Pendapatan Asli Daerah (PAD)", to: "Pendapatan Daerah", flow: 3203800695567 },
+    { from: "Pendapatan Daerah", to: "Jumlah Pendapatan", flow: 6224886445137 },
     { from: "Pendapatan Transfer Pemerintah Pusat", to: "Pendapatan Transfer", flow: 2050528079000 },
     { from: "Pendapatan Transfer Antar Daerah", to: "Pendapatan Transfer", flow: 970557670570 },
-    { from: "Pendapatan Asli Daerah (PAD)", to: "Pendapatan Daerah", flow: 3203800695567 },
     { from: "Pendapatan Transfer", to: "Pendapatan Daerah", flow: 3021085749570 },
-    { from: "Pendapatan Daerah", to: "Jumlah Pendapatan", flow: 6224886445137 },
     { from: "Sisa Lebih Perhitungan Anggaran Tahun Sebelumnya", to: "Penerimaan Pembiayaan", flow: 131294484961 },
     { from: "Pencairan Dana Cadangan", to: "Penerimaan Pembiayaan", flow: 67472388000 },
-    { from: "Sisa Lebih Perhitungan Anggaran Tahun Sebelumnya", to: "Penerimaan Pembiayaan", flow: 131294484961 },
     { from: "Penerimaan Pembiayaan", to: "Jumlah Pendapatan", flow: 198766872961 },
 ];
 
@@ -397,20 +428,35 @@ function getColorByNameR(name) {
       data: pengeluaranData,
       colorFrom: (c) => getColorByNameR(c.dataset.data[c.dataIndex].from),
       colorTo: (c) => getColorByNameR(c.dataset.data[c.dataIndex].to),
-      priority: { // define if you have priorities
-        "Belanja Daerah": 1,
+      priority: {
+        "Jumlah Pengeluaran": 1,
+        "Belanja Daerah": 1, // Same priority as Jumlah Pengeluaran
+        "Belanja Operasi": 2,
+        "Belanja Modal": 2,
+        "Belanja Tidak Terduga": 2,
+        "Belanja Transfer": 2,
+        "Pengeluaran Pembiayaan": 2,
+        "Belanja Pegawai": 3,
+        "Belanja Barang dan Jasa": 3,
+        "Belanja Subsidi": 3,
+        "Belanja Hibah": 3,
+        "Belanja Bantuan Sosial": 3,
+        "Belanja Modal Tanah": 3,
+        "Belanja Modal Peralatan dan Mesin": 3,
+        "Belanja Modal Gedung dan Bangunan": 3,
+        "Belanja Modal Jalan, Jaringan, dan Irigasi": 3,
+        "Belanja Modal Aset Tetap Lainnya": 3,
+        "Belanja Modal Aset Lainnya": 3,
+        "Penyertaan Modal Daerah": 3,
       },
       column: {
-        "Belanja Tidak Terduga": 1,
-        "Belanja Transfer": 1,
-        "Sisa Lebih Perhitungan Anggaran Tahun Sebelumnya": 1,
         "Jumlah Pengeluaran": 4,
         "Belanja Daerah": 5,
         "Belanja Operasi": 6,
         "Belanja Modal": 6,
         "Belanja Tidak Terduga": 6,
         "Belanja Transfer": 6,
-        "Pengeluaran Pembiayaan": 6,
+        "Pengeluaran Pembiayaan": 5,
         "Belanja Pegawai": 7,
         "Belanja Barang dan Jasa": 7,
         "Belanja Subsidi": 7,
@@ -422,7 +468,7 @@ function getColorByNameR(name) {
         "Belanja Modal Jalan, Jaringan, dan Irigasi": 7,
         "Belanja Modal Aset Tetap Lainnya": 7,
         "Belanja Modal Aset Lainnya": 7,
-        "Penyertaan Modal Daerah": 7,
+        "Penyertaan Modal Daerah": 6,
       },
     },
   ]
@@ -459,3 +505,60 @@ if (canvas) {
   });
 }
 
+
+// Prepare data for the Sankey Diagram
+var nodeLabels = [];
+var linkSource = [];
+var linkTarget = [];
+var linkValue = [];
+var linkLabel = [];
+var nodeColor = [];
+
+// Iterate through pendapatanData to populate node and link arrays
+pendapatanData.forEach(function(item, index) {
+  if (!nodeLabels.includes(item.from)) {
+    nodeLabels.push(item.from);
+    nodeColor.push("blue"); // You can customize colors here
+  }
+  if (!nodeLabels.includes(item.to)) {
+    nodeLabels.push(item.to);
+    nodeColor.push("blue"); // You can customize colors here
+  }
+  linkSource.push(nodeLabels.indexOf(item.from));
+  linkTarget.push(nodeLabels.indexOf(item.to));
+  linkValue.push(item.flow);
+  linkLabel.push(item.from); // Using 'from' as link labels
+});
+
+// Define the data for the Sankey Diagram
+var data1 = {
+  type: "sankey",
+  orientation: "h", // Horizontal orientation
+  node: {
+    label: nodeLabels,
+    // x : [0.001,0.2    ,0.001  ,0.001   ,0.001   ,0.3    ,0.4    ,0.001   ,0.2   ,0.001    ,0.2    ,0.3    ,0.2],
+    // y : [0.001,0.001,1/3,5/12,6/12,0.001,0.001,9/12,5/12,10/12,10/12,10/12,10/12],
+    color: nodeColor,
+    hovertemplate: "%{label} = %{value:,.0f}<extra></extra>",
+  },
+  link: {
+    source: linkSource,
+    target: linkTarget,
+    value: linkValue,
+    label: linkLabel, // Using 'from' as link labels
+    hovertemplate: "%{label} = %{value:,.0f}<extra></extra>",
+    
+
+  }
+};
+
+// Define the layout for the Sankey Diagram
+var layout = {
+  title: "Sankey Diagram of Pendapatan Data",
+  font: {
+    size: 12
+  }
+};
+
+// Render the Sankey Diagram
+Plotly.newPlot('sankeyChart', [data1], layout);

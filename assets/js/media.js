@@ -1,4 +1,11 @@
-function fotoPagination() {
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+    
+    function fotoPagination() {
     let currentPageFoto = 1;
     const totalPagesFoto = 2; // Update this according to the number of pages you have
 
@@ -10,8 +17,8 @@ function fotoPagination() {
                 pageDiv.classList.add('hidden');
             }
         });
-
         updatePaginationButtonsFoto(page);
+        scrollToTop();
     }
 
     function updatePaginationButtonsFoto(page) {
@@ -64,8 +71,8 @@ function videoPagination() {
                 pageDiv.classList.add('hidden');
             }
         });
-
         updatePaginationButtonsVideo(page);
+        scrollToTop();
     }
 
     function updatePaginationButtonsVideo(page) {

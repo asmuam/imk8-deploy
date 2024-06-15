@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="assets/css/animate.css" />
     <link rel="stylesheet" href="assets/css/tailwind.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-ksm0ba0g9oMVR4n5Cq0l2w0Do0DpFnlcp6+0QQ4KuMgs4U9wChF3wYmrAnx8X+9T" crossorigin="anonymous">
-
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
     <!-- ==== WOW JS ==== -->
     <script src="assets/js/wow.min.js"></script>
@@ -40,17 +40,15 @@
 
     <!-- ====== Navbar Section Start -->
     <div
-      class="navbar-family-font ud-header absolute left-0 top-0 z-40 flex w-full items-center bg-transparent"
+      class="ud-header absolute left-0 top-0 z-40 flex w-full items-center bg-transparent"
     >
       <div class="container">
         <div class="relative -mx-4 flex items-center justify-between">
-          <div class="w-60 max-w-full px-4 ">
-            <a href="index.html" class="navbar-logo block w-full py-5 items-center" style="display: flex; justify-content: center; align-items: center;">
+          <div class="w-60 max-w-full px-4">
+            <a href="index.html" class="navbar-logo block w-full py-5">
               <img src="assets/images/logoBekasi.png" alt="logo" class="header-logo rem-logo items-center" />
-            </a> 
+            </a>
           </div>
-          
-        
           <div class="flex w-full items-center justify-between px-4">
             <div>
               <button
@@ -69,23 +67,24 @@
               </button>
               <nav
                 id="navbarCollapse"
-                class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg  bg-white py-5 shadow-lg dark:bg-dark-2 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:px-4 lg:py-0 lg:shadow-none dark:lg:bg-transparent xl:px-6"
-              > 
+                class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-dark-2 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:px-4 lg:py-0 lg:shadow-none dark:lg:bg-transparent xl:px-6"
+              >
                 <ul class="blcok lg:flex 2xl:ml-20">
-                  <!-- beranda -->
                   <li class="group relative">
                     <a
-                      href="blog-grids.html"
-                      class="ud-menu-scroll mx-8 flex py-2 text-4xl font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10"
+                      href="index.html"
+                      class="ud-menu-scroll mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70"
                     >
                       Beranda
                     </a>
                   </li>
+                  <!-- informasi -->
                   <li class="submenu-item group relative">
                     <a
                       href="javascript:void(0)"
-                      class="relative mx-8 flex items-center justify-between py-2 text-4xl font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10"
-                    >
+                      class="relative mx-8 flex items-center justify-between py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10"
+                      style="white-space: nowrap;"
+                      >
                       Tentang Kami
 
                       <svg
@@ -105,13 +104,13 @@
                       class="submenu relative left-0 top-full hidden w-[250px] rounded-sm bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full"
                     >
                       <a
-                        href="about.html"
+                        href="sejarah.html"
                         class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
                       >
-                        Sejarahx`
-                      </a>
+                        Sejarah
+                    </a>
                       <a
-                        href="pricing.html"
+                        href="lambang.html"
                         class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
                       >
                         Lambang
@@ -123,16 +122,16 @@
                         Kondisi Geografi
                       </a>
                       <a
-                        href="blog-grids.html"
+                        href="walikota.html"
                         class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
                       >
-                        Sejarah Walikota & wakil
+                        Sejarah Walikota dan Wakil
                       </a>
                       <a
                         href="blog-details.html"
                         class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
                       >
-                        Bangunan bersejarah
+                        Bangunan Bersejarah
                       </a>
                     </div>
                   </li>
@@ -140,7 +139,7 @@
                   <li class="submenu-item group relative">
                     <a
                       href="javascript:void(0)"
-                      class="relative mx-8 flex items-center justify-between py-2 text-4xl font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10"
+                      class="relative mx-8 flex items-center justify-between py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10"
                     >
                       Pemerintahan
 
@@ -161,13 +160,13 @@
                       class="submenu relative left-0 top-full hidden w-[250px] rounded-sm bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full"
                     >
                       <a
-                        href="about.html"
+                        href="visimisi.html"
                         class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
                       >
                         Visi Misi
                       </a>
                       <a
-                        href="pricing.html"
+                        href="struktur.html"
                         class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
                       >
                         Struktur Organisasi
@@ -179,18 +178,18 @@
                         Daftar Pejabat Struktural
                       </a>
                       <a
-                        href="contact.html"
+                        href="blog-grids.html"
                         class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
                       >
-                        Data Wilayah Kecamatan & Kelurahan
+                        Data Wilayah Kecamatan dan Kelurahan
                       </a>
                     </div>
                   </li>
-                  <!-- Regulasi -->
+                  <!-- regulasi -->
                   <li class="submenu-item group relative">
                     <a
                       href="javascript:void(0)"
-                      class="relative mx-8 flex items-center justify-between py-2 text-4xl font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10"
+                      class="relative mx-8 flex items-center justify-between py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10"
                     >
                       Regulasi
 
@@ -220,30 +219,30 @@
                         href="pricing.html"
                         class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
                       >
-                        Peraturan Wali Kota
+                        Peraturan Wali kota
                       </a>
                       <a
                         href="contact.html"
                         class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
                       >
-                        Keputusan Wali Kota
+                        Keputusan Walikota
                       </a>
                     </div>
                   </li>
-                  <!-- media -->
                   <li class="group relative">
                     <a
-                      href="#team"
-                      class="ud-menu-scroll mx-8 flex py-2 text-4xl font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10"
+                      href="media.html"
+                      class="ud-menu-scroll mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10"
                     >
                       Media
                     </a>
                   </li>
+                  <!-- yang ada sub menunya -->
                   <!-- informasi -->
                   <li class="submenu-item group relative">
                     <a
                       href="javascript:void(0)"
-                      class="relative mx-8 flex items-center justify-between py-2 text-4xl font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10"
+                      class="relative mx-8 flex items-center justify-between py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10"
                     >
                       Informasi
 
@@ -270,7 +269,7 @@
                         Realisasi Keuangan dan Pembangunan
                       </a>
                       <a
-                        href="pricing.html"
+                        href="visualisasi.html"
                         class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
                       >
                         Open Data
@@ -282,19 +281,19 @@
                         Transparansi dan Anggaran
                       </a>
                       <a
-                        href="contact.html"
+                        href="visualisasi.html"
                         class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
                       >
                         TKDN
                       </a>
                       <a
-                        href="contact.html"
+                        href="blog-details.html"
                         class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
                       >
                         RLPPD
                       </a>
                       <a
-                        href="contact.html"
+                        href="rlppd.html"
                         class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
                       >
                         COVID-19
@@ -305,27 +304,10 @@
                   <li class="group relative">
                     <a
                       href="blog-grids.html"
-                      class="ud-menu-scroll mx-8 flex py-2 text-4xl font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10"
+                      class="ud-menu-scroll mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10"
                     >
                       LHKPN
                     </a>
-                  </li>
-                 
-                        <!-- Sign Up Page
-                      </a>
-                      <a
-                        href="signin.html"
-                        class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
-                      >
-                        Sign In Page
-                      </a>
-                      <a
-                        href="404.html"
-                        class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
-                      >
-                        404 Page
-                      </a> -->
-                    </div>
                   </li>
                 </ul>
               </nav>
@@ -403,20 +385,6 @@
                   </svg>
                 </span>
               </label>
-              <!-- <div class="hidden sm:flex">
-                <a
-                  href="signin.html"
-                  class="loginBtn px-[22px] py-2 text-base font-medium text-white hover:opacity-70"
-                >
-                  Sign In
-                </a>
-                <a
-                  href="signup.html"
-                  class="signUpBtn rounded-md bg-white bg-opacity-20 px-6 py-2 text-base font-medium text-white duration-300 ease-in-out hover:bg-opacity-100 hover:text-dark"
-                >
-                  Sign Up
-                </a>
-              </div> -->
             </div>
           </div>
         </div>
@@ -443,7 +411,6 @@
               >
                 Cerdas, Kreatif, Maju, Sejahtera, dan Ihsan
               </p>
-              <ul
               <ul class="mb-10 flex flex-wrap items-center justify-center gap-5">
                 <li>
                   <form action="https://links.tailgrids.com/play-download" method="get" class="flex items-center bg-white rounded-full shadow-md transition duration-300 ease-in-out hover:bg-gray-100">
@@ -458,10 +425,10 @@
                     </button>
                   </form>
                 </li>
-              </ul>
+              <!-- </ul> -->
               
               
-                <li>
+                <!-- <li>
                   <a
                     href="https://github.com/tailgrids/play-tailwind"
                     target="_blank"
@@ -489,8 +456,8 @@
                     Star on Github
                   </a>
                 </li>
-              </ul>
-              <div>
+              </ul> -->
+              <!-- <div>
                 <p class="mb-4 text-center text-base font-medium text-white">
                   Built with latest technology
                 </p>
@@ -642,7 +609,7 @@
                     </svg>
                   </a>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
 
@@ -653,7 +620,7 @@
             >
               <div class="mt-16">
                 <img
-                  src="assets/images/hero/hero-image.jpg"
+                  src="assets/images/beranda/beranda.png"
                   alt="hero"
                   class="mx-auto max-w-full rounded-t-xl rounded-tr-xl"
                 />
@@ -1805,32 +1772,30 @@
     </div>
     <!-- ====== Hero Section End -->
 
-    <!-- ====== Features Section Start -->
+    <!-- ====== Portal Section Start -->
     <section class="pb-8 pt-20 dark:bg-dark lg:pb-[70px] lg:pt-[120px]">
       <div class="container">
         <div class="-mx-4 flex flex-wrap">
           <div class="w-full px-4">
             <div class="mx-auto mb-12 max-w-[485px] text-center lg:mb-[70px]">
-              <span class="mb-2 block text-lg font-semibold text-primary">
+              <!-- <span class="mb-2 block text-lg font-semibold text-primary">
                 Features
-              </span>
+              </span> -->
               <h2
                 class="mb-3 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]"
               >
-                Main Features Of Play
+                Portal
               </h2>
-              <p class="text-base text-body-color dark:text-dark-6">
-                There are many variations of passages of Lorem Ipsum available
-                but the majority have suffered alteration in some form.
-              </p>
+              
             </div>
           </div>
         </div>
+        
         <div class="-mx-4 flex flex-wrap">
           <div class="w-full px-4 md:w-1/2 lg:w-1/4">
-            <div class="wow fadeInUp group mb-12" data-wow-delay=".1s">
+            <div class="wow fadeInUp group mb-3" data-wow-delay=".1s">
               <div
-                class="relative z-10 mb-10 flex h-[70px] w-[70px] items-center justify-center rounded-[14px] bg-primary"
+                class="relative z-10 mb-1 flex h-[70px] w-[70px] items-center justify-center rounded-[14px] bg-primary"
               >
                 <span
                   class="absolute left-0 top-0 -z-[1] mb-8 flex h-[70px] w-[70px] rotate-[25deg] items-center justify-center rounded-[14px] bg-primary bg-opacity-20 duration-300 group-hover:rotate-45"
@@ -1849,9 +1814,9 @@
                 </svg>
               </div>
               <h4 class="mb-3 text-xl font-bold text-dark dark:text-white">
-                Free and Open-Source
+                Camera
               </h4>
-              <p class="mb-8 text-body-color dark:text-dark-6 lg:mb-9">
+              <!-- <p class="mb-8 text-body-color dark:text-dark-6 lg:mb-9">
                 Lorem Ipsum is simply dummy text of the printing and industry.
               </p>
               <a
@@ -1859,48 +1824,88 @@
                 class="text-base font-medium text-dark hover:text-primary dark:text-white dark:hover:text-primary"
               >
                 Learn More
-              </a>
+              </a> -->
             </div>
           </div>
           <div class="w-full px-4 md:w-1/2 lg:w-1/4">
             <div class="wow fadeInUp group mb-12" data-wow-delay=".15s">
               <div
-                class="relative z-10 mb-10 flex h-[70px] w-[70px] items-center justify-center rounded-[14px] bg-primary"
+                class="relative z-10 mb-1 flex h-[70px] w-[70px] items-center justify-center rounded-[14px] bg-primary"
               >
                 <span
                   class="absolute left-0 top-0 -z-[1] mb-8 flex h-[70px] w-[70px] rotate-[25deg] items-center justify-center rounded-[14px] bg-primary bg-opacity-20 duration-300 group-hover:rotate-45"
                 ></span>
-                <svg
+                <img
                   width="36"
                   height="36"
                   viewBox="0 0 36 36"
                   fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+                  src="assets/images/beranda/camera.svg"
                 >
                   <path
                     d="M30.5998 1.01245H5.39981C2.98105 1.01245 0.956055 2.9812 0.956055 5.4562V30.6562C0.956055 33.075 2.9248 35.0437 5.39981 35.0437H30.5998C33.0186 35.0437 34.9873 33.075 34.9873 30.6562V5.39995C34.9873 2.9812 33.0186 1.01245 30.5998 1.01245ZM5.39981 3.48745H30.5998C31.6123 3.48745 32.4561 4.3312 32.4561 5.39995V11.1937H3.4873V5.39995C3.4873 4.38745 4.38731 3.48745 5.39981 3.48745ZM3.4873 30.6V13.725H23.0623V32.5125H5.39981C4.38731 32.5125 3.4873 31.6125 3.4873 30.6ZM30.5998 32.5125H25.5373V13.725H32.4561V30.6C32.5123 31.6125 31.6123 32.5125 30.5998 32.5125Z"
                     fill="white"
                   />
-                </svg>
+                </img>
+            
               </div>
-              <h4 class="mb-3 text-xl font-bold text-dark dark:text-white">
-                Multipurpose Template
+              <h4 class="mb-3.5 text-xl font-bold text-dark dark:text-white">
+                Camera
               </h4>
-              <p class="mb-8 text-body-color dark:text-dark-6 lg:mb-9">
+              <!-- <p class="mb-8 text-body-color dark:text-dark-6 lg:mb-9">
                 Lorem Ipsum is simply dummy text of the printing and industry.
-              </p>
-              <a
+              </p> -->
+              <!-- <a
                 href="javascript:void(0)"
                 class="text-base font-medium text-dark hover:text-primary dark:text-white dark:hover:text-primary"
               >
                 Learn More
-              </a>
+              </a> -->
             </div>
           </div>
+
+          <div class="w-full px-4 md:w-1/2 lg:w-1/4">
+            <div class="wow fadeInUp group mb-12" data-wow-delay=".15s">
+              <div
+                class="relative z-10 mb-1 flex h-[70px] w-[70px] items-center justify-center rounded-[14px] bg-primary"
+              >
+                <span
+                  class="absolute left-0 top-0 -z-[1] mb-8 flex h-[70px] w-[70px] rotate-[25deg] items-center justify-center rounded-[14px] bg-primary bg-opacity-20 duration-300 group-hover:rotate-45"
+                ></span>
+                <img
+                  width="36"
+                  height="36"
+                  viewBox="0 0 36 36"
+                  fill="none"
+                  src="assets/images/beranda/camera.svg"
+                >
+                  <path
+                    d="M30.5998 1.01245H5.39981C2.98105 1.01245 0.956055 2.9812 0.956055 5.4562V30.6562C0.956055 33.075 2.9248 35.0437 5.39981 35.0437H30.5998C33.0186 35.0437 34.9873 33.075 34.9873 30.6562V5.39995C34.9873 2.9812 33.0186 1.01245 30.5998 1.01245ZM5.39981 3.48745H30.5998C31.6123 3.48745 32.4561 4.3312 32.4561 5.39995V11.1937H3.4873V5.39995C3.4873 4.38745 4.38731 3.48745 5.39981 3.48745ZM3.4873 30.6V13.725H23.0623V32.5125H5.39981C4.38731 32.5125 3.4873 31.6125 3.4873 30.6ZM30.5998 32.5125H25.5373V13.725H32.4561V30.6C32.5123 31.6125 31.6123 32.5125 30.5998 32.5125Z"
+                    fill="white"
+                  />
+                </img>
+            
+              </div>
+              <h4 class="mb-3.5 text-xl font-bold text-dark dark:text-white">
+                Camera
+              </h4>
+              <!-- <p class="mb-8 text-body-color dark:text-dark-6 lg:mb-9">
+                Lorem Ipsum is simply dummy text of the printing and industry.
+              </p> -->
+              <!-- <a
+                href="javascript:void(0)"
+                class="text-base font-medium text-dark hover:text-primary dark:text-white dark:hover:text-primary"
+              >
+                Learn More
+              </a> -->
+            </div>
+          </div>
+
+
           <div class="w-full px-4 md:w-1/2 lg:w-1/4">
             <div class="wow fadeInUp group mb-12" data-wow-delay=".2s">
               <div
-                class="relative z-10 mb-10 flex h-[70px] w-[70px] items-center justify-center rounded-[14px] bg-primary"
+                class="relative z-10 mb-1 flex h-[70px] w-[70px] items-center justify-center rounded-[14px] bg-primary"
               >
                 <span
                   class="absolute left-0 top-0 -z-[1] mb-8 flex h-[70px] w-[70px] rotate-[25deg] items-center justify-center rounded-[14px] bg-primary bg-opacity-20 duration-300 group-hover:rotate-45"
@@ -1951,9 +1956,11 @@
                 </svg>
               </div>
               <h4 class="mb-3 text-xl font-bold text-dark dark:text-white">
-                High-quality Design
+               Layanan
+               <br>
+               Pengaduan
               </h4>
-              <p class="mb-8 text-body-color dark:text-dark-6 lg:mb-9">
+              <!-- <p class="mb-8 text-body-color dark:text-dark-6 lg:mb-9">
                 Lorem Ipsum is simply dummy text of the printing and industry.
               </p>
               <a
@@ -1961,13 +1968,13 @@
                 class="text-base font-medium text-dark hover:text-primary dark:text-white dark:hover:text-primary"
               >
                 Learn More
-              </a>
+              </a> -->
             </div>
           </div>
           <div class="w-full px-4 md:w-1/2 lg:w-1/4">
             <div class="wow fadeInUp group mb-12" data-wow-delay=".25s">
               <div
-                class="relative z-10 mb-10 flex h-[70px] w-[70px] items-center justify-center rounded-[14px] bg-primary"
+                class="relative z-10 mb-1 flex h-[70px] w-[70px] items-center justify-center rounded-[14px] bg-primary"
               >
                 <span
                   class="absolute left-0 top-0 -z-[1] mb-8 flex h-[70px] w-[70px] rotate-[25deg] items-center justify-center rounded-[14px] bg-primary bg-opacity-20 duration-300 group-hover:rotate-45"
@@ -1998,9 +2005,10 @@
                 </svg>
               </div>
               <h4 class="mb-3 text-xl font-bold text-dark dark:text-white">
-                All Essential Elements
+                Portal
+                <br>PPID
               </h4>
-              <p class="mb-8 text-body-color dark:text-dark-6 lg:mb-9">
+              <!-- <p class="mb-8 text-body-color dark:text-dark-6 lg:mb-9">
                 Lorem Ipsum is simply dummy text of the printing and industry.
               </p>
               <a
@@ -2008,7 +2016,7 @@
                 class="text-base font-medium text-dark hover:text-primary dark:text-white dark:hover:text-primary"
               >
                 Learn More
-              </a>
+              </a> -->
             </div>
           </div>
         </div>

@@ -20,6 +20,21 @@
   font-family: "Poppins";
 }
 
+.italic{
+  font-style: italic;
+}
+.bold{
+  font-style: bold;
+}
+.justify {
+  text-align: justify;
+}
+
+.label {
+  width: 100px; /* Atur sesuai kebutuhan Anda */
+  display: inline-block;
+  font-weight: bold;
+}
 .inset-b25rem {
   top: 0;
   right: 0;
@@ -179,6 +194,10 @@ abbr:where([title]) {
 /*
 Remove the default font size and weight for headings.
 */
+.large-logo {
+      width: 500px; /* Adjust the width as needed */
+      height: auto;
+    }
 .small-logo {
   width: 50px; /* Adjust the width as needed */
   height: auto;
@@ -656,6 +675,7 @@ body {
   padding-left: 16px;
 }
 
+
 @media (min-width: 540px){
   .container{
     max-width: 540px;
@@ -798,9 +818,14 @@ body {
   top: 50%;
 }
 
+.top-1\/4{
+  top: 25%;
+}
+
 .top-4{
   top: 1rem;
 }
+
 
 .top-\[60px\]{
   top: 60px;
@@ -1134,6 +1159,10 @@ body {
 
 .w-60{
   width: 15rem;
+}
+
+.w-160{
+  width: 30rem;
 }
 
 .w-\[120px\]{
@@ -1709,6 +1738,11 @@ body {
   padding-bottom: 0.125rem;
 }
 
+.py-4{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .py-10{
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
@@ -1840,6 +1874,10 @@ body {
   text-align: center;
 }
 
+.text-end{
+  text-align: right;
+}
+
 .text-2xl{
   font-size: 1.5rem;
   line-height: 2rem;
@@ -1850,6 +1888,10 @@ body {
   line-height: 2.25rem;
 }
 
+.text-pre4xl{
+  font-size: 2rem;
+  line-height: 1rem;
+}
 .text-4xl{
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -2350,10 +2392,10 @@ body {
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-primary:hover{
+/* .hover\:bg-primary:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(55 88 249 / var(--tw-bg-opacity));
-}
+} */
 
 .hover\:bg-white:hover{
   --tw-bg-opacity: 1;
@@ -2383,11 +2425,6 @@ body {
   color: rgb(55 88 249 / var(--tw-text-opacity));
 }
 
-.hover\:text-white:hover{
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
 .hover\:underline:hover{
   text-decoration-line: underline;
 }
@@ -2404,6 +2441,18 @@ body {
 .hover\:border-body-color:hover {
     --tw-border-opacity: 1;
     border-color: rgb(99 115 129 / var(--tw-border-opacity));
+}
+
+@media (hover: hover){
+    .hover\:bg-primary:hover{
+      --tw-bg-opacity: 1;
+      background-color: rgb(55 88 249 / var(--tw-bg-opacity));
+    }
+
+    .hover\:text-white:hover{
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
 }
 
 .focus\:border-primary:focus{
@@ -3295,7 +3344,12 @@ body {
 
 .chartSankey {
   width: 1800px;
-  height: 900px;
+  height: 100vh;
+}
+
+.chartSankey2 {
+  width: 100vw;
+  height: 100vh;
 }
 
 .chart-container {

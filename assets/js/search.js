@@ -1,3 +1,9 @@
+   function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
 document.addEventListener('DOMContentLoaded', function() {
     // Get search query from URL
     const urlParams = new URLSearchParams(window.location.search);
@@ -133,6 +139,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 `;
                 searchResultsElement.insertAdjacentHTML('beforeend', noResultsHTML);
             }
+            scrollToTop();
         }
 
         // Display initial results
