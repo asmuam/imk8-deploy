@@ -40,51 +40,53 @@
 
     <!-- ====== Navbar Section Start -->
     <div
-      class="ud-header absolute left-0 top-0 z-40 flex w-full items-center bg-transparent"
+      class="navbar-family-font ud-header absolute left-0 top-0 z-40 flex w-full items-center bg-transparent"
     >
       <div class="container">
-        <div class="relative -mx-4 flex items-center justify-between">
-          <div class="w-60 max-w-full px-4">
-            <a href="index.html" class="navbar-logo block w-full py-5">
+        <div class="relative flex items-center justify-center">
+          <div class="w-60 max-w-full">
+            <a href="index.html" class="navbar-logo block w-full py-5 items-center" style="display: flex; justify-content: center; align-items: center;">
               <img src="assets/images/logoBekasi.png" alt="logo" class="header-logo rem-logo items-center" />
-            </a>
+            </a> 
           </div>
-          <div class="flex w-full items-center justify-between px-4">
-            <div>
+          
+        
+          <div class="flex w-full items-center justify-center">
+            <div class="w-full">
               <button
                 id="navbarToggler"
                 class="absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
               >
                 <span
-                  class="relative my-[6px] block h-[2px] w-[30px] bg-dark dark:bg-white"
+                  class="relative my-[6px] block h-[2px] w-[30px] bg-white"
                 ></span>
                 <span
-                  class="relative my-[6px] block h-[2px] w-[30px] bg-dark dark:bg-white"
+                  class="relative my-[6px] block h-[2px] w-[30px] bg-white"
                 ></span>
                 <span
-                  class="relative my-[6px] block h-[2px] w-[30px] bg-dark dark:bg-white"
+                  class="relative my-[6px] block h-[2px] w-[30px] bg-white"
                 ></span>
               </button>
               <nav
                 id="navbarCollapse"
-                class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-dark-2 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:px-4 lg:py-0 lg:shadow-none dark:lg:bg-transparent xl:px-6"
-              >
-                <ul class="blcok lg:flex 2xl:ml-20">
-                  <li class="group relative">
+                class="pb-4"
+              > 
+              <br/>
+                 <ul class="flex align-items justify-between"> 
+                  <!-- beranda -->
+                  <li class="submenu-item group relative">
                     <a
-                      href="index.html"
-                      class=" mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6  lg:group-hover:opacity-70"
+                      href="blog-grids.html"
+                      class="relative flex items-center justify-between text-pre4xl font-medium text-dark group-hover:text-primary dark:text-white lg:inline-flex lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70"
                     >
                       Beranda
                     </a>
                   </li>
-                  <!-- informasi -->
                   <li class="submenu-item group relative">
                     <a
                       href="javascript:void(0)"
-                      class="relative mx-8 flex items-center justify-between py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:group-hover:opacity-70 xl:ml-10"
-                      style="white-space: nowrap;"
-                      >
+                      class="relative flex items-center justify-between text-pre4xl font-medium text-dark group-hover:text-primary dark:text-white lg:inline-flex lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70"
+                    >
                       Tentang Kami
 
                       <svg
@@ -101,37 +103,37 @@
                       </svg>
                     </a>
                     <div
-                      class="submenu relative left-0 top-full hidden w-[250px] rounded-sm bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full"
+                      class="submenu relative top-full hidden w-[250px] rounded-sm bg-white transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full"
                     >
                       <a
-                        href="sejarah.html"
-                        class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
+                        href="about.html"
+                        class="block rounded px-4 py-[10px] text-2xl text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
                       >
                         Sejarah
-                    </a>
+                      </a>
                       <a
-                        href="lambang.html"
-                        class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
+                        href="pricing.html"
+                        class="block rounded px-4 py-[10px] text-2xl text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
                       >
                         Lambang
                       </a>
                       <a
                         href="contact.html"
-                        class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
+                        class="block rounded px-4 py-[10px] text-2xl text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
                       >
                         Kondisi Geografi
                       </a>
                       <a
-                        href="walikota.html"
-                        class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
+                        href="blog-grids.html"
+                        class="block rounded px-4 py-[10px] text-2xl text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
                       >
-                        Sejarah Walikota dan Wakil
+                        Sejarah Walikota & wakil
                       </a>
                       <a
-                        href="bangunan.html"
-                        class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
+                        href="blog-details.html"
+                        class="block rounded px-4 py-[10px] text-2xl text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
                       >
-                        Bangunan Bersejarah
+                        Bangunan bersejarah
                       </a>
                     </div>
                   </li>
@@ -139,7 +141,7 @@
                   <li class="submenu-item group relative">
                     <a
                       href="javascript:void(0)"
-                      class="relative mx-8 flex items-center justify-between py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:group-hover:opacity-70 xl:ml-10"
+                      class="relative flex items-center justify-between text-pre4xl font-medium text-dark group-hover:text-primary dark:text-white lg:inline-flex lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70"
                     >
                       Pemerintahan
 
@@ -160,36 +162,36 @@
                       class="submenu relative left-0 top-full hidden w-[250px] rounded-sm bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full"
                     >
                       <a
-                        href="visimisi.html"
-                        class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
+                        href="about.html"
+                        class="block rounded px-4 py-[10px] text-2xl text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
                       >
                         Visi Misi
                       </a>
                       <a
-                        href="struktur.html"
-                        class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
+                        href="pricing.html"
+                        class="block rounded px-4 py-[10px] text-2xl text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
                       >
                         Struktur Organisasi
                       </a>
                       <a
-                        href="https://siap.bekasikota.go.id/index.php/frontend/pejabat/"
-                        class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
+                        href="contact.html"
+                        class="block rounded px-4 py-[10px] text-2xl text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
                       >
                         Daftar Pejabat Struktural
                       </a>
                       <a
-                        href="https://k-cloud.bekasikota.go.id/index.php/s/SK2l7YR5zC2bVZQ"
-                        class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
+                        href="contact.html"
+                        class="block rounded px-4 py-[10px] text-2xl text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
                       >
-                        Data Wilayah Kecamatan dan Kelurahan
+                        Data Wilayah Kecamatan & Kelurahan
                       </a>
                     </div>
                   </li>
-                  <!-- regulasi -->
+                  <!-- Regulasi -->
                   <li class="submenu-item group relative">
                     <a
                       href="javascript:void(0)"
-                      class="relative mx-8 flex items-center justify-between py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4  lg:group-hover:opacity-70 xl:ml-10"
+                      class="0relative flex items-center justify-between text-pre4xl font-medium text-dark group-hover:text-primary dark:text-white lg:inline-flex lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70"
                     >
                       Regulasi
 
@@ -210,39 +212,39 @@
                       class="submenu relative left-0 top-full hidden w-[250px] rounded-sm bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full"
                     >
                       <a
-                        href="https://jdih.bekasikota.go.id/peraturan-daerah"
-                        class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
+                        href="about.html"
+                        class="block rounded px-4 py-[10px] text-2xl text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
                       >
                         Peraturan Daerah
                       </a>
                       <a
-                        href="https://jdih.bekasikota.go.id/peraturan-walikota"
-                        class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
+                        href="pricing.html"
+                        class="block rounded px-4 py-[10px] text-2xl text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
                       >
-                        Peraturan Wali kota
+                        Peraturan Wali Kota
                       </a>
                       <a
-                        href="https://jdih.bekasikota.go.id/data-peraturan-kepwal"
-                        class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
+                        href="contact.html"
+                        class="block rounded px-4 py-[10px] text-2xl text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
                       >
-                        Keputusan Walikota
+                        Keputusan Wali Kota
                       </a>
                     </div>
                   </li>
-                  <li class="group relative">
+<!-- media -->
+                  <li class="submenu-item group relative">
                     <a
-                      href="media.html"
-                      class=" mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6  lg:group-hover:text-primary lg:group-hover:opacity-70 xl:ml-10"
+                      href="blog-grids.html"
+                      class="relative flex items-center justify-between text-pre4xl font-medium text-dark group-hover:text-primary dark:text-white lg:inline-flex lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70"
                     >
                       Media
                     </a>
                   </li>
-                  <!-- yang ada sub menunya -->
                   <!-- informasi -->
                   <li class="submenu-item group relative">
                     <a
                       href="javascript:void(0)"
-                      class="relative mx-8 flex items-center justify-between py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4  lg:group-hover:opacity-100 xl:ml-10"
+                      class="relative flex items-center justify-between text-pre4xl font-medium text-dark group-hover:text-primary dark:text-white lg:inline-flex lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70"
                     >
                       Informasi
 
@@ -263,56 +265,81 @@
                       class="submenu relative left-0 top-full hidden w-[250px] rounded-sm bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full"
                     >
                       <a
-                        href="https://simpelbang.bekasikota.go.id/"
-                        class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
+                        href="about.html"
+                        class="block rounded px-4 py-[10px] text-2xl text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
                       >
                         Realisasi Keuangan dan Pembangunan
                       </a>
                       <a
-                        href="https://danta.bekasikota.go.id/"
-                        class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
+                        href="pricing.html"
+                        class="block rounded px-4 py-[10px] text-2xl text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
                       >
                         Open Data
                       </a>
                       <a
-                        href="visualisasi.html"
-                        class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
+                        href="contact.html"
+                        class="block rounded px-4 py-[10px] text-2xl text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
                       >
                         Transparansi dan Anggaran
                       </a>
                       <a
-                        href="https://tkdn.kemenperin.go.id/search.php"
-                        class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
+                        href="contact.html"
+                        class="block rounded px-4 py-[10px] text-2xl text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
                       >
                         TKDN
                       </a>
                       <a
-                        href="rlppd.html".html"
-                        class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
+                        href="contact.html"
+                        class="block rounded px-4 py-[10px] text-2xl text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
                       >
                         RLPPD
                       </a>
                       <a
-                        href="https://corona.bekasikota.go.id/"
-                        class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
+                        href="contact.html"
+                        class="block rounded px-4 py-[10px] text-2xl text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
                       >
                         COVID-19
                       </a>
                     </div>
                   </li>
                   <!-- lhkpn -->
-                  <li class="group relative">
+                  <li class="submenu-item group relative">
                     <a
-                      href="https://elhkpn.kpk.go.id/portal/user/pengumuman_lhkpn/YW1odFRqRk9hRk4zUm1abmREUnZORkp4ZURCRE5YRmpRazF1WVhWRGRWZHhLMnhFUW1kSlpDczJkVXQ1TURReFpIaFhTMXAwVFRkRWIwRnVWWFpRU0E9PQ=="
-                      class=" mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6   lg:group-hover:opacity-70 xl:ml-10"
+                      href="blog-grids.html"
+                      class="relative flex items-center justify-between text-pre4xl font-medium text-dark group-hover:text-primary dark:text-white lg:inline-flex lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70"
                     >
                       LHKPN
                     </a>
                   </li>
+                 
+                        <!-- Sign Up Page
+                      </a>
+                      <a
+                        href="signin.html"
+                        class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
+                      >
+                        Sign In Page
+                      </a>
+                      <a
+                        href="404.html"
+                        class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
+                      >
+                        404 Page
+                      </a> -->
+                    </div>
+                  </li>
                 </ul>
               </nav>
             </div>
-            <div class="flex items-center justify-end pr-16 lg:pr-0">
+            <!-- Bagian Jumbotron -->
+
+            <!-- <img src="assets/images/beranda/beranda.png" /> -->
+
+
+            <!-- Akhir Jumboton -->
+
+
+            <div class="flex items-center justify-end pr-16 px-10">
               <label
                 for="themeSwitcher"
                 class="inline-flex cursor-pointer items-center"
@@ -325,7 +352,7 @@
                   id="themeSwitcher"
                   class="sr-only"
                 />
-                <span class="block text-dark dark:hidden">
+                <span class="block text-white dark:hidden">
                   <svg
                     class="fill-current"
                     width="24"
@@ -385,6 +412,20 @@
                   </svg>
                 </span>
               </label>
+              <!-- <div class="hidden sm:flex">
+                <a
+                  href="signin.html"
+                  class="loginBtn px-[22px] py-2 text-base font-medium text-white hover:opacity-70"
+                >
+                  Sign In
+                </a>
+                <a
+                  href="signup.html"
+                  class="signUpBtn rounded-md bg-white bg-opacity-20 px-6 py-2 text-base font-medium text-white duration-300 ease-in-out hover:bg-opacity-100 hover:text-dark"
+                >
+                  Sign Up
+                </a>
+              </div> -->
             </div>
           </div>
         </div>
@@ -2085,33 +2126,36 @@
     <section id="about" class="bg-gray-1 pb-8 pt-20 dark:bg-dark-2 lg:pb-[70px] lg:pt-[120px]">
       <div class="container">
         <div class="wow fadeInUp" data-wow-delay=".2s">
+          <div class="mx-auto mb-12 max-w-[485px] text-center lg:mb-[70px]">
+            <h2
+              class="mb-3 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]"
+            >
+              Berita Terkini
+            </h2>
+            
+          </div>
           <div class="-mx-4 flex flex-wrap items-center">
             <div class="w-full px-4 lg:w-1/2">
               <div class="mb-12 max-w-[540px] lg:mb-0">
                 <h2
-                  class="mb-5 text-3xl font-bold leading-tight text-dark dark:text-white sm:text-[40px] sm:leading-[1.2]"
+                  class="mb-5 text-3xl font-bold leading-tight text-dark dark:text-white sm:text-[28px] sm:leading-[1.2]"
                 >
-                  Brilliant Toolkit to Build Nextgen Website Faster.
+                Siswi SMP Bekasi Dikeroyok karena Urusan Asmara, Polisi Turun Tangan
                 </h2>
                 <p
-                  class="mb-10 text-base leading-relaxed text-body-color dark:text-dark-6"
+                  class="mb-10 text-base justify leading-relaxed text-body-color dark:text-dark-6"
                 >
-                  The main ‘thrust' is to focus on educating attendees on how to
-                  best protect highly vulnerable business applications with
-                  interactive panel discussions and roundtables led by subject
-                  matter experts.
+                Sebuah video pengeroyokan remaja putri yang disebut terjadi di Kota Bekasi, Jawa Barat (Jabar), beredar di media sosial. Polisi turun tangan mengusut kasus ini.
+                <br />
                   <br />
-                  <br />
-                  The main ‘thrust' is to focus on educating attendees on how to
-                  best protect highly vulnerable business applications with
-                  interactive panel.
+                  Dari video yang beredar, tampak seorang remaja putri yang statusnya siswi SMP dikeroyok sekitar 4 orang sebayanya di suatu lapangan. Narasi video menyebutkan pengeroyokan itu dilatari masalah asmara.
                 </p>
 
                 <a
                   href="javascript:void(0)"
                   class="inline-flex items-center justify-center rounded-md border border-primary bg-primary px-7 py-3 text-center text-base font-medium text-white hover:border-blue-dark hover:bg-blue-dark"
                 >
-                  Know More
+                  Lihat Selengkapnya
                 </a>
               </div>
             </div>
@@ -2123,7 +2167,7 @@
                     class="mb-4 sm:mb-8 sm:h-[400px] md:h-[540px] lg:h-[400px] xl:h-[500px]"
                   >
                     <img
-                      src="./assets/images/about/about-image-01.jpg"
+                      src="./assets/images/index/berita1.jpeg"
                       alt="about image"
                       class="h-full w-full object-cover object-center"
                     />
@@ -2135,7 +2179,7 @@
                     class="mb-4 sm:mb-8 sm:h-[220px] md:h-[346px] lg:mb-4 lg:h-[225px] xl:mb-8 xl:h-[310px]"
                   >
                     <img
-                      src="./assets/images/about/about-image-02.jpg"
+                      src="./assets/images/index/berita2.jpg"
                       alt="about image"
                       class="h-full w-full object-cover object-center"
                     />
@@ -2145,17 +2189,17 @@
                     class="relative z-10 mb-4 flex items-center justify-center overflow-hidden bg-primary px-6 py-12 sm:mb-8 sm:h-[160px] sm:p-5 lg:mb-4 xl:mb-8"
                   >
                     <div>
-                      <span class="block text-5xl font-extrabold text-white">
-                        09
+                      <span class="block text-2xl font-extrabold text-white">
+                        Tampilkan berita lainnya
                       </span>
-                      <span class="block text-base font-semibold text-white">
-                        We have
-                      </span>
-                      <span
+                      <!-- <span class="block text-base font-extrabold text-white">
+                        Tampilkan Berita Lainnya
+                      </span> -->
+                      <!-- <span
                         class="block text-base font-medium text-white text-opacity-70"
                       >
                         Years of experience
-                      </span>
+                      </span> -->
                     </div>
                     <div>
                       <span class="absolute left-0 top-0 -z-10">
@@ -5464,5 +5508,75 @@
 
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+      // ==== for menu scroll
+      const pageLink = document.querySelectorAll(".ud-menu-scroll");
+
+      pageLink.forEach((elem) => {
+        elem.addEventListener("click", (e) => {
+          e.preventDefault();
+          document.querySelector(elem.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+            offsetTop: 1 - 60,
+          });
+        });
+      });
+
+      // section menu active
+      function onScroll(event) {
+        const sections = document.querySelectorAll(".ud-menu-scroll");
+        const scrollPos =
+          window.pageYOffset ||
+          document.documentElement.scrollTop ||
+          document.body.scrollTop;
+
+        for (let i = 0; i < sections.length; i++) {
+          const currLink = sections[i];
+          const val = currLink.getAttribute("href");
+          const refElement = document.querySelector(val);
+          const scrollTopMinus = scrollPos + 73;
+          if (
+            refElement.offsetTop <= scrollTopMinus &&
+            refElement.offsetTop + refElement.offsetHeight > scrollTopMinus
+          ) {
+            document
+              .querySelector(".ud-menu-scroll")
+              .classList.remove("active");
+            currLink.classList.add("active");
+          } else {
+            currLink.classList.remove("active");
+          }
+        }
+      }
+
+      window.document.addEventListener("scroll", onScroll);
+
+      // Testimonial
+      const testimonialSwiper = new Swiper(".testimonial-carousel", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        breakpoints: {
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          1280: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        },
+      });
+    </script>
   </body>
 </html>
