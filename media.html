@@ -448,7 +448,7 @@
    {
    openTab: 1,
    activeClasses: 'bg-primary text-white',
-   inactiveClasses: 'text-body-color hover:bg-primary hover:text-white',
+   inactiveClasses: 'text-body-color border-primary rounded-full border hover:bg-primary hover:text-white',
    }
    "
    x-init="fotoPagination()"
@@ -461,7 +461,7 @@
          href="javascript:void(0)"
          @click="openTab = 1 ; fotoPagination()"
          :class="openTab === 1 ? activeClasses : inactiveClasses"
-         class="px-4 py-3 text-sm font-medium rounded-md md:text-base lg:px-6"
+         class="px-4 py-3 text-sm font-medium rounded-md md:text-base lg:px-6 mx-4 flex-1 text-center mb-1"
          >
       Foto
       </a>
@@ -469,7 +469,7 @@
          href="javascript:void(0)"
          @click="openTab = 2; videoPagination()"
          :class="openTab === 2 ? activeClasses : inactiveClasses"
-         class="px-4 py-3 text-sm font-medium rounded-md md:text-base lg:px-6"
+         class="px-4 py-3 text-sm font-medium rounded-md md:text-base lg:px-6 mx-4 flex-1 text-center mb-1"
          >
       Video
       </a>
@@ -485,6 +485,7 @@
             <section class="bg-gray-2 pb-10 lg:pb-20" x-data="{ modalOpen: false, modalImage: '' }">
             <div id="pageFoto-1" class="pageFoto hidden">
                 <div class="container mx-auto">
+                <span>menampilkan halaman 1 dari 2</span>
                 <div class="flex flex-wrap -mx-4">
                     <div class="w-full px-4 md:w-1/2 xl:w-1/5">
                         <div
@@ -682,6 +683,7 @@
             </div>
             <div id="pageFoto-2" class="pageFoto hidden">
                 <div class="container mx-auto">
+                <span>menampilkan halaman 2 dari 2</span>
                 <div class="flex flex-wrap -mx-4">
                     <div class="w-full px-4 md:w-1/2 xl:w-1/5">
                         <div
@@ -898,6 +900,7 @@
             <section x-data="{ modalOpen: false, modalVideo: '' }" class="bg-gray-2 pb-10 lg:pb-20">
             <div id="pageVideo-1" class="pageVideo hidden">
             <div class="container mx-auto">
+                <span>menampilkan halaman 1 dari 2</span>
                 <div class="flex flex-wrap -mx-4">
                     <div class="w-full px-4 md:w-1/2 xl:w-1/5">
                         <div class="mb-10 overflow-hidden bg-white rounded-lg shadow-1 hover:shadow-3 relative"
@@ -923,7 +926,8 @@
             </div>
             </div>
             <div id="pageVideo-2" class="pageVideo hidden">
-                           <div class="container mx-auto">
+                <div class="container mx-auto">
+                <span>menampilkan halaman 2 dari 2</span>
                 <div class="flex flex-wrap -mx-4">
                     <div class="w-full px-4 md:w-1/2 xl:w-1/5">
                         <div class="mb-10 overflow-hidden bg-white rounded-lg shadow-1 hover:shadow-3 relative"

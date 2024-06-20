@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="assets/css/animate.css" />
   <link rel="stylesheet" href="assets/css/tailwind.css" />
 
+
   <!-- ==== WOW JS ==== -->
   <script src="assets/js/wow.min.js"></script>
   <script>new WOW().init();</script>
@@ -451,15 +452,16 @@
     <div class="absolute top-0 left-0 -z-[1] w-full dark:bg-dark h-full"></div>
     <div class="container px-4 dark:bg-dark">
       <div>
-        <h1 class="my-4 text-2xl font-bold text-dark dark:text-white md:leading-[1.2]">
+        <h1 class="my-4 text-3xl font-bold text-dark dark:text-white md:leading-[1.2]">
             Dinamika Anggaran Pendapatan dan Belanja Daerah Kota Bekasi
         </h1>
-            <canvas id="apbdChart" width="800" height="500"></canvas>
+            <canvas id="apbdChart"></canvas>
       </div>
-      <div>
-        <h1 class="my-4 mt-12 text-center text-2xl font-bold text-dark dark:text-white md:leading-[1.2]">
+      <div class="text-center">
+        <h1 class="my-4 mt-12 text-center text-3xl font-bold text-dark dark:text-white md:leading-[1.2]">
             Aliran Pendapatan dan Pengeluaran APBD Kota Bekasi 2024
         </h1>
+        <span class="text-center text-dark dark:text-white"><< Geser ke kanan atau ke kiri untuk melihat lebih lanjut >></span>
       </div>
       <div id="chart-container" class="my-8 overflow-x-auto">
         <div class="chartSankey">

@@ -1,5 +1,15 @@
 var theme = localStorage.getItem('theme') || 'light'; // Ambil tema dari localStorage
 var textColor = (theme === 'dark') ? '#fff' : '#000'; // Tentukan warna teks berdasarkan tema
+window.addEventListener('storage', function(event) {
+  if (event.key === 'theme') {
+    var theme = event.newValue || 'light'; // Ambil nilai tema baru
+    var textColor = (theme === 'dark') ? '#fff' : '#000'; // Tentukan warna teks berdasarkan tema baru
+    // Lakukan sesuatu dengan textColor, misalnya memperbarui gaya
+    console.log('Tema telah diubah menjadi:', theme);
+    console.log('Warna teks:', textColor);
+  }
+});
+
 
 
 // Variabel data JSON
@@ -212,53 +222,135 @@ const data = {
 };
 
 
-document.addEventListener("DOMContentLoaded", function() {
-    var ctx = document.getElementById('apbdChart').getContext('2d');
-    var apbdChart = new Chart(ctx, {
-        type: 'line',
-        data: data,
-        options: {
-            responsive: true,
-            plugins: {
-                legend: {
-                    position: 'top',
-                    labels: {
-                        color: textColor // Mengatur warna teks legend
-                    }
-                },
-                tooltip: {
-                    mode: 'index',
-                    intersect: false,
-                }
-            },
-            scales: {
-                x: {
-                    display: true,
-                    title: {
-                        display: true,
-                        text: 'Tahun',
-                        color: textColor // Mengatur warna teks title x-axis
-                    },
-                    ticks:{
-                      color: textColor
-                    }
-                },
-                y: {
-                    display: true,
-                    title: {
-                        display: true,
-                        text: 'Triliun Rupiah',
-                        color: textColor // Mengatur warna teks title x-axis
-                    },
-                    ticks:{
-                      color: textColor
-                    }
-                }
-            }
-        }
-    });
-});
+// document.addEventListener("DOMContentLoaded", function() {
+//     var ctx = document.getElementById('apbdChart').getContext('2d');
+//     var apbdChart = new Chart(ctx, {
+//         type: 'line',
+//         data: data,
+//         options: {
+//             responsive: true,
+//             plugins: {
+//                 legend: {
+//                     position: 'top',
+//                     labels: {
+//                         color: textColor // Mengatur warna teks legend
+//                     }
+//                 },
+//                 tooltip: {
+//                     mode: 'index',
+//                     intersect: false,
+//                 }
+//             },
+//             scales: {
+//                 x: {
+//                     display: true,
+//                     title: {
+//                         display: true,
+//                         text: 'Tahun',
+//                         color: textColor // Mengatur warna teks title x-axis
+//                     },
+//                     ticks:{
+//                       color: textColor
+//                     }
+//                 },
+//                 y: {
+//                     display: true,
+//                     title: {
+//                         display: true,
+//                         text: 'Triliun Rupiah',
+//                         color: textColor // Mengatur warna teks title x-axis
+//                     },
+//                     ticks:{
+//                       color: textColor
+//                     }
+//                 }
+//             }
+//         }
+//     });
+// });
 
+
+            document.addEventListener("DOMContentLoaded", function() {
+                initializeChart();
+            });
+
+            // Initialize Chart
+            let apbdChart;
+            function initializeChart() {
+                const ctx = document.getElementById('apbdChart').getContext('2d');
+                apbdChart = new Chart(ctx, {
+                    type: 'line',
+                    data: data,
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            legend: {
+                                position: 'top',
+                                labels: {
+                                    color: getTextColor() // Mengatur warna teks legend
+                                }
+                            },
+                            tooltip: {
+                                mode: 'index',
+                                intersect: false,
+                            }
+                        },
+                        scales: {
+                            x: {
+                                display: true,
+                                title: {
+                                    display: true,
+                                    text: 'Tahun',
+                                    color: getTextColor() // Mengatur warna teks title x-axis
+                                },
+                                ticks: {
+                                    color: getTextColor()
+                                }
+                            },
+                            y: {
+                                display: true,
+                                title: {
+                                    display: true,
+                                    text: 'Triliun Rupiah',
+                                    color: getTextColor() // Mengatur warna teks title y-axis
+                                },
+                                ticks: {
+                                    color: getTextColor()
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            function getTextColor() {
+                return document.documentElement.classList.contains('dark') ? '#fff' : '#000';
+            }
+
+            function updateChartColors() {
+                const textColor = getTextColor();
+                apbdChart.options.plugins.legend.labels.color = textColor;
+                apbdChart.options.scales.x.title.color = textColor;
+                apbdChart.options.scales.x.ticks.color = textColor;
+                apbdChart.options.scales.y.title.color = textColor;
+                apbdChart.options.scales.y.ticks.color = textColor;
+                apbdChart.update();
+            }
+
+            window.addEventListener('storage', function(event) {
+                if (event.key === 'theme') {
+                    updateChartColors();
+                }
+            });
+
+            const observer = new MutationObserver(() => {
+                updateChartColors();
+            });
+
+            observer.observe(document.documentElement, {
+                attributes: true,
+                attributeFilter: ['class'],
+            });
 
 // sankey
 // pakai cleanNumericString jika data ada pemisah ribuan (.)

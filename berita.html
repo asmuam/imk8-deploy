@@ -449,22 +449,22 @@
                     <section x-data="
                         {
                           slides: ['1', '2'],
-                          activeSlide: 1,
+                          activeSlide: 0, // Starting at 0, since array indices are 0-based
                           next() {
-                            this.activeSlide = (this.activeSlide + 1) % this.slides.length;
-                            this.scrollToSlide(this.activeSlide);
+                              this.activeSlide = (this.activeSlide + 1) % this.slides.length;
+                              this.scrollToSlide(this.activeSlide);
                           },
                           prev() {
-                            this.activeSlide = (this.activeSlide - 1 + this.slides.length) % this.slides.length;
-                            this.scrollToSlide(this.activeSlide);
+                              this.activeSlide = (this.activeSlide - 1 + this.slides.length) % this.slides.length;
+                              this.scrollToSlide(this.activeSlide);
                           },
                           scrollToSlide(index) {
-                            this.$refs.carousel.scrollTo({
-                              left: this.$refs.carousel.offsetWidth * index,
-                              behavior: 'smooth'
-                            });
+                              this.$refs.carousel.scrollTo({
+                                  left: this.$refs.carousel.offsetWidth * index,
+                                  behavior: 'smooth'
+                              });
                           }
-                        }
+                      }
                       " class="relative">
                       <div class="flex-no-wrap snap mx-auto flex h-auto overflow-hidden transition-all" x-ref="carousel">
                         <!-- item carousel 1 -->
