@@ -102,6 +102,14 @@ document.addEventListener('DOMContentLoaded', function() {
             const endIndex = startIndex + resultsPerPage;
             const currentPageResults = filteredResults.slice(startIndex, endIndex);
 
+
+            // Add current page and total pages info
+            const pageInfoHTML = `
+                <div class="w-full px-4 text-left mb-4">
+                    <p class="text-lg dark:text-white">Menampilkan halaman ${currentPage} dari ${totalPages}</p>
+                </div>
+            `;
+            searchResultsElement.insertAdjacentHTML('beforeend', pageInfoHTML);
             // Generate HTML for each filtered search result item or show no results message
             if (currentPageResults.length > 0) {
                 currentPageResults.forEach(result => {
