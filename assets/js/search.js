@@ -245,7 +245,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const pageLinks = paginationList.querySelectorAll('a');
             pageLinks.forEach(link => {
                 const pageNumber = parseInt(link.textContent);
-                console.log("pagenumber = ", pageNumber, "current = ",currentPage);
                 if (pageNumber == currentPage) {
                     localStorage.setItem('currentPage', pageNumber);
                     link.classList.add('bg-primary', 'text-white');

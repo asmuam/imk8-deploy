@@ -444,77 +444,34 @@
         <div class="flex flex-wrap justify-center -mx-4">
           <div class="w-full px-4">
             <div class="flex flex-wrap -mx-4">
-              <div class="w-full px-4 py-3 lg:w-8/12">
+              <div id="konten" class="w-full px-4 py-3 lg:w-8/12">
                   <div class="">
-                    <section x-data="
-                        {
-                          slides: ['1', '2'],
-                          activeSlide: 0, // Starting at 0, since array indices are 0-based
-                          next() {
-                              this.activeSlide = (this.activeSlide + 1) % this.slides.length;
-                              this.scrollToSlide(this.activeSlide);
-                          },
-                          prev() {
-                              this.activeSlide = (this.activeSlide - 1 + this.slides.length) % this.slides.length;
-                              this.scrollToSlide(this.activeSlide);
-                          },
-                          scrollToSlide(index) {
-                              this.$refs.carousel.scrollTo({
-                                  left: this.$refs.carousel.offsetWidth * index,
-                                  behavior: 'smooth'
-                              });
-                          }
-                      }
-                      " class="relative">
+                    <section x-data="carouselBerita()" class="relative">
                       <div class="flex-no-wrap snap mx-auto flex h-auto overflow-hidden transition-all" x-ref="carousel">
                         <!-- item carousel 1 -->
-                        <div class="relative z-10 mx-auto h-full w-full flex-shrink-0 overflow-hidden">
-                          <div class="container mx-auto py-16px">
-                            <div class="-mx-4 flex flex-wrap items-center">
-                              <div class="w-full px-4">
-                                <div class="dark:bg-dark-2 my-2 overflow-hidden duration-300 bg-white rounded-lg shadow-1 hover:shadow-3">
-                                  <img src="assets/images/posts/28b252964b6455776d4616ef1b2f6efd.jpg" alt="image" class="w-full" />
-                                  <div class="p-4 text-left sm:p-9 md:p-7 xl:p-9 ">
-                                    <h2 class="text-xl font-bold mb-2 dark:text-white">Judul Berita</h2>
-                                    <p class="text-sm text-gray-500 mb-4 dark:text-white">Author: admin, Jam terbit: 10:00 AM</p>
-                                    <p class="text-base leading-relaxed text-body-color mb-6 dark:text-white">
-                                      Lorem ipsum dolor sit amet pretium consectetur adipiscing elit. Lorem consectetur adipiscing elit...
-                                    </p>
-                                    <div class="text-right object-right align-right">
-                                      <a href="javascript:void(0)" class="bg-dark border-dark dark:border-dark-2 border rounded-md inline-flex items-center justify-center py-3 px-7 text-center text-base font-medium text-white hover:bg-body-color hover:border-body-color disabled:bg-gray-3 disabled:border-gray-3 disabled:text-dark-5">
-                                        Lihat Selengkapnya
-                                      </a>
+                          <template x-for="(slide, index) in slides" :key="index">
+                            <div class="relative z-10 mx-auto h-full w-full flex-shrink-0 overflow-hidden">
+                                <div class="container mx-auto py-16px">
+                                    <div class="-mx-4 flex flex-wrap items-center">
+                                        <div class="w-full px-4">
+                                            <div class="dark:bg-dark-2 my-2 overflow-hidden duration-300 bg-white rounded-lg shadow-1 hover:shadow-3">
+                                                <img :src="slide.img" alt="image" class="w-full h-[150px] md:h-[500px]" />
+                                                <div class="p-4 text-left sm:p-9 md:p-7 xl:p-9">
+                                                    <h2 class="text-xl font-bold mb-2 dark:text-white" x-text="slide.title"></h2>
+                                                    <p class="text-sm text-gray-500 mb-4 dark:text-white" x-text="slide.stamp"></p>
+                                                    <p class="text-base leading-relaxed text-body-color mb-6 dark:text-white" x-text="slide.overview"></p>
+                                                    <div class="text-right object-right align-right">
+                                                        <a :href="slide.url" class="bg-dark border-dark dark:border-dark-2 border rounded-md inline-flex items-center justify-center py-3 px-7 text-center text-base font-medium text-white hover:bg-body-color hover:border-body-color disabled:bg-gray-3 disabled:border-gray-3 disabled:text-dark-5">
+                                                            Lihat Selengkapnya
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                  </div>
                                 </div>
-                              </div>
                             </div>
-                          </div>
-                        </div>
-                        <!-- item carousel 2 -->
-                        <div class="relative z-10 mx-auto h-full w-full flex-shrink-0 overflow-hidden">
-                          <div class="container mx-auto py-16px">
-                            <div class="-mx-4 flex flex-wrap items-center">
-                              <div class="w-full px-4">
-                                <div class="dark:bg-dark-2 my-2 overflow-hidden duration-300 bg-white rounded-lg shadow-1 hover:shadow-3">
-                                  <img src="assets/images/posts/28b252964b6455776d4616ef1b2f6efd.jpg" alt="image" class="w-full" />
-                                  <div class="p-4 text-left sm:p-9 md:p-7 xl:p-9 ">
-                                    <h2 class="text-xl font-bold mb-2 dark:text-white">Judul Berita</h2>
-                                    <p class="text-sm text-gray-500 mb-4 dark:text-white">Author: admin, Jam terbit: 10:00 AM</p>
-                                    <p class="text-base leading-relaxed text-body-color mb-6 dark:text-white">
-                                      Lorem ipsum dolor sit amet pretium consectetur adipiscing elit. Lorem consectetur adipiscing elit...
-                                    </p>
-                                    <div class="text-right object-right align-right">
-                                      <a href="javascript:void(0)" class="bg-dark border-dark dark:border-dark-2 border rounded-md inline-flex items-center justify-center py-3 px-7 text-center text-base font-medium text-white hover:bg-body-color hover:border-body-color disabled:bg-gray-3 disabled:border-gray-3 disabled:text-dark-5">
-                                        Lihat Selengkapnya
-                                      </a>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                        </template>
                       </div>
                       <!-- button carousel -->
                       <div>
@@ -528,6 +485,12 @@
                             <path d="M7.11571 19.6969C6.90946 19.6969 6.73759 19.6281 6.56571 19.4906C6.25634 19.1812 6.25634 18.7 6.56571 18.3906L13.7845 11L6.56571 3.64374C6.25634 3.33436 6.25634 2.85311 6.56571 2.54374C6.87509 2.23436 7.35634 2.23436 7.66571 2.54374L15.4345 10.45C15.7438 10.7594 15.7438 11.2406 15.4345 11.55L7.66571 19.4562C7.52821 19.5937 7.32196 19.6969 7.11571 19.6969Z"></path>
                           </svg>
                         </button>
+                      </div>
+                      <!-- pagination -->
+                      <div class="mt-1 flex bottom-4 left-1/2 transform -translate-x-1/2 z-40 flex space-x-2 justify-center">
+                        <template x-for="(slide, index) in slides" :key="index">
+                          <button @click="goToSlide(index)" :class="{'bg-primary': activeSlide === index, 'bg-gray-7': activeSlide !== index}" class="w-3 mx-1 h-3 rounded-full transition-all"></button>
+                        </template>
                       </div>
                     </section>
                   </div>
@@ -546,316 +509,7 @@
                       </form>
                     </div>
                   </div>
-                  <div
-                    class="wow fadeInUp relative mb-12 mt-8 overflow-hidden rounded-[5px] bg-primary px-11 py-[60px] text-center lg:px-8"
-                    data-wow-delay=".1s
-                    "
-                  >
-                    <h3
-                      class="mb-[6px] text-[28px] font-semibold leading-[40px] text-white"
-                    >
-                      Join our newsletter!
-                    </h3>
-                    <p class="mb-5 text-base text-white">
-                      Enter your email to receive our latest newsletter.
-                    </p>
-                    <form>
-                      <input
-                        type="email"
-                        placeholder="Your email address"
-                        class="mb-4 h-[50px] w-full rounded-md border border-transparent bg-white/10 text-center text-base text-white outline-none placeholder:text-white/60 focus:border-white focus-visible:shadow-none"
-                      />
-                      <input
-                        type="submit"
-                        value="Subscribe Now"
-                        class="mb-4 h-[50px] w-full cursor-pointer rounded-md bg-secondary text-center text-sm font-medium text-white transition duration-300 ease-in-out hover:bg-[#0BB489] hover:bg-opacity-90"
-                      />
-                    </form>
-                    <p class="text-sm font-medium text-white">
-                      Don't worry, we don't spam
-                    </p>
-
-                    <div>
-                      <span class="absolute top-0 right-0">
-                        <svg
-                          width="46"
-                          height="46"
-                          viewBox="0 0 46 46"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <circle
-                            cx="1.39737"
-                            cy="44.6026"
-                            r="1.39737"
-                            transform="rotate(-90 1.39737 44.6026)"
-                            fill="white"
-                            fill-opacity="0.44"
-                          />
-                          <circle
-                            cx="1.39737"
-                            cy="7.9913"
-                            r="1.39737"
-                            transform="rotate(-90 1.39737 7.9913)"
-                            fill="white"
-                            fill-opacity="0.44"
-                          />
-                          <circle
-                            cx="13.6943"
-                            cy="44.6026"
-                            r="1.39737"
-                            transform="rotate(-90 13.6943 44.6026)"
-                            fill="white"
-                            fill-opacity="0.44"
-                          />
-                          <circle
-                            cx="13.6943"
-                            cy="7.9913"
-                            r="1.39737"
-                            transform="rotate(-90 13.6943 7.9913)"
-                            fill="white"
-                            fill-opacity="0.44"
-                          />
-                          <circle
-                            cx="25.9911"
-                            cy="44.6026"
-                            r="1.39737"
-                            transform="rotate(-90 25.9911 44.6026)"
-                            fill="white"
-                            fill-opacity="0.44"
-                          />
-                          <circle
-                            cx="25.9911"
-                            cy="7.9913"
-                            r="1.39737"
-                            transform="rotate(-90 25.9911 7.9913)"
-                            fill="white"
-                            fill-opacity="0.44"
-                          />
-                          <circle
-                            cx="38.288"
-                            cy="44.6026"
-                            r="1.39737"
-                            transform="rotate(-90 38.288 44.6026)"
-                            fill="white"
-                            fill-opacity="0.44"
-                          />
-                          <circle
-                            cx="38.288"
-                            cy="7.9913"
-                            r="1.39737"
-                            transform="rotate(-90 38.288 7.9913)"
-                            fill="white"
-                            fill-opacity="0.44"
-                          />
-                          <circle
-                            cx="1.39737"
-                            cy="32.3058"
-                            r="1.39737"
-                            transform="rotate(-90 1.39737 32.3058)"
-                            fill="white"
-                            fill-opacity="0.44"
-                          />
-                          <circle
-                            cx="13.6943"
-                            cy="32.3058"
-                            r="1.39737"
-                            transform="rotate(-90 13.6943 32.3058)"
-                            fill="white"
-                            fill-opacity="0.44"
-                          />
-                          <circle
-                            cx="25.9911"
-                            cy="32.3058"
-                            r="1.39737"
-                            transform="rotate(-90 25.9911 32.3058)"
-                            fill="white"
-                            fill-opacity="0.44"
-                          />
-                          <circle
-                            cx="38.288"
-                            cy="32.3058"
-                            r="1.39737"
-                            transform="rotate(-90 38.288 32.3058)"
-                            fill="white"
-                            fill-opacity="0.44"
-                          />
-                          <circle
-                            cx="1.39737"
-                            cy="20.0086"
-                            r="1.39737"
-                            transform="rotate(-90 1.39737 20.0086)"
-                            fill="white"
-                            fill-opacity="0.44"
-                          />
-                          <circle
-                            cx="13.6943"
-                            cy="20.0086"
-                            r="1.39737"
-                            transform="rotate(-90 13.6943 20.0086)"
-                            fill="white"
-                            fill-opacity="0.44"
-                          />
-                          <circle
-                            cx="25.9911"
-                            cy="20.0086"
-                            r="1.39737"
-                            transform="rotate(-90 25.9911 20.0086)"
-                            fill="white"
-                            fill-opacity="0.44"
-                          />
-                          <circle
-                            cx="38.288"
-                            cy="20.0086"
-                            r="1.39737"
-                            transform="rotate(-90 38.288 20.0086)"
-                            fill="white"
-                            fill-opacity="0.44"
-                          />
-                        </svg>
-                      </span>
-                      <span class="absolute bottom-0 left-0">
-                        <svg
-                          width="46"
-                          height="46"
-                          viewBox="0 0 46 46"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <circle
-                            cx="1.39737"
-                            cy="44.6026"
-                            r="1.39737"
-                            transform="rotate(-90 1.39737 44.6026)"
-                            fill="white"
-                            fill-opacity="0.44"
-                          />
-                          <circle
-                            cx="1.39737"
-                            cy="7.9913"
-                            r="1.39737"
-                            transform="rotate(-90 1.39737 7.9913)"
-                            fill="white"
-                            fill-opacity="0.44"
-                          />
-                          <circle
-                            cx="13.6943"
-                            cy="44.6026"
-                            r="1.39737"
-                            transform="rotate(-90 13.6943 44.6026)"
-                            fill="white"
-                            fill-opacity="0.44"
-                          />
-                          <circle
-                            cx="13.6943"
-                            cy="7.9913"
-                            r="1.39737"
-                            transform="rotate(-90 13.6943 7.9913)"
-                            fill="white"
-                            fill-opacity="0.44"
-                          />
-                          <circle
-                            cx="25.9911"
-                            cy="44.6026"
-                            r="1.39737"
-                            transform="rotate(-90 25.9911 44.6026)"
-                            fill="white"
-                            fill-opacity="0.44"
-                          />
-                          <circle
-                            cx="25.9911"
-                            cy="7.9913"
-                            r="1.39737"
-                            transform="rotate(-90 25.9911 7.9913)"
-                            fill="white"
-                            fill-opacity="0.44"
-                          />
-                          <circle
-                            cx="38.288"
-                            cy="44.6026"
-                            r="1.39737"
-                            transform="rotate(-90 38.288 44.6026)"
-                            fill="white"
-                            fill-opacity="0.44"
-                          />
-                          <circle
-                            cx="38.288"
-                            cy="7.9913"
-                            r="1.39737"
-                            transform="rotate(-90 38.288 7.9913)"
-                            fill="white"
-                            fill-opacity="0.44"
-                          />
-                          <circle
-                            cx="1.39737"
-                            cy="32.3058"
-                            r="1.39737"
-                            transform="rotate(-90 1.39737 32.3058)"
-                            fill="white"
-                            fill-opacity="0.44"
-                          />
-                          <circle
-                            cx="13.6943"
-                            cy="32.3058"
-                            r="1.39737"
-                            transform="rotate(-90 13.6943 32.3058)"
-                            fill="white"
-                            fill-opacity="0.44"
-                          />
-                          <circle
-                            cx="25.9911"
-                            cy="32.3058"
-                            r="1.39737"
-                            transform="rotate(-90 25.9911 32.3058)"
-                            fill="white"
-                            fill-opacity="0.44"
-                          />
-                          <circle
-                            cx="38.288"
-                            cy="32.3058"
-                            r="1.39737"
-                            transform="rotate(-90 38.288 32.3058)"
-                            fill="white"
-                            fill-opacity="0.44"
-                          />
-                          <circle
-                            cx="1.39737"
-                            cy="20.0086"
-                            r="1.39737"
-                            transform="rotate(-90 1.39737 20.0086)"
-                            fill="white"
-                            fill-opacity="0.44"
-                          />
-                          <circle
-                            cx="13.6943"
-                            cy="20.0086"
-                            r="1.39737"
-                            transform="rotate(-90 13.6943 20.0086)"
-                            fill="white"
-                            fill-opacity="0.44"
-                          />
-                          <circle
-                            cx="25.9911"
-                            cy="20.0086"
-                            r="1.39737"
-                            transform="rotate(-90 25.9911 20.0086)"
-                            fill="white"
-                            fill-opacity="0.44"
-                          />
-                          <circle
-                            cx="38.288"
-                            cy="20.0086"
-                            r="1.39737"
-                            transform="rotate(-90 38.288 20.0086)"
-                            fill="white"
-                            fill-opacity="0.44"
-                          />
-                        </svg>
-                      </span>
-                    </div>
-                  </div>
-
-                  <div class="flex flex-wrap mb-8 -mx-4">
+                  <div x-data="popularArticle(numArticle)" class="flex flex-wrap mb-8 mt-4">
                     <div class="w-full px-4">
                       <h2
                         class="wow fadeInUp relative pb-5 text-2xl font-semibold text-dark dark:text-white sm:text-[28px]"
@@ -868,139 +522,123 @@
                         class="mb-10 inline-block h-[2px] w-20 bg-primary"
                       ></span>
                     </div>
-
-                    <div class="w-full px-4 md:w-1/2 lg:w-full">
-                      <div
-                        class="flex items-center w-full pb-5 mb-5 border-b wow fadeInUp border-stroke dark:border-dark-3"
-                        data-wow-delay=".1s
-                        "
-                      >
+                    <template x-for="(slide, index) in slides" :key="index">
+                      <div class="w-full px-4 md:w-1/2 lg:w-full">
                         <div
-                          class="mr-5 h-20 w-full max-w-[80px] overflow-hidden rounded-full"
+                          class="flex items-center w-full pb-5 mb-5 border-b wow fadeInUp border-stroke dark:border-dark-3"
+                          data-wow-delay=".1s
+                          "
                         >
-                          <img
-                            src="assets/images/blog/article-author-01.png"
-                            alt="image"
-                            class="w-full"
-                          />
-                        </div>
-                        <div class="w-full">
-                          <h4>
-                            <a
-                              href="javascript:void(0)"
-                              class="inline-block mb-1 text-lg font-medium leading-snug text-dark hover:text-primary dark:text-dark-6 dark:hover:text-primary lg:text-base xl:text-lg"
-                            >
-                              Create engaging online courses your student…
-                            </a>
-                          </h4>
-                          <p class="text-sm text-body-color dark:text-dark-6">
-                            Glomiya Lucy
-                          </p>
+                          <div
+                            class="mr-5  w-full max-w-[80px] overflow-hidden"
+                          >
+                            <img
+                              :src="slide.img"
+                              alt="image"
+                              class=""
+                            />
+                          </div>
+                          <div class="w-full">
+                            <h4>
+                              <a
+                                :href="slide.url"
+                                class="inline-block mb-1 text-lg font-medium leading-snug text-dark hover:text-primary dark:text-dark-6 dark:hover:text-primary lg:text-base xl:text-lg"
+                                x-text="slide.title"
+                                >
+                              </a>
+                            </h4>
+                            <p x-text="slide.stamp" class="text-sm text-body-color dark:text-dark-6">
+                            </p>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="w-full px-4 md:w-1/2 lg:w-full">
-                      <div
-                        class="flex items-center w-full pb-5 mb-5 border-b wow fadeInUp border-stroke dark:border-dark-3"
-                        data-wow-delay=".1s
-                        "
-                      >
-                        <div
-                          class="mr-5 h-20 w-full max-w-[80px] overflow-hidden rounded-full"
-                        >
-                          <img
-                            src="assets/images/blog/article-author-02.png"
-                            alt="image"
-                            class="w-full"
-                          />
-                        </div>
-                        <div class="w-full">
-                          <h4>
-                            <a
-                              href="javascript:void(0)"
-                              class="inline-block mb-1 text-lg font-medium leading-snug text-dark hover:text-primary dark:text-dark-6 dark:hover:text-primary lg:text-base xl:text-lg"
-                            >
-                              The ultimate formula for launching online course
-                            </a>
-                          </h4>
-                          <p class="text-sm text-body-color dark:text-dark-6">
-                            Andrio jeson
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="w-full px-4 md:w-1/2 lg:w-full">
-                      <div
-                        class="flex items-center w-full pb-5 mb-5 border-b wow fadeInUp border-stroke dark:border-dark-3"
-                        data-wow-delay=".1s
-                        "
-                      >
-                        <div
-                          class="mr-5 h-20 w-full max-w-[80px] overflow-hidden rounded-full"
-                        >
-                          <img
-                            src="assets/images/blog/article-author-03.png"
-                            alt="image"
-                            class="w-full"
-                          />
-                        </div>
-                        <div class="w-full">
-                          <h4>
-                            <a
-                              href="javascript:void(0)"
-                              class="inline-block mb-1 text-lg font-medium leading-snug text-dark hover:text-primary dark:text-dark-6 dark:hover:text-primary lg:text-base xl:text-lg"
-                            >
-                              50 Best web design tips & tricks that will help
-                              you
-                            </a>
-                          </h4>
-                          <p class="text-sm text-body-color dark:text-dark-6">
-                            Samoyel Dayno
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="w-full px-4 md:w-1/2 lg:w-full">
-                      <div
-                        class="flex items-center w-full pb-5 mb-5 border-0 wow fadeInUp border-stroke dark:border-dark-3 md:border-b lg:border-0"
-                        data-wow-delay=".1s
-                        "
-                      >
-                        <div
-                          class="mr-5 h-20 w-full max-w-[80px] overflow-hidden rounded-full"
-                        >
-                          <img
-                            src="assets/images/blog/article-author-04.png"
-                            alt="image"
-                            class="w-full"
-                          />
-                        </div>
-                        <div class="w-full">
-                          <h4>
-                            <a
-                              href="javascript:void(0)"
-                              class="inline-block mb-1 text-lg font-medium leading-snug text-dark hover:text-primary dark:text-dark-6 dark:hover:text-primary lg:text-base xl:text-lg"
-                            >
-                              The 8 best landing page builders, reviewed
-                            </a>
-                          </h4>
-                          <p class="text-sm text-body-color dark:text-dark-6">
-                            Andrio Glori
-                          </p>
-                        </div>
-                      </div>
-                    </div>
+                    </template>
                   </div>
-
-                  <div
-                    class="wow fadeInUp mb-12 overflow-hidden rounded-[5px]"
-                    data-wow-delay=".1s"
-                  >
-                    <img
-                      src="assets/images/blog/bannder-ad.png"
-                      alt="image"
-                      class="w-full"
-                    />
+                  <div id="popular-image" x-data="popularImage(numPhoto)" class="flex flex-wrap mb-8 mt-4">
+                    <div class="w-full px-4">
+                      <h2
+                        class="wow fadeInUp relative pb-5 text-2xl font-semibold text-dark dark:text-white sm:text-[28px]"
+                        data-wow-delay=".1s
+                        "
+                      >
+                        Foto
+                      </h2>
+                      <span
+                        class="mb-10 inline-block h-[2px] w-20 bg-primary"
+                      ></span>
+                    </div>
+                    <template x-for="(slide, index) in slides" :key="index">
+                      <div class="w-full px-4 md:w-1/2 lg:w-full">
+                        <div
+                          class="flex items-center w-full pb-5 mb-5 border-b wow fadeInUp border-stroke dark:border-dark-3"
+                          data-wow-delay=".1s
+                          "
+                        >
+                          <div
+                            class="mr-5  w-full max-w-[80px] overflow-hidden"
+                          >
+                            <img
+                              :src="slide.url"
+                              alt="image"
+                              class=""
+                            />
+                          </div>
+                          <div class="w-full">
+                            <h4>
+                              <a
+                                :href="slide.url"
+                                class="inline-block mb-1 text-lg font-medium leading-snug text-dark hover:text-primary dark:text-dark-6 dark:hover:text-primary lg:text-base xl:text-lg"
+                                x-text="slide.text"
+                                >
+                              </a>
+                            </h4>
+                          </div>
+                        </div>
+                      </div>
+                    </template>
+                  </div>
+                  <div id="popular-video" x-data="popularVideo(numVideo)" class="flex flex-wrap mb-8 mt-4">
+                    <div class="w-full px-4">
+                      <h2
+                        class="wow fadeInUp relative pb-5 text-2xl font-semibold text-dark dark:text-white sm:text-[28px]"
+                        data-wow-delay=".1s
+                        "
+                      >
+                        Video
+                      </h2>
+                      <span
+                        class="mb-10 inline-block h-[2px] w-20 bg-primary"
+                      ></span>
+                    </div>
+                    <template x-for="(slide, index) in slides" :key="index">
+                      <div class="w-full px-4 md:w-1/2 lg:w-full">
+                        <div
+                          class="flex items-center w-full pb-5 mb-5 border-b wow fadeInUp border-stroke dark:border-dark-3"
+                          data-wow-delay=".1s
+                          "
+                        >
+                          <div
+                            class="mr-5  w-full max-w-[80px] overflow-hidden"
+                          >
+                            <img
+                              :src="slide.thumbnail"
+                              alt="image"
+                              class=""
+                            />
+                          </div>
+                          <div class="w-full">
+                            <h4>
+                              <a
+                                :href="slide.url"
+                                class="inline-block mb-1 text-lg font-medium leading-snug text-dark hover:text-primary dark:text-dark-6 dark:hover:text-primary lg:text-base xl:text-lg"
+                                x-text="slide.title"
+                                >
+                              </a>
+                            </h4>
+                          </div>
+                        </div>
+                      </div>
+                    </template>
                   </div>
                 </div>
               </div>
@@ -1462,7 +1100,8 @@
 
   <!-- ====== All Scripts -->
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/table.js"></script>
+  <script src="assets/js/beritaData.js"></script>
+  <script src="assets/js/berita.js"></script>
   <script src="assets/js/searchbar.js"></script>
 
 </body>
