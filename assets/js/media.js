@@ -151,131 +151,285 @@ var galleryData = [
                     this.currentPage = page;
                     scrollToTop()
                 },
-                openModal(imageUrl) {
+                Openmodal(imageUrl) {
                     this.modalImage = imageUrl;
                     this.modalOpen = true;
                 }
             };
         }
 
-// function fotoPagination() {
-// let currentPageFoto = 1;
-// const totalPagesFoto = 2; // Update this according to the number of pages you have
 
-// function showPageFoto(page) {
-//     document.querySelectorAll('.pageFoto').forEach((pageDiv, index) => {
-//         if (index + 1 === page) {
-//             pageDiv.classList.remove('hidden');
-//         } else {
-//             pageDiv.classList.add('hidden');
+const galleryVideo = [
+    {
+        title: "TAHAPAN PENILAIAN KLARIFIKASI LAPANGAN LOMBA DESA DAN KELURAHAN TINGKAT PROVINSI JABAR 2024",
+        url: "https://www.youtube.com/embed/HzwTqRuALJE?rel=0&enablejsapi=1",
+        thumbnail: "https://i.ytimg.com/vi/HzwTqRuALJE/hqdefault.jpg"
+    },
+    {
+        title: "Sinkronisasi Pengumpulan, Pengolahan, Analisis dan Diseminasi Statistik Sektoral",
+        url: "https://www.youtube.com/embed/lOvFBT_MlRo?rel=0&enablejsapi=1",
+        thumbnail: "https://i.ytimg.com/vi/lOvFBT_MlRo/hqdefault.jpg"
+    },
+    {
+        title: "Festival Adu Bedug dan Dondang Ke-17 Kota Bekasi",
+        url: "https://www.youtube.com/embed/QVlHDfz4akc?rel=0&enablejsapi=1",
+        thumbnail: "https://i.ytimg.com/vi/QVlHDfz4akc/hqdefault.jpg"
+    },
+    {
+        title: "Upacara Hari Ulang Tahun Ke 27 Kota Bekasi",
+        url: "https://www.youtube.com/embed/MELBQ7mC0lo?rel=0&enablejsapi=1",
+        thumbnail: "https://i.ytimg.com/vi/MELBQ7mC0lo/hqdefault.jpg"
+    },
+    {
+        title: "Logo Resmi HUT Kota Bekasi Ke-27 Tahun 2024",
+        url: "https://www.youtube.com/embed/tHfgQMRci2I?rel=0&enablejsapi=1",
+        thumbnail: "https://i.ytimg.com/vi/tHfgQMRci2I/hqdefault.jpg"
+    },
+    {
+        title: "Pemilu Damai Menuju Indonesia Emas",
+        url: "https://www.youtube.com/embed/m0t1MNzappo?rel=0&enablejsapi=1",
+        thumbnail: "https://i.ytimg.com/vi/m0t1MNzappo/hqdefault.jpg"
+    },
+    {
+        title: "LIVE : SAPA WARGA TEMA :  PPDB Kota Bekasi, Semua Bisa Sekolah ., Negeri Dan Swasta Sama",
+        url: "https://www.youtube.com/embed/ai0E6z0oHqg?rel=0&enablejsapi=1",
+        thumbnail: "https://i.ytimg.com/vi/ai0E6z0oHqg/hqdefault.jpg"
+    },
+    {
+        title: "Penilaian  Klarifikasi Lapangan Lomba Desa dan Kelurahan Tingkat Provinsi Jawa Barat Tahun 2023",
+        url: "https://www.youtube.com/embed/O30VeI_ybIo?rel=0&enablejsapi=1",
+        thumbnail: "https://i.ytimg.com/vi/O30VeI_ybIo/hqdefault.jpg"
+    },
+    {
+        title: "Roadshow Bus KPK &quot;Hajar Serangan Fajar&quot;",
+        url: "https://www.youtube.com/embed/RmFq__N-UvI?rel=0&enablejsapi=1",
+        thumbnail: "https://i.ytimg.com/vi/RmFq__N-UvI/hqdefault.jpg"
+    },
+    {
+        title: "LIVE : Sapa Warga Tema :  Qurban Aman, Sehat dan Bebas Zoonosis",
+        url: "https://www.youtube.com/embed/-eWEgNORfhU?rel=0&enablejsapi=1",
+        thumbnail: "https://i.ytimg.com/vi/-eWEgNORfhU/hqdefault.jpg"
+    },
+    {
+        title: "Plt Wali Kota Bekasi Tanam Pohon pada Puncak Peringatan Hari Lingkungan Hidup Sedunia",
+        url: "https://www.youtube.com/embed/4Cwjhsj-4T0?rel=0&enablejsapi=1",
+        thumbnail: "https://i.ytimg.com/vi/4Cwjhsj-4T0/hqdefault.jpg"
+    },
+    {
+        title: "Verifikasi Lapangan Kunjungan (VLK) Evaluasi Kota Layak Anak (KLA) Tahun 2023",
+        url: "https://www.youtube.com/embed/rgeK_W9e5vE?rel=0&enablejsapi=1",
+        thumbnail: "https://i.ytimg.com/vi/rgeK_W9e5vE/hqdefault.jpg"
+    },
+    {
+        title: "Sosialisasi SP4N LAPOR Kec. Jatiasih",
+        url: "https://www.youtube.com/embed/XOBqB6WcjjY?rel=0&enablejsapi=1",
+        thumbnail: "https://i.ytimg.com/vi/XOBqB6WcjjY/hqdefault.jpg"
+    },
+    {
+        title: "Sosialisasi SP4N Lapor Kec. Jatisampurna",
+        url: "https://www.youtube.com/embed/2D4Xdjr4P6Y?rel=0&enablejsapi=1",
+        thumbnail: "https://i.ytimg.com/vi/2D4Xdjr4P6Y/hqdefault.jpg"
+    },
+    {
+        title: "UJI EMSI AKBAR  DALAM RANGKA  HARI  LINGKUNGAN HIDUP SE-DUNIA",
+        url: "https://www.youtube.com/embed/xQgYGw9Wywk?rel=0&enablejsapi=1",
+        thumbnail: "https://i.ytimg.com/vi/xQgYGw9Wywk/hqdefault.jpg"
+    },
+    {
+        title: "UPPKS  KECAMATAN SE- KOTA BEKASI",
+        url: "https://www.youtube.com/embed/grWdWXe3cvU?rel=0&enablejsapi=1",
+        thumbnail: "https://i.ytimg.com/vi/grWdWXe3cvU/hqdefault.jpg"
+    },
+    {
+        title: "Diskominfostandi Sosialisasi SPAN LAPOR! di Wilayah Kecamatan Pondokgede",
+        url: "https://www.youtube.com/embed/ECN0cIH1b7Y?rel=0&enablejsapi=1",
+        thumbnail: "https://i.ytimg.com/vi/ECN0cIH1b7Y/hqdefault.jpg"
+    },
+    {
+        title: "LIVE SAPA WARGA : Bertani di Kota, Solusi Pangan dan Lingkungan",
+        url: "https://www.youtube.com/embed/8m0pFx13D8Y?rel=0&enablejsapi=1",
+        thumbnail: "https://i.ytimg.com/vi/8m0pFx13D8Y/hqdefault.jpg"
+    },
+    {
+        title: "Diskominfostandi Sosialisasi SP4N LAPOR !!! di Wilayah Kec. Bantargebang",
+        url: "https://www.youtube.com/embed/OHOJrSoyJO8?rel=0&enablejsapi=1",
+        thumbnail: "https://i.ytimg.com/vi/OHOJrSoyJO8/hqdefault.jpg"
+    },
+    {
+        title: "LIVE : Upacara Peringatan Hari Kebangkitan Nasional ke-115 Tingkat Kota Bekasi Tahun 2023",
+        url: "https://www.youtube.com/embed/FjfGQerk3z4?rel=0&enablejsapi=1",
+        thumbnail: "https://i.ytimg.com/vi/FjfGQerk3z4/hqdefault.jpg"
+    },
+    {
+        title: "LIVE : Festival Adu Bedug &amp;  Dondang Ke-16 Mustikajaya 2023",
+        url: "https://www.youtube.com/embed/dm8jTlnss_M?rel=0&enablejsapi=1",
+        thumbnail: "https://i.ytimg.com/vi/dm8jTlnss_M/hqdefault.jpg"
+    },
+    {
+        title: "Pemkot Bekasi Menerima  Kunjungan Observasi Lapangan JFPH  Kementerian Kominfo RI",
+        url: "https://www.youtube.com/embed/mZVpKOSOC_k?rel=0&enablejsapi=1",
+        thumbnail: "https://i.ytimg.com/vi/mZVpKOSOC_k/hqdefault.jpg"
+    },
+    {
+        title: "Nikah Massal Juara, Persembahan Gubernur Jawa Barat Ridwan Kamil untuk Masyarakat Kota Bekasi",
+        url: "https://www.youtube.com/embed/Le03h21-3gs?rel=0&enablejsapi=1",
+        thumbnail: "https://i.ytimg.com/vi/Le03h21-3gs/hqdefault.jpg"
+    },
+    {
+        title: "Upacara Pembukaan TNI Manunggal Membangun Desa (TMMD) ke-116 Tahun 2023 di Kota Bekasi",
+        url: "https://www.youtube.com/embed/q0SozIUkOGw?rel=0&enablejsapi=1",
+        thumbnail: "https://i.ytimg.com/vi/q0SozIUkOGw/hqdefault.jpg"
+    },
+    {
+        title: "Sosialisasi SP4N Lapor Kecamatan Pondok Melati",
+        url: "https://www.youtube.com/embed/JPAWEX_nvM8?rel=0&enablejsapi=1",
+        thumbnail: "https://i.ytimg.com/vi/JPAWEX_nvM8/hqdefault.jpg"
+    },
+    {
+        title: "LIVE : Peluang Bekasi Keren Go Digital Kota Bekasi # Section 2",
+        url: "https://www.youtube.com/embed/MV808vaCaBQ?rel=0&enablejsapi=1",
+        thumbnail: "https://i.ytimg.com/vi/MV808vaCaBQ/hqdefault.jpg"
+    },
+    {
+        title: "LIVE  :  Peluang Bekasi Keren Go Digital Kota Bekasi",
+        url: "https://www.youtube.com/embed/QQtKq15FGCI?rel=0&enablejsapi=1",
+        thumbnail: "https://i.ytimg.com/vi/QQtKq15FGCI/hqdefault.jpg"
+    },
+    {
+        title: "LIVE : Khotmil Qur&#39;an Secara Virtual Bersama OPD Se-Kota Bekasi",
+        url: "https://www.youtube.com/embed/mp3Wqwb54eA?rel=0&enablejsapi=1",
+        thumbnail: "https://i.ytimg.com/vi/mp3Wqwb54eA/hqdefault.jpg"
+    },
+    {
+        title: "Pembongkaran Bangunan Bening Boutique Hotel  diatas Saluran Air",
+        url: "https://www.youtube.com/embed/xkkFrOrXfWU?rel=0&enablejsapi=1",
+        thumbnail: "https://i.ytimg.com/vi/xkkFrOrXfWU/hqdefault.jpg"
+    },
+    {
+        title: "Upacara Hari Pendidikan Nasional Tahun 2023",
+        url: "https://www.youtube.com/embed/q8ic_NeTID0?rel=0&enablejsapi=1",
+        thumbnail: "https://i.ytimg.com/vi/q8ic_NeTID0/hqdefault.jpg"
+    },
+];
+
+
+ function videoPagination() {
+            return {
+                galleryVideo: galleryVideo,
+                itemsPerPage: 15,
+                currentPage: 1,
+                modalOpen: false,
+                modalVideo: '',
+                get totalPages() {
+                    return Math.ceil(this.galleryVideo.length / this.itemsPerPage);
+                },
+                get paginatedGalleryVideo() {
+                    let paginatedVideo = [];
+                    for (let i = 0; i < this.totalPages; i++) {
+                        paginatedVideo.push(this.galleryVideo.slice(i * this.itemsPerPage, (i + 1) * this.itemsPerPage));
+                    }
+                    return paginatedVideo;
+                },
+                showPage(page) {
+                    this.currentPage = page;
+                },
+                updatePaginationButtons(page) {
+                    document.querySelectorAll('.pageVideo-btn').forEach(button => {
+                        if (parseInt(button.id.replace('pageVideo-', '')) === page) {
+                            button.classList.add('bg-primary', 'text-white');
+                            button.classList.remove('text-dark');
+                        } else {
+                            button.classList.add('text-dark');
+                            button.classList.remove('bg-primary', 'text-white');
+                        }
+                    });
+                },
+                prevPage() {
+                    if (this.currentPage > 1) {
+                        this.currentPage--;
+                    }
+                    scrollToTop()
+                },
+                nextPage() {
+                    if (this.currentPage < this.totalPages) {
+                        this.currentPage++;
+                    }
+                    scrollToTop()
+                },
+                goToPage(page) {
+                    this.currentPage = page;
+                    scrollToTop()
+                },
+                Openmodal(videoUrl) {
+                    this.modalVideo = videoUrl;
+                    this.modalOpen = true;
+                }
+            };
+        }
+
+// function videoPagination() {
+//     let currentPageVideo = 1;
+//     const totalPagesVideo = 2; // Update this according to the number of pages you have
+
+//     function showPageVideo(page) {
+//         document.querySelectorAll('.pageVideo').forEach((pageDiv, index) => {
+//             if (index + 1 === page) {
+//                 pageDiv.classList.remove('hidden');
+//             } else {
+//                 pageDiv.classList.add('hidden');
+//             }
+//         });
+//         updatePaginationButtonsVideo(page);
+//         scrollToTop();
+//     }
+
+//     function updatePaginationButtonsVideo(page) {
+//         document.querySelectorAll('.pageVideo-btn').forEach(button => {
+//             if (parseInt(button.id.replace('pageVideo-', '')) === page) {
+//                 button.classList.add('bg-primary', 'text-white');
+//                 button.classList.remove('text-dark', 'hover:bg-primary');
+//             } else {
+//                 button.classList.add('text-dark', 'hover:bg-primary');
+//                 button.classList.remove('bg-primary', 'text-white');
+//             }
+//         });
+//     }
+
+//     document.querySelectorAll('.pageVideo-btn').forEach(button => {
+//         button.addEventListener('click', function() {
+//             const page = parseInt(this.id.replace('pageVideo-', ''));
+//             currentPageVideo = page;
+//             showPageVideo(page);
+//         });
+//     });
+
+//     document.getElementById('prevVideo').addEventListener('click', function() {
+//         if (currentPageVideo > 1) {
+//             currentPageVideo--;
+//             showPageVideo(currentPageVideo);
 //         }
 //     });
-//     updatePaginationButtonsFoto(page);
-//     scrollToTop();
-// }
 
-// function updatePaginationButtonsFoto(page) {
-//     document.querySelectorAll('.pageFoto-btn').forEach(button => {
-//         if (parseInt(button.id.replace('pageFoto-', '')) === page) {
-//             button.classList.add('bg-primary', 'text-white');
-//             button.classList.remove('text-dark', 'hover:bg-primary');
-//         } else {
-//             button.classList.add('text-dark', 'hover:bg-primary');
-//             button.classList.remove('bg-primary', 'text-white');
+//     document.getElementById('nextVideo').addEventListener('click', function() {
+//         if (currentPageVideo < totalPagesVideo) {
+//             currentPageVideo++;
+//             showPageVideo(currentPageVideo);
 //         }
 //     });
+
+//     // Initialize the first page
+//     showPageVideo(currentPageVideo);
 // }
 
-// document.querySelectorAll('.pageFoto-btn').forEach(button => {
-//     button.addEventListener('click', function() {
-//         const page = parseInt(this.id.replace('pageFoto-', ''));
-//         currentPageFoto = page;
-//         showPageFoto(page);
-//     });
-// });
 
-// document.getElementById('prevFoto').addEventListener('click', function() {
-//     if (currentPageFoto > 1) {
-//         currentPageFoto--;
-//         showPageFoto(currentPageFoto);
-//     }
-// });
-
-// document.getElementById('nextFoto').addEventListener('click', function() {
-//     if (currentPageFoto < totalPagesFoto) {
-//         currentPageFoto++;
-//         showPageFoto(currentPageFoto);
-//     }
-// });
-
-// // Initialize the first page
-// showPageFoto(currentPageFoto);
-// }
-
-function videoPagination() {
-    let currentPageVideo = 1;
-    const totalPagesVideo = 2; // Update this according to the number of pages you have
-
-    function showPageVideo(page) {
-        document.querySelectorAll('.pageVideo').forEach((pageDiv, index) => {
-            if (index + 1 === page) {
-                pageDiv.classList.remove('hidden');
-            } else {
-                pageDiv.classList.add('hidden');
-            }
-        });
-        updatePaginationButtonsVideo(page);
-        scrollToTop();
-    }
-
-    function updatePaginationButtonsVideo(page) {
-        document.querySelectorAll('.pageVideo-btn').forEach(button => {
-            if (parseInt(button.id.replace('pageVideo-', '')) === page) {
-                button.classList.add('bg-primary', 'text-white');
-                button.classList.remove('text-dark', 'hover:bg-primary');
-            } else {
-                button.classList.add('text-dark', 'hover:bg-primary');
-                button.classList.remove('bg-primary', 'text-white');
-            }
-        });
-    }
-
-    document.querySelectorAll('.pageVideo-btn').forEach(button => {
-        button.addEventListener('click', function() {
-            const page = parseInt(this.id.replace('pageVideo-', ''));
-            currentPageVideo = page;
-            showPageVideo(page);
-        });
-    });
-
-    document.getElementById('prevVideo').addEventListener('click', function() {
-        if (currentPageVideo > 1) {
-            currentPageVideo--;
-            showPageVideo(currentPageVideo);
-        }
-    });
-
-    document.getElementById('nextVideo').addEventListener('click', function() {
-        if (currentPageVideo < totalPagesVideo) {
-            currentPageVideo++;
-            showPageVideo(currentPageVideo);
-        }
-    });
-
-    // Initialize the first page
-    showPageVideo(currentPageVideo);
-}
-
-
-    function closeModalAndPauseVideo() {
-        const modalVideo = document.getElementById('modalVideo');
+function closeModalAndPauseVideo() {
+    const modalVideo = document.getElementById('modalVideo');
         if (modalVideo) {
             var iframe = document.getElementsByTagName("iframe")[0].contentWindow;
-            iframe.postMessage(
-                '{"event":"command","func":"' + 'pauseVideo' + '","args":""}',
-                "*"
+                iframe.postMessage(
+                '{"event":"command","func":"' + 'pauseVideo' + '","args":""}',"*"
             );
         }
-        this.modalOpen = false; // Menutup modal
-    }
+    this.modalOpen = false; // Menutup modal
+}
 
