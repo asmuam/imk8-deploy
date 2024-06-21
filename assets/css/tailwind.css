@@ -1046,6 +1046,10 @@ body {
   margin-top: 0.25rem;
 }
 
+.mt-4{
+  margin-top: 1rem;
+}
+
 .mt-12{
   margin-top: 3rem;
 }
@@ -2890,6 +2894,10 @@ body {
   .md\:leading-\[1\.44\]{
     line-height: 1.44;
   }
+
+  .md\:h-\[500px\]{
+  height: 500px;
+}
 }
 
 @media (min-width: 960px){

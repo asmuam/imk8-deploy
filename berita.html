@@ -446,8 +446,8 @@
             <div class="flex flex-wrap -mx-4">
               <div id="konten" class="w-full px-4 py-3 lg:w-8/12">
                   <div class="">
-                    <section x-data="carouselBerita()" class="relative">
-                      <div class="flex-no-wrap snap mx-auto flex h-auto overflow-hidden transition-all" x-ref="carousel">
+                    <section x-data="carouselBerita()" x-init="init()" class="relative">
+                      <div class="flex-no-wrap snap mx-auto flex overflow-hidden transition-all" x-ref="carousel">
                         <!-- item carousel 1 -->
                           <template x-for="(slide, index) in slides" :key="index">
                             <div class="relative z-10 mx-auto h-full w-full flex-shrink-0 overflow-hidden">
@@ -475,12 +475,12 @@
                       </div>
                       <!-- button carousel -->
                       <div>
-                        <button class="absolute left-4 top-1/4 z-40 flex h-[50px] w-[50px] items-center justify-center rounded-full border border-body-color bg-gray-7 text-body-color transition-all hover:border-primary hover:bg-primary hover:text-white dark:border-dark-6 dark:text-dark-6" @click="prev()">
+                        <button class="absolute left-4 top-1/4 z-40 flex h-[50px] w-[50px] items-center justify-center rounded-full border border-body-color bg-gray-7 text-body-color transition-all hover:border-primary hover:bg-primary hover:text-white dark:border-dark-6 " @click="prev()">
                           <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-current">
                             <path d="M14.8845 19.6969C14.6782 19.6969 14.472 19.6281 14.3345 19.4562L6.56571 11.55C6.25634 11.2406 6.25634 10.7594 6.56571 10.45L14.3345 2.54374C14.6438 2.23436 15.1251 2.23436 15.4345 2.54374C15.7438 2.85311 15.7438 3.33436 15.4345 3.64374L8.21571 11L15.4688 18.3562C15.7782 18.6656 15.7782 19.1469 15.4688 19.4562C15.2626 19.5937 15.0907 19.6969 14.8845 19.6969Z"></path>
                           </svg>
                         </button>
-                        <button class="absolute left-auto right-4 top-1/4 z-40 flex h-[50px] w-[50px] items-center justify-center rounded-full border border-body-color bg-gray-7 text-body-color transition-all hover:border-primary hover:bg-primary hover:text-white dark:border-dark-6 dark:text-dark-6" @click="next()">
+                        <button class="absolute left-auto right-4 top-1/4 z-40 flex h-[50px] w-[50px] items-center justify-center rounded-full border border-body-color bg-gray-7 text-body-color transition-all hover:border-primary hover:bg-primary hover:text-white dark:border-dark-6 " @click="next()">
                           <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-current">
                             <path d="M7.11571 19.6969C6.90946 19.6969 6.73759 19.6281 6.56571 19.4906C6.25634 19.1812 6.25634 18.7 6.56571 18.3906L13.7845 11L6.56571 3.64374C6.25634 3.33436 6.25634 2.85311 6.56571 2.54374C6.87509 2.23436 7.35634 2.23436 7.66571 2.54374L15.4345 10.45C15.7438 10.7594 15.7438 11.2406 15.4345 11.55L7.66571 19.4562C7.52821 19.5937 7.32196 19.6969 7.11571 19.6969Z"></path>
                           </svg>
@@ -489,7 +489,7 @@
                       <!-- pagination -->
                       <div class="mt-1 flex bottom-4 left-1/2 transform -translate-x-1/2 z-40 flex space-x-2 justify-center">
                         <template x-for="(slide, index) in slides" :key="index">
-                          <button @click="goToSlide(index)" :class="{'bg-primary': activeSlide === index, 'bg-gray-7': activeSlide !== index}" class="w-3 mx-1 h-3 rounded-full transition-all"></button>
+                          <button @click="goToSlide(index); stopSlide(); autoSlide();" :class="{'bg-primary': activeSlide === index, 'bg-gray-7': activeSlide !== index}" class="w-3 mx-1 h-3 rounded-full transition-all"></button>
                         </template>
                       </div>
                     </section>
@@ -509,14 +509,14 @@
                       </form>
                     </div>
                   </div>
-                  <div x-data="popularArticle(numArticle)" class="flex flex-wrap mb-8 mt-4">
+                  <div x-data="popularArticle()" class="flex flex-wrap mb-8 mt-4">
                     <div class="w-full px-4">
                       <h2
                         class="wow fadeInUp relative pb-5 text-2xl font-semibold text-dark dark:text-white sm:text-[28px]"
                         data-wow-delay=".1s
                         "
                       >
-                        Popular Articles
+                        Berita Hangat
                       </h2>
                       <span
                         class="mb-10 inline-block h-[2px] w-20 bg-primary"
@@ -554,7 +554,7 @@
                       </div>
                     </template>
                   </div>
-                  <div id="popular-image" x-data="popularImage(numPhoto)" class="flex flex-wrap mb-8 mt-4">
+                  <div id="popular-image" x-data="popularImage()" class="flex flex-wrap mb-8 mt-4">
                     <div class="w-full px-4">
                       <h2
                         class="wow fadeInUp relative pb-5 text-2xl font-semibold text-dark dark:text-white sm:text-[28px]"
@@ -588,7 +588,7 @@
                               <a
                                 :href="slide.url"
                                 class="inline-block mb-1 text-lg font-medium leading-snug text-dark hover:text-primary dark:text-dark-6 dark:hover:text-primary lg:text-base xl:text-lg"
-                                x-text="slide.text"
+                                x-text="slide.title"
                                 >
                               </a>
                             </h4>
@@ -597,7 +597,7 @@
                       </div>
                     </template>
                   </div>
-                  <div id="popular-video" x-data="popularVideo(numVideo)" class="flex flex-wrap mb-8 mt-4">
+                  <div id="popular-video" x-data="popularVideo()" class="flex flex-wrap mb-8 mt-4">
                     <div class="w-full px-4">
                       <h2
                         class="wow fadeInUp relative pb-5 text-2xl font-semibold text-dark dark:text-white sm:text-[28px]"
@@ -1101,8 +1101,11 @@
   <!-- ====== All Scripts -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/beritaData.js"></script>
+  <script src="assets/js/galleryFoto.js"></script>
+  <script src="assets/js/galleryVideo.js"></script>
   <script src="assets/js/berita.js"></script>
   <script src="assets/js/searchbar.js"></script>
+  <script src="assets/js/swiper-bundle.min.js"></script>
 
 </body>
 </html>
