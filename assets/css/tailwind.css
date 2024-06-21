@@ -826,6 +826,10 @@ body {
   top: 25%;
 }
 
+.top-1\/5{
+  top: 20%;
+}
+
 .top-4{
   top: 1rem;
 }
@@ -2843,6 +2847,10 @@ body {
 
   .md\:border-b{
     border-bottom-width: 1px;
+  }
+
+  .md\:top-1\/4{
+    top: 25%;
   }
 
   .md\:p-\[60px\]{
