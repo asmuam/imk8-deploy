@@ -2185,67 +2185,67 @@
     </section>
     <!-- ====== berita Section End -->
 
-    <!-- ====== pengunjung Section Start -->
-    <section
-      id="pricing"
-      class="relative z-20 overflow-hidden bg-white pb-12 pt-12 dark:bg-dark"
-    >
-      <div class="container mx-auto">
-        <div class="-mx-4 flex flex-wrap">
-          <div class="w-full px-4">
-            <div class="mx-auto mb-[30px] max-w-[510px] text-center">
-              <h2
-                class="mb-3 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]"
-              >
-                Pengunjung
-              </h2>
-            </div>
-          </div>
-        </div>
-        <div class="-mx-4 flex flex-wrap justify-center">
-
-          <div class="w-full px-4 md:w-1/2 lg:w-1/3 relative">
-            <p class="text-lg font-medium text-white text-center mb-2">Online</p>
-            <div class="relative my-4 rounded-full bg-primary shadow-pricing w-[200px] h-[200px] flex items-center justify-center mx-auto">
-              <h2 id="counter" class="text-4xl font-semibold xl:text-[42px] xl:leading-[1.21] text-white">
-                <span id="count" class="-ml-1 -tracking-[2px]">
-                  17000
-                </span>
-              </h2>
-            </div>
-          </div>
-          
-          
-          
-          <div class="w-full px-4 md:w-1/2 lg:w-1/3 relative">
-            <p class="text-lg font-medium text-white text-center mb-2">Hari Ini</p>
-            <div class="relative my-4 rounded-full bg-primary shadow-pricing w-[200px] h-[200px] flex items-center justify-center mx-auto">
-              <h2 id="counter" class="text-4xl font-semibold xl:text-[42px] xl:leading-[1.21] text-white">
-                <span id="count" class="-ml-1 -tracking-[2px]">
-                  14000
-                </span>
-              </h2>
-            </div>
-          </div>
-          
-
-          <div class="w-full px-4 md:w-1/2 lg:w-1/3 relative">
-            <p class="text-lg font-medium text-white text-center mb-2">Total</p>
-            <div class="relative my-4 rounded-full bg-primary shadow-pricing w-[200px] h-[200px] flex items-center justify-center mx-auto">
-              <h2 id="counter" class="text-4xl font-semibold xl:text-[42px] xl:leading-[1.21] text-white">
-                <span id="count" class="-ml-1 -tracking-[2px]">
-                  7000
-                </span>
-              </h2>
-            </div>
-          </div>
-                    
-        </div>
-          
+<!-- ====== pengunjung Section Start -->
+<section
+  id="pricing"
+  class="relative z-20 overflow-hidden bg-white pb-12 pt-12 dark:bg-dark"
+>
+  <div class="container mx-auto">
+    <div class="-mx-4 flex flex-wrap">
+      <div class="w-full px-4">
+        <div class="mx-auto mb-[30px] max-w-[510px] text-center">
+          <h2
+            class="mb-3 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]"
+          >
+            Pengunjung
+          </h2>
         </div>
       </div>
-    </section>
-    <!-- ====== Pricing Section End -->
+    </div>
+    <div class="-mx-4 flex flex-wrap justify-center">
+
+      <div class="w-full px-4 md:w-1/2 lg:w-1/3 relative">
+        <p class="text-lg font-medium text-dark dark:text-white text-center mb-2">Online</p>
+        <div class="relative my-4 rounded-full bg-primary shadow-pricing w-[200px] h-[200px] flex items-center justify-center mx-auto">
+          <h2 id="counter" class="text-4xl font-semibold xl:text-[42px] xl:leading-[1.21] text-white">
+            <span id="count" class="-ml-1 -tracking-[2px]" title="Pengunjung Online">
+              17
+            </span>
+          </h2>
+        </div>
+      </div>
+      
+      
+      
+      <div class="w-full px-4 md:w-1/2 lg:w-1/3 relative">
+        <p class="text-lg font-medium text-dark dark:text-white text-center mb-2">Hari Ini</p>
+        <div class="relative my-4 rounded-full bg-primary shadow-pricing w-[200px] h-[200px] flex items-center justify-center mx-auto">
+          <h2 id="counter" class="text-4xl font-semibold xl:text-[42px] xl:leading-[1.21] text-white">
+            <span id="count" class="-ml-1 -tracking-[2px]" title="Pengunjung Hari Ini">
+              140
+            </span>
+          </h2>
+        </div>
+      </div>
+
+      <div class="w-full px-4 md:w-1/2 lg:w-1/3 relative">
+        <p class="text-lg font-medium text-dark dark:text-white text-center mb-2">Total</p>
+        <div class="relative my-4 rounded-full bg-primary shadow-pricing w-[200px] h-[200px] flex items-center justify-center mx-auto">
+          <h2 id="counter" class="text-4xl font-semibold xl:text-[42px] xl:leading-[1.21] text-white">
+            <span id="count" class="-ml-1 -tracking-[2px]" title="Total Pengunjung">
+              700
+            </span>
+          </h2>
+        </div>
+      </div>
+                
+    </div>
+      
+    </div>
+  </div>
+</section>
+<!-- ====== pengunjung Section End -->
+
 
 <!-- ====== Footer Section Start -->
     <footer
@@ -2801,54 +2801,55 @@ function beritaSwiper() {
 </script>
 
       <!-- buat animasi angka pengunjung -->
-      <script>
-        // Fungsi untuk animasi counter
-      function animateCounter(element, start, end, duration) {
-        let range = end - start;
-        let current = start;
-        let increment = end > start ? 100 : -1;
-        let stepTime = Math.abs(Math.floor(duration / range)); // Menyesuaikan stepTime
-        stepTime = Math.max(stepTime, 10);
-        let timer = setInterval(function() {
-          current += increment;
-          element.textContent = current;
-          if (current == end) {
-            clearInterval(timer);
-          }
-        }, stepTime);
+<script>
+  // Fungsi untuk animasi counter
+  function animateCounter(element, start, end, duration) {
+    let range = end - start;
+    let current = start;
+    let increment = end > start ? 1 : -1;
+    let stepTime = Math.abs(Math.floor(duration / range));
+    stepTime = Math.max(stepTime, 10);
+    let timer = setInterval(function() {
+      current += increment;
+      element.textContent = current;
+      if (current == end) {
+        clearInterval(timer);
       }
+    }, stepTime);
+  }
 
-      // Animasi counter ketika elemen masuk ke viewport
-      function animateOnScroll() {
-        let counters = document.querySelectorAll('#counter');
-        counters.forEach(counter => {
-          let start = 0;
-          let end = parseInt(counter.textContent);
-          let duration = 50; // Durasi animasi dalam milidetik
-          animateCounter(counter.querySelector('#count'), start, end, duration);
-        });
+  // Animasi counter ketika elemen masuk ke viewport
+  function animateOnScroll() {
+    let counters = document.querySelectorAll('#counter');
+    counters.forEach(counter => {
+      let start = 0;
+      let end = parseInt(counter.textContent);
+      let duration = 50; // Ubah durasi animasi sesuai kebutuhan
+      animateCounter(counter.querySelector('#count'), start, end, duration);
+    });
+  }
+
+  // Deteksi ketika elemen masuk ke viewport
+  let options = {
+    rootMargin: '0px',
+    threshold: 0.5
+  };
+
+  let observer = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateOnScroll();
+        observer.unobserve(entry.target);
       }
+    });
+  }, options);
 
-      // Deteksi ketika elemen masuk ke viewport
-      let options = {
-        rootMargin: '0px',
-        threshold: 0.5
-      };
+  let elements = document.querySelectorAll('.shadow-pricing');
+  elements.forEach(element => {
+    observer.observe(element);
+  });
 
-      let observer = new IntersectionObserver(function(entries, observer) {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            animateOnScroll();
-            observer.unobserve(entry.target);
-          }
-        });
-      }, options);
+</script>
 
-      let elements = document.querySelectorAll('.shadow-pricing');
-      elements.forEach(element => {
-        observer.observe(element);
-      });
-
-      </script>
   </body>
 </html>
