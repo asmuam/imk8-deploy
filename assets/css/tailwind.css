@@ -35,6 +35,13 @@
   height: 100%;
 }
 
+
+  .icon-spacing {
+    margin-right: 0.5rem; /* Adjust the spacing as needed */
+  }
+
+
+
 .label {
   width: 100px; /* Atur sesuai kebutuhan Anda */
   display: inline-block;
@@ -2663,6 +2670,7 @@ body {
   .sm\:max-w-\[60px\]{
     max-width: 60px;
   }
+
 
   .sm\:p-10{
     padding: 2.5rem;
