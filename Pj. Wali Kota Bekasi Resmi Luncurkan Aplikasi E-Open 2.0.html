@@ -9,12 +9,16 @@
   <link rel="shortcut icon"href="assets/images/logoBekasi.png" type="image/x-icon" />
   <link rel="stylesheet" href="assets/css/animate.css" />
   <link rel="stylesheet" href="assets/css/tailwind.css" />
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    
   <!-- ==== WOW JS ==== -->
   <script src="assets/js/wow.min.js"></script>
-  <script>
-    new WOW().init();
-  </script>
+  <script>new WOW().init();</script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.0/dist/cdn.min.js"></script>
+  <link rel="stylesheet" href= "https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> 
+  <script src= "https://code.jquery.com/jquery-1.12.4.js"> </script> 
+  <script src= "https://code.jquery.com/ui/1.12.1/jquery-ui.js"> </script> 
+
 </head>
 
 <body>
@@ -417,16 +421,16 @@
                               />
                         </svg>
                     </span>
-                      Pemerintahan
+                      Berita
                   </a>
                   <span class="text-body-color dark:text-dark-6 px-3"> / </span>
                 </li>
                 <li class="flex items-center">
                   <a
+                      id="judul-berita-bc"
                       href="javascript:void(0)"
                       class="text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary text-base font-medium"
                       >
-                  Struktur Organisasi
                   </a>
                 </li> 
             </ul>
@@ -434,8 +438,7 @@
           <!-- breadcrumb -->
         </div>
           <div class="w-full px-4">
-            <h1 class="mt-1 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]">
-            Struktur Organisasi Pemerintahan Kota Bekasi
+            <h1 id="judul-berita" class="mt-1 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]">
         </h1>
           </div>
       </div>
@@ -443,38 +446,282 @@
   </div>
   <!-- ====== Banner Section End -->
 
-  <!-- ====== struktur Start ====== -->
-  <section id="contact" class="relative py-10">
-    <div class="absolute top-0 left-0 -z-[1] w-full dark:bg-dark h-full"></div>
-    <div class="absolute top-0 left-0 -z-[1] h-1/2 w-full bg-[#E9F9FF] dark:bg-dark-700 lg:h-[45%] xl:h-1/2"></div>
-    <div class="container px-4">
-      <div>
-        <!-- bagan -->
-        <div class="items-center object-center justify-center flex">
-          <img src="assets/images/struktur-organisasi.png" alt="">
+<!-- ====== berita Start ====== -->
+    <section class="pb-10 dark:bg-dark lg:pb-20">
+      <div x-data="berita(judul)" class="container">
+        <div class="flex flex-wrap justify-center -mx-4">
+          <div class="w-full px-4">
+            <div class="flex flex-wrap -mx-4">
+              <div id="konten" class="w-full px-4 py-3 lg:w-8/12">
+                            <div
+              class="wow fadeInUp relative z-20 mb-[50px] h-[300px] overflow-hidden rounded-[5px] md:h-[400px] lg:h-[500px]"
+              data-wow-delay=".1s
+              "
+            >
+              <img
+                :src="berita.img"
+                alt="image"
+                class="object-cover object-center w-full h-full"
+              />
+            </div>
+                <div>
+                  <h3
+                    x-text="berita.title"
+                    class="wow mb-2 fadeInUp text-xl font-bold text-dark dark:text-white sm:text-2xl md:leading-[1.28]"
+                    data-wow-delay=".1s
+                    "
+                  >
+                  </h3>
+                  <span class="text-dark-3 dark:text-dark-3">
+                    <i class="fas fa-user"></i> <span x-text="berita.author"></span>
+                    <i class="fas fa-calendar-alt ml-4"></i> <span class="" x-text="berita.time"></span>
+                    <i class="fas fa-eye ml-4"></i> <span x-text="berita.views"></span>
+                  </span>
+
+                  <p
+                    x-html="isiBeritaHTML"
+                    class="mb-6 mt-8 text-base wow fadeInUp text-body-color text-dark dark:text-dark-6"
+                    data-wow-delay=".1s"
+                  >
+                  </p>
+                  <div class="flex flex-wrap items-center mb-12 -mx-4">
+                    <div class="w-full px-4 md:w-1/2">
+                      <div
+                        class="flex flex-wrap items-center gap-3 mb-8 wow fadeInUp md:mb-0"
+                        data-wow-delay=".1s"
+                      >
+                      <template x-for="tag in tagsArray" :key="tag">
+                          <a :href="`/search.html?tag=${tag}`" class="block rounded-md bg-primary/[0.08] px-[14px] py-[5px] text-base text-dark hover:bg-primary hover:text-white dark:text-white"
+                          x-text="tag"></a>
+                      </template>
+                      </div>
+                    </div>
+                    <div class="w-full px-4 md:w-1/2">
+                      <div
+                        class="flex items-center wow fadeInUp md:justify-end"
+                        data-wow-delay=".1s"
+                      >
+                        <span
+                          class="mr-5 text-sm font-medium text-body-color dark:text-dark-6"
+                        >
+                          Share This Post
+                        </span>
+                        <div class="flex items-center gap-[10px]">
+                          <a href="javascript:void(0)">
+                            <svg
+                              width="32"
+                              height="32"
+                              viewBox="0 0 32 32"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32Z"
+                                fill="#1877F2"
+                              />
+                              <path
+                                d="M17 15.5399V12.7518C17 11.6726 17.8954 10.7976 19 10.7976H21V7.86631L18.285 7.67682C15.9695 7.51522 14 9.30709 14 11.5753V15.5399H11V18.4712H14V24.3334H17V18.4712H20L21 15.5399H17Z"
+                                fill="white"
+                              />
+                            </svg>
+                          </a>
+                          <a href="javascript:void(0)">
+                            <svg
+                              width="32"
+                              height="32"
+                              viewBox="0 0 32 32"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32Z"
+                                fill="#55ACEE"
+                              />
+                              <path
+                                d="M24.2945 11.375C24.4059 11.2451 24.2607 11.0755 24.0958 11.1362C23.728 11.2719 23.3918 11.3614 22.8947 11.4166C23.5062 11.0761 23.7906 10.5895 24.0219 9.99339C24.0777 9.84961 23.9094 9.71915 23.7645 9.78783C23.1759 10.0669 22.5408 10.274 21.873 10.3963C21.2129 9.7421 20.272 9.33331 19.2312 9.33331C17.2325 9.33331 15.6117 10.8406 15.6117 12.6993C15.6117 12.9632 15.6441 13.2202 15.7051 13.4663C12.832 13.3324 10.2702 12.1034 8.49031 10.2188C8.36832 10.0897 8.14696 10.1068 8.071 10.2643C7.86837 10.6846 7.7554 11.1509 7.7554 11.6418C7.7554 12.8093 8.39417 13.8395 9.36518 14.4431C8.92981 14.4301 8.51344 14.3452 8.12974 14.2013C7.94292 14.1312 7.72877 14.2543 7.75387 14.4427C7.94657 15.8893 9.11775 17.0827 10.6295 17.3647C10.3259 17.442 10.0061 17.483 9.67537 17.483C9.59517 17.483 9.51567 17.4805 9.43688 17.4756C9.23641 17.4632 9.07347 17.6426 9.15942 17.8141C9.72652 18.946 10.951 19.7361 12.376 19.7607C11.1374 20.6637 9.57687 21.2017 7.88109 21.2017C7.672 21.2017 7.5823 21.4706 7.7678 21.5617C9.20049 22.266 10.832 22.6666 12.5656 22.6666C19.2231 22.6666 22.8631 17.5377 22.8631 13.0896C22.8631 12.944 22.8594 12.7984 22.8528 12.6542C23.3932 12.2911 23.8789 11.8595 24.2945 11.375Z"
+                                fill="white"
+                              />
+                            </svg>
+                          </a>
+                          <a href="javascript:void(0)">
+                            <svg
+                              width="32"
+                              height="32"
+                              viewBox="0 0 32 32"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32Z"
+                                fill="#007AB9"
+                              />
+                              <path
+                                d="M11.7836 10.1666C11.7833 10.8452 11.3716 11.4559 10.7426 11.7106C10.1137 11.9654 9.39306 11.8134 8.92059 11.3263C8.44811 10.8392 8.31813 10.1143 8.59192 9.49341C8.86572 8.87251 9.48862 8.4796 10.1669 8.49996C11.0678 8.527 11.784 9.26533 11.7836 10.1666ZM11.8336 13.0666H8.50024V23.4999H11.8336V13.0666ZM17.1003 13.0666H13.7836V23.4999H17.0669V18.0249C17.0669 14.9749 21.0419 14.6916 21.0419 18.0249V23.4999H24.3336V16.8916C24.3336 11.75 18.4503 11.9416 17.0669 14.4666L17.1003 13.0666Z"
+                                fill="white"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full px-4 py-2 lg:w-4/12">
+                <div>
+                  <div class="">
+                    <div class="w-full lg:flex">
+                      <form id=searchForm class="ui-widget relative flex items-center w-full border rounded-md border-stroke dark:border-dark-3 bg-gray-2 dark:bg-dark-2">
+                        <input id=searchInput type="text" placeholder="Cari Berita..." class="w-full bg-transparent py-3 pl-6 pr-[58px] text-base text-body-color dark:text-dark-6 outline-none">
+                        <button type="submit" class="absolute top-0 right-0 flex h-full w-[52px] items-center justify-center rounded-tr-md rounded-br-md border border-primary bg-primary text-white">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-current">
+                            <path d="M23.025 20.8875L16.8375 15.8625C19.3875 12.375 19.125 7.3875 15.9375 4.2375C14.25 2.55 12 1.6125 9.6 1.6125C7.2 1.6125 4.95 2.55 3.2625 4.2375C-0.225 7.725 -0.225 13.425 3.2625 16.9125C4.95 18.6 7.2 19.5375 9.6 19.5375C11.8875 19.5375 14.025 18.675 15.7125 17.1375L21.975 22.2C22.125 22.3125 22.3125 22.3875 22.5 22.3875C22.7625 22.3875 22.9875 22.275 23.1375 22.0875C23.4375 21.7125 23.4 21.1875 23.025 20.8875ZM9.6 17.85C7.65 17.85 5.85 17.1 4.4625 15.7125C1.6125 12.8625 1.6125 8.25 4.4625 5.4375C5.85 4.05 7.65 3.3 9.6 3.3C11.55 3.3 13.35 4.05 14.7375 5.4375C17.5875 8.2875 17.5875 12.9 14.7375 15.7125C13.3875 17.1 11.55 17.85 9.6 17.85Z"></path>
+                          </svg>
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                  <div id="popular-article" x-data="popularArticle()" class="flex flex-wrap mb-8 mt-4">
+                    <div class="w-full px-4">
+                      <h2
+                        class="wow fadeInUp relative pb-5 text-2xl font-semibold text-dark dark:text-white sm:text-[28px]"
+                        data-wow-delay=".1s
+                        "
+                      >
+                        Berita Hangat
+                      </h2>
+                      <span
+                        class="mb-10 inline-block h-[2px] w-20 bg-primary"
+                      ></span>
+                    </div>
+                    <template x-for="(slide, index) in slides" :key="index">
+                      <div class="w-full px-4 md:w-1/2 lg:w-full">
+                        <div
+                          class="flex items-center w-full pb-5 mb-5 border-b wow fadeInUp border-stroke dark:border-dark-3"
+                          data-wow-delay=".1s
+                          "
+                        >
+                          <div
+                            class="mr-5  w-full max-w-[80px] overflow-hidden"
+                          >
+                            <img
+                              :src="slide.img"
+                              alt="image"
+                              class=""
+                            />
+                          </div>
+                          <div class="w-full">
+                            <h4>
+                              <a
+                                :href="slide.url"
+                                class="inline-block mb-1 text-lg font-medium leading-snug text-dark hover:text-primary dark:text-dark-6 dark:hover:text-primary lg:text-base xl:text-lg"
+                                x-text="slide.title"
+                                >
+                              </a>
+                            </h4>
+                            <p x-text="slide.time" class="text-sm text-body-color dark:text-dark-6">
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </template>
+                  </div>
+                  <div id="popular-image" x-data="popularImage()" class="flex flex-wrap mb-8 mt-4">
+                    <div class="w-full px-4">
+                      <h2
+                        class="wow fadeInUp relative pb-5 text-2xl font-semibold text-dark dark:text-white sm:text-[28px]"
+                        data-wow-delay=".1s
+                        "
+                      >
+                        Foto
+                      </h2>
+                      <span
+                        class="mb-10 inline-block h-[2px] w-20 bg-primary"
+                      ></span>
+                    </div>
+                    <template x-for="(slide, index) in slides" :key="index">
+                      <div class="w-full px-4 md:w-1/2 lg:w-full">
+                        <div
+                          class="flex items-center w-full pb-5 mb-5 border-b wow fadeInUp border-stroke dark:border-dark-3"
+                          data-wow-delay=".1s
+                          "
+                        >
+                          <div
+                            class="mr-5  w-full max-w-[80px] overflow-hidden"
+                          >
+                            <img
+                              :src="slide.url"
+                              alt="image"
+                              class=""
+                            />
+                          </div>
+                          <div class="w-full">
+                            <h4>
+                              <a
+                                :href="slide.url"
+                                class="inline-block mb-1 text-lg font-medium leading-snug text-dark hover:text-primary dark:text-dark-6 dark:hover:text-primary lg:text-base xl:text-lg"
+                                x-text="slide.title"
+                                >
+                              </a>
+                            </h4>
+                            <p x-text="slide.time" class="text-sm text-body-color dark:text-dark-6">
+                          </div>
+                        </div>
+                      </div>
+                    </template>
+                  </div>
+                  <div id="popular-video" x-data="popularVideo()" class="flex flex-wrap mb-8 mt-4">
+                    <div class="w-full px-4">
+                      <h2
+                        class="wow fadeInUp relative pb-5 text-2xl font-semibold text-dark dark:text-white sm:text-[28px]"
+                        data-wow-delay=".1s
+                        "
+                      >
+                        Video
+                      </h2>
+                      <span
+                        class="mb-10 inline-block h-[2px] w-20 bg-primary"
+                      ></span>
+                    </div>
+                    <template x-for="(slide, index) in slides" :key="index">
+                      <div class="w-full px-4 md:w-1/2 lg:w-full">
+                        <div
+                          class="flex items-center w-full pb-5 mb-5 border-b wow fadeInUp border-stroke dark:border-dark-3"
+                          data-wow-delay=".1s
+                          "
+                        >
+                          <div
+                            class="mr-5  w-full max-w-[80px] overflow-hidden"
+                          >
+                            <img
+                              :src="slide.thumbnail"
+                              alt="image"
+                              class=""
+                            />
+                          </div>
+                          <div class="w-full">
+                            <h4>
+                              <a
+                                :href="slide.url"
+                                class="inline-block mb-1 text-lg font-medium leading-snug text-dark hover:text-primary dark:text-dark-6 dark:hover:text-primary lg:text-base xl:text-lg"
+                                x-text="slide.title"
+                                >
+                              </a>
+                            </h4>
+                            <p x-text="slide.time" class="text-sm text-body-color dark:text-dark-6">
+                          </div>
+                        </div>
+                      </div>
+                    </template>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div>
-             <!-- ====== Table Section Start -->
-<section class="bg-white dark:bg-dark py-20 lg:py-[120px]">
-   <div class="container mx-auto">
-      <div class="flex flex-wrap -mx-4">
-         <div class="w-full px-4">
-            <div class="max-w-full">
-               <table class="w-full">
-                  <tbody id="daftar-opd" class="max-w-full">
-                  </tbody>
-               </table>
-            </div>
-         </div>
-      </div>
-   </div>
-</section>
-<!-- ====== Table Section End -->
-      </div>
-    </div>
-  </section>
-  <!-- ====== struktur End ====== -->
+    </section>
+    <!-- ====== Berita Section End -->
 
 <!-- ====== Footer Section Start -->
     <footer
@@ -910,9 +1157,11 @@
   </a>
   <!-- ====== Back To Top End -->
 
-
   <!-- ====== All Scripts -->
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/table-struktur.js"></script>
-</body>
+  <script src="assets/js/berita.js"></script>
+  <script src="assets/js/searchbar.js"></script>
+  <script src="assets/js/beritaData.js"></script>
+  <script src="assets/js/galleryFoto.js"></script>
+  <script src="assets/js/galleryVideo.js"></script></body>
 </html>

@@ -35,11 +35,11 @@
         const searchInput = document.getElementById('searchInput');
 
         searchForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            const query = searchInput.value.trim();
-            if (query !== '') {
-                localStorage.setItem('searchQuery', query);
-                localStorage.removeItem('currentPage');
-                window.location.href = `search.html?query=${encodeURIComponent(query)}`;
-            }
-        });
+          event.preventDefault();
+          const query = searchInput.value.trim();
+          if (query !== '') {
+              localStorage.setItem('searchQuery', query);
+              localStorage.removeItem('currentPage');
+              window.location.href = `search.html?query=${encodeURIComponent(query)}`;
+          }
+      });
