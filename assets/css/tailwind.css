@@ -3744,6 +3744,10 @@ body {
     max-height: 450px;
 }
 
+.max-h-4 {
+    max-height: 4rem;
+}
+
 .overflow-y-auto {
     overflow-y: scroll
 }
