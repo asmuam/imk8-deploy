@@ -2306,6 +2306,7 @@ body {
   opacity: 0.7;
 }
 
+
 .sticky #navbarCollapse li .ud-menu-scroll.active{
   --tw-text-opacity: 1;
   color: rgb(55 88 249 / var(--tw-text-opacity));
@@ -2827,6 +2828,11 @@ body {
 }
 
 @media (min-width: 720px){
+
+  .group:hover .md\:group-hover\:opacity-70{
+    opacity: 0.7;
+  }
+
   .md\:mb-0{
     margin-bottom: 0px;
   }
@@ -3827,3 +3833,4 @@ body {
 
 .filter-options{
 }
+
