@@ -1,38 +1,36 @@
-
 (function () {
   "use strict";
 
   //===== Prealoder
-
   window.onload = function () {
     window.setTimeout(fadeout, 500);
-}
+  };
 
-function fadeout() {
+  function fadeout() {
     document.querySelector('.preloader').style.opacity = '0';
     document.querySelector('.preloader').style.display = 'none';
-}
+  }
 
   // ======= Sticky
   window.onscroll = function () {
     const ud_header = document.querySelector(".ud-header");
     const logo = document.querySelectorAll(".header-logo");
 
-    if(logo.length) {
+    if (logo.length) {
       // === logo change
       if (ud_header.classList.contains("sticky")) {
-        document.querySelector(".header-logo").src="assets/images/logoBekasi.png"
+        document.querySelector(".header-logo").src = "assets/images/logoBekasi.png";
       } else {
-        document.querySelector(".header-logo").src="assets/images/logoBekasi.png"
+        document.querySelector(".header-logo").src = "assets/images/logoBekasi.png";
       }
     }
 
     if (document.documentElement.classList.contains("dark")) {
-      if(logo.length) {
+      if (logo.length) {
         // === logo change
         if (ud_header.classList.contains("sticky")) {
-          document.querySelector(".header-logo").src="assets/images/logoBekasi.png"
-        } 
+          document.querySelector(".header-logo").src = "assets/images/logoBekasi.png";
+        }
       }
     }
 
@@ -50,57 +48,60 @@ function fadeout() {
 
   // ===== responsive navbar
   const navbarToggler = document.getElementById("navbarToggler");
-const navbarCollapse = document.getElementById("navbarCollapse");
+  const navbarCollapse = document.getElementById("navbarCollapse");
 
-navbarToggler.addEventListener("click", () => {
-  navbarToggler.classList.toggle("navbarTogglerActive");
-  navbarCollapse.classList.toggle("hidden");
-});
+  // Hapus event listener sebelumnya jika ada
+  navbarToggler.removeEventListener("click", toggleNavbar);
 
-// Tutup navbar-collapse saat item menu utama diklik
-document.querySelectorAll("#navbarCollapse ul li:not(.submenu-item) a").forEach((link) => {
-  link.addEventListener("click", () => {
-    navbarToggler.classList.remove("navbarTogglerActive");
-    navbarCollapse.classList.add("hidden");
-  });
-});
+  // Tambahkan event listener baru
+  navbarToggler.addEventListener("click", toggleNavbar);
 
-// Perilaku submenu
-const submenuItems = document.querySelectorAll(".submenu-item");
+  function toggleNavbar() {
+    navbarToggler.classList.toggle("navbarTogglerActive");
+    navbarCollapse.classList.toggle("hidden");
+  }
 
-submenuItems.forEach((item) => {
-  const submenu = item.querySelector(".submenu");
-  const submenuToggle = item.querySelector("a");
-
-  submenuToggle.addEventListener("click", (e) => {
-    e.preventDefault();
-
-    // Tutup submenu yang lain sebelum membuka yang baru
-    submenuItems.forEach((otherItem) => {
-      const otherSubmenu = otherItem.querySelector(".submenu");
-      if (otherItem !== item && !otherSubmenu.classList.contains("hidden")) {
-        otherSubmenu.classList.add("hidden");
-      }
+  // Tutup navbar-collapse saat item menu utama diklik
+  document.querySelectorAll("#navbarCollapse ul li:not(.submenu-item) a").forEach((link) => {
+    link.addEventListener("click", () => {
+      navbarToggler.classList.remove("navbarTogglerActive");
+      navbarCollapse.classList.add("hidden");
     });
-
-    submenu.classList.toggle("hidden");
   });
-});
 
   // Menutup navbarCollapse saat klik di luar area navbarCollapse
-  document.addEventListener("click", function(e) {
+  document.addEventListener("click", function (e) {
     if (!navbarCollapse.contains(e.target) && e.target !== navbarToggler) {
       navbarToggler.classList.remove("navbarTogglerActive");
       navbarCollapse.classList.add("hidden");
 
       // Tutup semua submenu yang terbuka
-      submenuItems.forEach((item) => {
-        const submenu = item.querySelector(".submenu");
-        if (!submenu.classList.contains("hidden")) {
-          submenu.classList.add("hidden");
-        }
+      document.querySelectorAll(".submenu").forEach((submenu) => {
+        submenu.classList.add("hidden");
       });
     }
+  });
+
+  // Perilaku submenu
+  const submenuItems = document.querySelectorAll(".submenu-item");
+
+  submenuItems.forEach((item) => {
+    const submenu = item.querySelector(".submenu");
+    const submenuToggle = item.querySelector("a");
+
+    submenuToggle.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      // Tutup submenu yang lain sebelum membuka yang baru
+      submenuItems.forEach((otherItem) => {
+        const otherSubmenu = otherItem.querySelector(".submenu");
+        if (otherItem !== item && !otherSubmenu.classList.contains("hidden")) {
+          otherSubmenu.classList.add("hidden");
+        }
+      });
+
+      submenu.classList.toggle("hidden");
+    });
   });
 
   // ===== Faq accordion
@@ -148,14 +149,14 @@ submenuItems.forEach((item) => {
     scrollTo(document.documentElement);
   };
 
-    /* ========  themeSwitcher start ========= */
+  /* ========  themeSwitcher start ========= */
 
   // themeSwitcher
   const themeSwitcher = document.getElementById('themeSwitcher');
 
   // Theme Vars
   const userTheme = localStorage.getItem('theme');
-  const systemTheme = window.matchMedia('(prefers-color0scheme: dark)').matches;
+  const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
   // Initial Theme Check
   const themeCheck = () => {
@@ -170,11 +171,10 @@ submenuItems.forEach((item) => {
     if (document.documentElement.classList.contains('dark')) {
       document.documentElement.classList.remove('dark');
       localStorage.setItem('theme', 'light');
-      return;
+    } else {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
     }
-
-    document.documentElement.classList.add('dark');
-    localStorage.setItem('theme', 'dark');
   };
 
   // call theme switch on clicking buttons
@@ -185,6 +185,5 @@ submenuItems.forEach((item) => {
   // invoke theme check on initial load
   themeCheck();
   /* ========  themeSwitcher End ========= */
+
 })();
-
-
