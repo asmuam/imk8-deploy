@@ -1998,6 +1998,10 @@ body {
   padding-top: 120px;
 }
 
+.pt-\[130px\]{
+  padding-top: 130px;
+}
+
 .pt-\[90px\]{
   padding-top: 90px;
 }
@@ -2534,10 +2538,10 @@ body {
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
-/* .hover\:bg-primary:hover{
+.hover\:bg-primary:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(55 88 249 / var(--tw-bg-opacity));
-} */
+}
 
 .hover\:bg-white:hover{
   --tw-bg-opacity: 1;
@@ -3895,3 +3899,6 @@ body {
 .filter-options{
 }
 
+.whitespace-pre-line {
+    white-space: pre-line;
+}
