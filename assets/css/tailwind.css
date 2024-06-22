@@ -3851,3 +3851,6 @@ body {
 .filter-options{
 }
 
+.whitespace-pre-line {
+    white-space: pre-line;
+}
