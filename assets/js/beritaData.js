@@ -173,5 +173,4 @@ const beritaData = [
     "Saya sangat mengapresiasi atas segala raihan prestasi yang telah ditorehkan atas inovasi-inovasi program layanan yang dihadirkan Disdukcapi, dan saya pun mendorong Kadisdukcapil dan segenap jajarannya untuk tidak berhenti berinovasi menciptakan program-program terbaik lainnya untuk kemajuan pelayanan publik di Kota Bekasi ke depannya," tutup Gani (Wan/Humas)
     `,
 },
-    // Add more data as needed
 ];

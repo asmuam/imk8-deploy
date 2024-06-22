@@ -464,26 +464,27 @@
                           <section class="bg-gray-2 pb-10 lg:pb-20 w-full" x-data="searchPagination()" x-init="init()">
                                     <!-- Filter Section Start -->
         <div class="flex mt-8 mb-4 filter-section">
-            <div class="filter-options">
-                <label class="inline-flex items-center">
-                    <input type="radio" class="form-radio text-primary" value="all" x-model="filterType" @change="changeFilterType('all')">
-                    <span class="mx-1 text-sm text-body-color dark:text-dark-6">Semua</span>
-                </label>
-                <label class="inline-flex items-center ml-4">
-                    <input type="radio" class="form-radio text-primary" value="foto" x-model="filterType" @change="changeFilterType('foto')">
-                    <span class="mx-1 text-sm text-body-color dark:text-dark-6">Foto</span>
-                </label>
-                <label class="inline-flex items-center ml-4">
-                    <input type="radio" class="form-radio text-primary" value="video" x-model="filterType" @change="changeFilterType('video')">
-                    <span class="mx-1 text-sm text-body-color dark:text-dark-6">Video</span>
-                </label>
-                <label class="inline-flex items-center ml-4">
-                    <input type="radio" class="form-radio text-primary" value="berita" x-model="filterType" @change="changeFilterType('berita')">
-                    <span class="mx-1 text-sm text-body-color dark:text-dark-6">Berita</span>
-                </label>
-            </div>
-            <div class="sort-options">
-                <label class="ml-8 flex items-center">
+<div class="filter-options flex flex-wrap">
+    <label class="ml-4 inline-flex items-center mb-2 w-[70px]">
+        <input type="radio" class="form-radio text-primary" value="all" x-model="filterType" @change="changeFilterType('all')">
+        <span class="mx-1 text-sm text-body-color dark:text-dark-6">Semua</span>
+    </label>
+    <label class="inline-flex items-center ml-4 mb-2 w-[70px]">
+        <input type="radio" class="form-radio text-primary" value="foto" x-model="filterType" @change="changeFilterType('foto')">
+        <span class="mx-1 text-sm text-body-color dark:text-dark-6">Foto</span>
+    </label>
+    <label class="inline-flex items-center ml-4 mb-2 w-[70px]">
+        <input type="radio" class="form-radio text-primary" value="video" x-model="filterType" @change="changeFilterType('video')">
+        <span class="mx-1 text-sm text-body-color dark:text-dark-6">Video</span>
+    </label>
+    <label class="inline-flex items-center ml-4 mb-2 w-[70px]">
+        <input type="radio" class="form-radio text-primary" value="berita" x-model="filterType" @change="changeFilterType('berita')">
+        <span class="mx-1 text-sm text-body-color dark:text-dark-6">Berita</span>
+    </label>
+</div>
+
+            <div class="sort-options flex items-center">
+                <label class="ml-8 flex items-center mb-2">
                     <span class="text-sm text-body-color dark:text-dark-6">Urutkan berdasarkan:</span>
                     <select class="mx-4 text-primary border border-stroke rounded-md px-2 py-1 text-sm" x-model="sortOption" @change="changeSortOption($event.target.value)">
                         <option value="newest">Terbaru</option>
@@ -497,8 +498,12 @@
                                   <template x-for="(page, pageIndex) in paginatedResult" :key="pageIndex">
                                       <div :class="{'hidden': currentPage !== (pageIndex + 1)}">
                                           <div class="container mx-auto">
-                                              <span class="text-body-color" x-text="'menampilkan halaman ' + (pageIndex + 1) + ' dari ' + totalPages"></span>
-                                              <div class="flex flex-wrap -mx-4">
+                                              <div class="flex flex-col">
+                                                  <span class="text-body-color" x-text="'menampilkan halaman ' + (pageIndex + 1) + ' dari ' + totalPages"></span>
+                                                  <span class="text-body-color" x-text="'Hasil pencarian: ' + totalResult + ' konten'"></span>
+                                              </div>
+
+                                              <div class="flex flex-wrap -mx-4 my-4">
                                                   <template x-for="(result, index) in page" :key="index">
                                                       <div class="w-full px-4 md:w-1/2 lg:w-1/3">
                                                           <div class="mb-10 wow fadeInUp group" data-wow-delay=".1s">

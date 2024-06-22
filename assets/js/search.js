@@ -8,6 +8,7 @@
 function searchPagination() {
     return {
         result: [],
+        totalResult:'',
         itemsPerPage: 6,
         currentPage: 1,
         totalPages: 1,
@@ -20,6 +21,7 @@ function searchPagination() {
             this.getFilteredResults();
             this.totalPages = Math.ceil(this.result.length / this.itemsPerPage);
             this.paginatedResult = this.getPaginatedResult();
+            this.totalResult = this.result.length;
         },
 
                 changeFilterType(newFilterType) {
@@ -185,10 +187,11 @@ combineAndSortResults(beritaResults = [], galleryResults = [], videoResults = []
         },
         updateFilteredResults() {
                     this.getFilteredResults();
+                    this.totalPages = Math.ceil(this.result.length / this.itemsPerPage);
                     this.currentPage = 1; // Reset to first page after filter/sort change
                     this.updatePaginationButtons(1);
                     this.paginatedResult = this.getPaginatedResult();
-
+                    this.totalResult = this.result.length;
                 },
 
     };
