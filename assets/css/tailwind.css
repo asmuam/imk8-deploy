@@ -30,6 +30,18 @@
   text-align: justify;
 }
 
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+
+  .icon-spacing {
+    margin-right: 0.5rem; /* Adjust the spacing as needed */
+  }
+
+
+
 .label {
   width: 100px; /* Atur sesuai kebutuhan Anda */
   display: inline-block;
@@ -1942,6 +1954,10 @@ body {
   padding-top: 120px;
 }
 
+.pt-\[130px\]{
+  padding-top: 130px;
+}
+
 .pt-\[90px\]{
   padding-top: 90px;
 }
@@ -2478,10 +2494,10 @@ body {
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
-/* .hover\:bg-primary:hover{
+.hover\:bg-primary:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(55 88 249 / var(--tw-bg-opacity));
-} */
+}
 
 .hover\:bg-white:hover{
   --tw-bg-opacity: 1;
@@ -2732,6 +2748,7 @@ body {
     max-width: 60px;
   }
 
+
   .sm\:p-10{
     padding: 2.5rem;
   }
@@ -2860,6 +2877,10 @@ body {
   .md\:w-1\/2{
     width: 50%;
   }
+
+  
+
+  
 
   .md\:w-1\/3{
     width: 33.333333%;
@@ -3834,3 +3855,6 @@ body {
 .filter-options{
 }
 
+.whitespace-pre-line {
+    white-space: pre-line;
+}
