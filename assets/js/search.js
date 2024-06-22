@@ -25,7 +25,6 @@ function searchPagination() {
             const query = urlParams.get('query') || '';
             const tag = urlParams.get('tag') || '';
             this.query = query;
-
             // Dummy content for search results (replace with actual dynamic data fetching)
             let beritaResults = [];
             let galleryResults = [];
