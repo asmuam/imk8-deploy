@@ -20,10 +20,9 @@ const beritaData = [
 },
 {
     title: "Aplikasi SIMODALINDAG, Pj. Wali Kota Bekasi: Mempermudah Pelayanan Perindustrian dan Perdagangan",
-    url: "/Aplikasi SIMODALINDAG, Pj. Wali Kota Bekasi: Mempermudah Pelayanan Perindustrian dan Perdagangan.html",
-    img: "https://bekasikota.go.id:443/uploads/post/9efb5a6b435fcb8ca9adc9825cfc20de.jpg",
-    overview: "Kota Bekasi - Bertempat di Aula Nonon Sonthanie, Pj. Wali Kota Bekasi, Gani Muhamad, meresmikan pelincuran Aplikasi Sistem Informasi Monitoring dan Pengendalian Perindustrian dan Pergadangan (SIMODALINDAG) yang digagas oleh Dinas Perdagangan dan Perindustrian (Disdagperin) Kota Bekasi pada Jum'at (21/06)",
+    url: "/Aplikasi SIMODALINDAG_ Pj_ Wali Kota Bekasi_ Mempermudah Pelayanan Perindustrian dan Perdagangan",
     time: "22 Juni 2024",
+    img:"https://bekasikota.go.id/uploads/post/9efb5a6b435fcb8ca9adc9825cfc20de.jpg",
     author: "By Admin",
     view: "13 Views",
     tags: "Simodalindah, Disdagperin, Diskominfostandi, DPMPTSP, PJ. Wali Kota Bekasi",
@@ -123,7 +122,7 @@ const beritaData = [
 },
 {
     title: "Pj Wali Kota Bekasi Sambut Ketua Komisi VIII DPR RI Dalam Rangka Kunker di Kota Bekasi",
-    url: "",
+    url: "/Pj Wali Kota Bekasi Sambut Ketua Komisi VIII DPR RI Dalam Rangka Kunker di Kota Bekasi.html",
     img: "https://bekasikota.go.id:443/uploads/post/fc4b4ec725a71107f5a6ddc496725d48.jpg",
     overview: "KOTA BEKASI - Kunjungan kerja DPR RI Komisi VIII dalam rangka kunjungan kerja spesifik yang di laksanakan di Gedung Pangudi Luhur (STTPL) di Jl. HM Joyo Martono No.19 Margahayu Bekasi Timur Kota Bekasi. Rabu,(19/6/24). Sambutan selamat datang kepada Ketua Komisi VIII DPR RI beserta Sekretaris dan Anggota di Kota Bekasi merupakan kunjungan kerja yang sangat hangat.",
     time: "19 Juni 2024 ",
@@ -134,7 +133,7 @@ const beritaData = [
 },
 {
     title: "TP PKK Kota Bekasi Hadir Di Seminar Literasi Digital Bagi Perempuan",
-    url: "",
+    url: "/TP PKK Kota Bekasi Hadir Di Seminar Literasi Digital Bagi Perempuan.html",
     img: "https://bekasikota.go.id:443/uploads/post/99546fbfa561e583d88e5389eafa62b2.jpg",
     overview: "KOTA BEKASI - PJ Ketua TP PKK Kota Bekasi Yolla Kusuma Gani bersama pengurus hadir dalam Seminar Literasi Digital Bagi Perempuan dengan tema “Yuk Lebih Cakap di Ruang Digital”, yang diselenggarakan oleh DWP Kominfo berkolaborasi dengan Organisasi Aksi Solidaritas Era Kabinet Indonesia Maju (OASE Kabinet Indonesia Maju), bertempat di Balai Sudirman, Tebet, Jakarta Selatan. Menteri Komunikasi dan Informatika Budi Arie Setiadi, Ketua OASE Kabinet Indonesia Maju Ny. Tri Tito Karnavian, Ketua Dharma Wanita Persatuan (DWP) Kemenkominfo Ilma Nugrahani Ismail, Penasehat DWP Kemenkominfo Dina Budi Arie Setiadi turut hadir pada acara tersebut. Budie Arie Setiadi menyampaikan sangat mengapresiasi kegiatan seminar seperti ini, kegiatan ini merupakan bagian dari edukasi kepada masyarakat terkhusus kaum perempuan untuk menambah wawasan serta menangkal kejahatan seperti pemberitaan hoax dimedia sosial.",
     time: "14 Desember 2023 ",
@@ -145,7 +144,7 @@ const beritaData = [
 },
 {
     title: "Pj. Wali Kota Bekasi Shalat Idul Adha Sekaligus Serahkan Hewan Qurban",
-    url: "",
+    url: "/Pj. Wali Kota Bekasi Shalat Idul Adha Sekaligus Serahkan Hewan Qurban.html",
     img: "https://bekasikota.go.id:443/uploads/post/220c9c83779f13c5ec7c6f7f8e82e753.jpg",
     overview: "Kota Bekasi - Pj. Wali Kota Bekasi Gani Muhamad bersama Unsur Forkopimda dan jajaran pejabat Pemerintah Kota Bekasi melaksanakan Shalat Sunah Idul Adha 1445 Hijriah di Masjid Agung Al-Barkah pada Senin (17/06). Selepas Shalat Ied, Gani Muhamad memberikan sambutan yang mengajak untuk memahami makna dari kisah Nabi Ibrahim dan Nabi Ismail AS dalam pengorbanan dan keikhlasannya dalam beribadah.",
     time: "17 Juni 2024 ",
@@ -173,5 +172,4 @@ const beritaData = [
     "Saya sangat mengapresiasi atas segala raihan prestasi yang telah ditorehkan atas inovasi-inovasi program layanan yang dihadirkan Disdukcapi, dan saya pun mendorong Kadisdukcapil dan segenap jajarannya untuk tidak berhenti berinovasi menciptakan program-program terbaik lainnya untuk kemajuan pelayanan publik di Kota Bekasi ke depannya," tutup Gani (Wan/Humas)
     `,
 },
-    // Add more data as needed
 ];
