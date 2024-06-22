@@ -38,9 +38,9 @@
     >
       <div class="container">
         <div class="relative -mx-4 flex items-center justify-between">
-          <div class="w-60 max-w-full px-4">
-            <a href="index.html" class="navbar-logo block w-full py-5">
-              <img src="assets/images/logoBekasi.png" alt="logo" class="header-logo rem-logo items-center" />
+          <div class="w-60 max-w-full mx-1 pl-6">
+            <a href="index.html" class=" block w-full py-5">
+              <img src="assets/images/logoBekasi.png" alt="logo" class="max-h-4 items-center" />
             </a>
           </div>
           <div class="flex w-full items-center justify-between px-4">
@@ -122,7 +122,7 @@
                         Sejarah Walikota dan Wakil
                       </a>
                       <a
-                        href="blog-details.html"
+                        href="bangunan.html"
                         class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
                       >
                         Bangunan Bersejarah
@@ -482,410 +482,66 @@
         <div>
             <!-- konten foto -->
             <!-- ====== Cards Section Start -->
-            <section class="bg-gray-2 pb-10 lg:pb-20" x-data="{ modalOpen: false, modalImage: '' }">
-            <div id="pageFoto-1" class="pageFoto hidden">
-                <div class="container mx-auto">
-                <span>menampilkan halaman 1 dari 2</span>
-                <div class="flex flex-wrap -mx-4">
-                    <div class="w-full px-4 md:w-1/2 xl:w-1/5">
-                        <div
-                        class="mb-10 overflow-hidden duration-300 bg-white rounded-lg shadow-1 hover:shadow-3 "
-                        @click="modalOpen = true; modalImage = 'https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-01.jpg'"
-                        >
-                        <img
-                            src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-01.jpg"
-                            alt="image"
-                            class="w-full"
-                            />
-                        <div class="p-4 text-center sm:p-9 md:p-7 xl:p-9">
-                            <p
-                                class="text-base leading-relaxed text-body-color"
-                                >
-                                Lorem ipsum dolor sit amet pretium consectetur adipiscing
-                                elit. Lorem consectetur adipiscing elit.
-                            </p>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="w-full px-4 md:w-1/2 xl:w-1/5">
-                        <div
-                        class="mb-10 overflow-hidden duration-300 bg-white rounded-lg shadow-1 hover:shadow-3 "
-                        @click="modalOpen = true; modalImage = 'https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-02.jpg'"
-                        >
-                        <img
-                            src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-02.jpg"
-                            alt="image"
-                            class="w-full"
-                            />
-                        <div class="p-4 text-center sm:p-9 md:p-7 xl:p-9">
-                            <p class="text-base leading-relaxed text-body-color">
-                                Lorem ipsum dolor sit amet pretium consectetur adipiscing
-                                elit. Lorem consectetur adipiscing elit.
-                            </p>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="w-full px-4 md:w-1/2 xl:w-1/5">
-                        <div
-                        class="mb-10 overflow-hidden duration-300 bg-white rounded-lg shadow-1 hover:shadow-3 "
-                        >
-                        <img
-                            src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-03.jpg"
-                            alt="image"
-                            class="w-full"
-                            />
-                        <div class="p-4 text-center sm:p-9 md:p-7 xl:p-9">
-                            <p class="text-base leading-relaxed text-body-color">
-                                Lorem ipsum dolor sit amet pretium consectetur adipiscing
-                                elit. Lorem consectetur adipiscing elit.
-                            </p>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="w-full px-4 md:w-1/2 xl:w-1/5">
-                        <div
-                        class="mb-10 overflow-hidden duration-300 bg-white rounded-lg shadow-1 hover:shadow-3 "
-                        >
-                        <img
-                            src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-03.jpg"
-                            alt="image"
-                            class="w-full"
-                            />
-                        <div class="p-4 text-center sm:p-9 md:p-7 xl:p-9">
-                            <p class="text-base leading-relaxed text-body-color ">
-                                Lorem ipsum dolor sit amet pretium consectetur adipiscing
-                                elit. Lorem consectetur adipiscing elit.
-                            </p>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="w-full px-4 md:w-1/2 xl:w-1/5">
-                        <div
-                        class="mb-10 overflow-hidden duration-300 bg-white rounded-lg shadow-1 hover:shadow-3 "
-                        >
-                        <img
-                            src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-03.jpg"
-                            alt="image"
-                            class="w-full"
-                            />
-                        <div class="p-4 text-center sm:p-9 md:p-7 xl:p-9">
-                            <p class="text-base leading-relaxed text-body-color">
-                                Lorem ipsum dolor sit amet pretium consectetur adipiscing
-                                elit. Lorem consectetur adipiscing elit.
-                            </p>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="w-full px-4 md:w-1/2 xl:w-1/5">
-                        <div
-                        class="mb-10 overflow-hidden duration-300 bg-white rounded-lg shadow-1 hover:shadow-3 "
-                        >
-                        <img
-                            src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-03.jpg"
-                            alt="image"
-                            class="w-full"
-                            />
-                        <div class="p-4 text-center sm:p-9 md:p-7 xl:p-9">
-                            <p class="text-base leading-relaxed text-body-color">
-                                Lorem ipsum dolor sit amet pretium consectetur adipiscing
-                                elit. Lorem consectetur adipiscing elit.
-                            </p>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="w-full px-4 md:w-1/2 xl:w-1/5">
-                        <div
-                        class="mb-10 overflow-hidden duration-300 bg-white rounded-lg shadow-1 hover:shadow-3 "
-                        >
-                        <img
-                            src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-03.jpg"
-                            alt="image"
-                            class="w-full"
-                            />
-                        <div class="p-4 text-center sm:p-9 md:p-7 xl:p-9">
-                            <p class="text-base leading-relaxed text-body-color">
-                                Lorem ipsum dolor sit amet pretium consectetur adipiscing
-                                elit. Lorem consectetur adipiscing elit.
-                            </p>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="w-full px-4 md:w-1/2 xl:w-1/5">
-                        <div
-                        class="mb-10 overflow-hidden duration-300 bg-white rounded-lg shadow-1 hover:shadow-3 "
-                        >
-                        <img
-                            src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-03.jpg"
-                            alt="image"
-                            class="w-full"
-                            />
-                        <div class="p-4 text-center sm:p-9 md:p-7 xl:p-9">
-                            <p class="text-base leading-relaxed text-body-color">
-                                Lorem ipsum dolor sit amet pretium consectetur adipiscing
-                                elit. Lorem consectetur adipiscing elit.
-                            </p>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="w-full px-4 md:w-1/2 xl:w-1/5">
-                        <div
-                        class="mb-10 overflow-hidden duration-300 bg-white rounded-lg shadow-1 hover:shadow-3 "
-                        >
-                        <img
-                            src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-03.jpg"
-                            alt="image"
-                            class="w-full"
-                            />
-                        <div class="p-4 text-center sm:p-9 md:p-7 xl:p-9">
-                            <p class="text-base leading-relaxed text-body-color">
-                                Lorem ipsum dolor sit amet pretium consectetur adipiscing
-                                elit. Lorem consectetur adipiscing elit.
-                            </p>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="w-full px-4 md:w-1/2 xl:w-1/5">
-                        <div
-                        class="mb-10 overflow-hidden duration-300 bg-white rounded-lg shadow-1 hover:shadow-3 "
-                        >
-                        <img
-                            src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-03.jpg"
-                            alt="image"
-                            class="w-full"
-                            />
-                        <div class="p-4 text-center sm:p-9 md:p-7 xl:p-9">
-                            <p class="text-base leading-relaxed text-body-color">
-                                Lorem ipsum dolor sit amet pretium consectetur adipiscing
-                                elit. Lorem consectetur adipiscing elit.
-                            </p>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="w-full px-4 md:w-1/2 xl:w-1/5">
-                        <div
-                        class="mb-10 overflow-hidden duration-300 bg-white rounded-lg shadow-1 hover:shadow-3 "
-                        >
-                        <img
-                            src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-03.jpg"
-                            alt="image"
-                            class="w-full"
-                            />
-                        <div class="p-4 text-center sm:p-9 md:p-7 xl:p-9">
-                            <p class="text-base leading-relaxed text-body-color">
-                                Lorem ipsum dolor sit amet pretium consectetur adipiscing
-                                elit. Lorem consectetur adipiscing elit.
-                            </p>
-                        </div>
-                        </div>
+            <section class="bg-gray-2 pb-10 lg:pb-20" x-data="fotoPagination()">
+                <div x-show="modalOpen"       
+                    x-transition
+                    class="fixed top-0 left-0 flex z-10 items-center justify-center w-full h-full min-h-screen px-4 py-5 bg-dark/90 rounded">
+                    <div class="h-full w-full inset-0 z-50 flex items-center justify-center p-2 overflow-hidden bg-dark bg-opacity-20">
+                        <img :src="modalImage" alt="Modal Image" @click.outside="modalOpen = false" class="h-[300px] w-auto">
                     </div>
                 </div>
-            </div>
-            </div>
-            <div id="pageFoto-2" class="pageFoto hidden">
-                <div class="container mx-auto">
-                <span>menampilkan halaman 2 dari 2</span>
-                <div class="flex flex-wrap -mx-4">
-                    <div class="w-full px-4 md:w-1/2 xl:w-1/5">
-                        <div
-                        class="mb-10 overflow-hidden duration-300 bg-white rounded-lg shadow-1 hover:shadow-3 "
-                        @click="modalOpen = true; modalImage = 'https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-03.jpg'"
-                        >
-                        <img
-                            src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-03.jpg"
-                            alt="image"
-                            class="w-full"
-                            />
-                        <div class="p-4 text-center sm:p-9 md:p-7 xl:p-9">
-                            <p
-                                class="text-base leading-relaxed text-body-color"
-                                >
-                                Lorem ipsum dolor sit amet pretium consectetur adipiscing
-                                elit. Lorem consectetur adipiscing elit.
-                            </p>
-                        </div>
+                <template x-for="(page, pageIndex) in paginatedGalleryData" :key="pageIndex">
+                    <div :class="{'hidden': currentPage !== (pageIndex + 1)}">
+                        <div class="container mx-auto">
+                            <span x-text="'menampilkan halaman ' + (pageIndex + 1) + ' dari ' + totalPages"></span>
+                            <div class="flex flex-wrap -mx-4">
+                                <template x-for="item in page" :key="item.url">
+                                    <div class="w-full px-4 md:w-1/2 xl:w-1/5 mb-4">
+                                        <div class="mb-10 h-full overflow-hidden duration-300 bg-white rounded-lg shadow-1 hover:shadow-3"
+                                            @click="Openmodal(item.url)">
+                                            <img :src="item.url" alt="image" class="w-full h-[150px]" />
+                                            <div class="p-4 text-center sm:p-9 md:p-7 xl:p-9">
+                                                <p class="text-base leading-relaxed text-body-color" x-text="item.title"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </template>
+                            </div>
                         </div>
                     </div>
-                    <div class="w-full px-4 md:w-1/2 xl:w-1/5">
-                        <div
-                        class="mb-10 overflow-hidden duration-300 bg-white rounded-lg shadow-1 hover:shadow-3 "
-                        @click="modalOpen = true; modalImage = 'https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-02.jpg'"
-                        >
-                        <img
-                            src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-02.jpg"
-                            alt="image"
-                            class="w-full"
-                            />
-                        <div class="p-4 text-center sm:p-9 md:p-7 xl:p-9">
-                            <p class="text-base leading-relaxed text-body-color">
-                                Lorem ipsum dolor sit amet pretium consectetur adipiscing
-                                elit. Lorem consectetur adipiscing elit.
-                            </p>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="w-full px-4 md:w-1/2 xl:w-1/5">
-                        <div
-                        class="mb-10 overflow-hidden duration-300 bg-white rounded-lg shadow-1 hover:shadow-3 "
-                        >
-                        <img
-                            src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-03.jpg"
-                            alt="image"
-                            class="w-full"
-                            />
-                        <div class="p-4 text-center sm:p-9 md:p-7 xl:p-9">
-                            <p class="text-base leading-relaxed text-body-color">
-                                Lorem ipsum dolor sit amet pretium consectetur adipiscing
-                                elit. Lorem consectetur adipiscing elit.
-                            </p>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="w-full px-4 md:w-1/2 xl:w-1/5">
-                        <div
-                        class="mb-10 overflow-hidden duration-300 bg-white rounded-lg shadow-1 hover:shadow-3 "
-                        >
-                        <img
-                            src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-03.jpg"
-                            alt="image"
-                            class="w-full"
-                            />
-                        <div class="p-4 text-center sm:p-9 md:p-7 xl:p-9">
-                            <p class="text-base leading-relaxed text-body-color ">
-                                Lorem ipsum dolor sit amet pretium consectetur adipiscing
-                                elit. Lorem consectetur adipiscing elit.
-                            </p>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="w-full px-4 md:w-1/2 xl:w-1/5">
-                        <div
-                        class="mb-10 overflow-hidden duration-300 bg-white rounded-lg shadow-1 hover:shadow-3 "
-                        >
-                        <img
-                            src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-03.jpg"
-                            alt="image"
-                            class="w-full"
-                            />
-                        <div class="p-4 text-center sm:p-9 md:p-7 xl:p-9">
-                            <p class="text-base leading-relaxed text-body-color">
-                                Lorem ipsum dolor sit amet pretium consectetur adipiscing
-                                elit. Lorem consectetur adipiscing elit.
-                            </p>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="w-full px-4 md:w-1/2 xl:w-1/5">
-                        <div
-                        class="mb-10 overflow-hidden duration-300 bg-white rounded-lg shadow-1 hover:shadow-3 "
-                        >
-                        <img
-                            src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-03.jpg"
-                            alt="image"
-                            class="w-full"
-                            />
-                        <div class="p-4 text-center sm:p-9 md:p-7 xl:p-9">
-                            <p class="text-base leading-relaxed text-body-color">
-                                Lorem ipsum dolor sit amet pretium consectetur adipiscing
-                                elit. Lorem consectetur adipiscing elit.
-                            </p>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="w-full px-4 md:w-1/2 xl:w-1/5">
-                        <div
-                        class="mb-10 overflow-hidden duration-300 bg-white rounded-lg shadow-1 hover:shadow-3 "
-                        >
-                        <img
-                            src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-03.jpg"
-                            alt="image"
-                            class="w-full"
-                            />
-                        <div class="p-4 text-center sm:p-9 md:p-7 xl:p-9">
-                            <p class="text-base leading-relaxed text-body-color">
-                                Lorem ipsum dolor sit amet pretium consectetur adipiscing
-                                elit. Lorem consectetur adipiscing elit.
-                            </p>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-            
-            <!-- ====== Pagination Section Start -->
-            <div class="bg-white dark:bg-dark py-10 text-center ">
-            <div
-                class="inline-flex gap-1 rounded-full border border-stroke p-3 "
-            >
-                <ul class="flex items-center gap-1">
-                <li>
-                    <button
-                    id="prevFoto"
-                    class="flex h-10 min-w-10 items-center justify-center rounded-full px-2 dark:text-white text-dark hover:text-white hover:bg-primary"
-                    >
-                    <svg
-                        width="20"
-                        height="21"
-                        viewBox="0 0 20 21"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                        d="M17.5 9.8125H4.15625L9.46875 4.40625C9.75 4.125 9.75 3.6875 9.46875 3.40625C9.1875 3.125 8.75 3.125 8.46875 3.40625L2 9.96875C1.71875 10.25 1.71875 10.6875 2 10.9688L8.46875 17.5312C8.59375 17.6562 8.78125 17.75 8.96875 17.75C9.15625 17.75 9.3125 17.6875 9.46875 17.5625C9.75 17.2812 9.75 16.8438 9.46875 16.5625L4.1875 11.2188H17.5C17.875 11.2188 18.1875 10.9062 18.1875 10.5312C18.1875 10.125 17.875 9.8125 17.5 9.8125Z"
-                        fill="currentColor"
-                        />
-                    </svg>
-                    </button>
-                </li>
-                <li>
-                    <button
-                    id="pageFoto-1"
-                    class="pageFoto-btn flex h-10 min-w-10 items-center justify-center rounded-full dark:text-white hover:text-white bg-primary hover:bg-primary px-2 text-white "
-                    >
-                    1
-                    </button>
-                </li>
-                <li>
-                    <button
-                    id="pageFoto-2"
-                    class="pageFoto-btn flex h-10 min-w-10 items-center justify-center rounded-full dark:text-white hover:text-white px-2 text-dark hover:bg-primary"
-                    >
-                    2
-                    </button>
-                </li>
+                </template>
 
-                <li>
-                    <button
-                    id="nextFoto"
-                    class="flex h-10 min-w-10 items-center justify-center rounded-full px-2 text-dark dark:text-white hover:text-white hover:bg-primary "
-                    >
-                    <svg
-                        width="20"
-                        height="21"
-                        viewBox="0 0 20 21"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                        d="M18 10L11.5312 3.4375C11.25 3.15625 10.8125 3.15625 10.5312 3.4375C10.25 3.71875 10.25 4.15625 10.5312 4.4375L15.7812 9.78125H2.5C2.125 9.78125 1.8125 10.0937 1.8125 10.4688C1.8125 10.8438 2.125 11.1875 2.5 11.1875H15.8437L10.5312 16.5938C10.25 16.875 10.25 17.3125 10.5312 17.5938C10.6562 17.7188 10.8437 17.7812 11.0312 17.7812C11.2187 17.7812 11.4062 17.7188 11.5312 17.5625L18 11C18.2812 10.7187 18.2812 10.2812 18 10Z"
-                        fill="currentColor"
-                        />
-                    </svg>
-                    </button>
-                </li>
-                </ul>
-            </div>
-            </div>
-            <!-- ====== Pagination Section End -->
-                <!-- Modal Overlay -->
-            <div x-show="modalOpen"       
-            x-transition
-            class="fixed top-0 left-0 flex z-10 items-center justify-center w-full h-full min-h-screen px-4 py-5 bg-dark/90 rounded">
-                <div                     
-                class="h-full w-full inset-0 z-50 flex items-center justify-center p-2 overflow-hidden bg-dark bg-opacity-20">
-                    <img :src="modalImage" alt="Modal Image" @click.outside="modalOpen = false">
+                <!-- Pagination Section Start -->
+                <div class="bg-white dark:bg-dark py-10 text-center">
+                    <div class="inline-flex gap-1 rounded-full border border-stroke p-3">
+                        <ul class="flex items-center gap-1">
+                            <li>
+                                <button id="prevFoto" @click="prevPage" class="flex h-10 min-w-10 items-center justify-center rounded-full px-2 dark:text-white text-dark hover:text-white hover:bg-primary">
+                                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17.5 9.8125H4.15625L9.46875 4.40625C9.75 4.125 9.75 3.6875 9.46875 3.40625C9.1875 3.125 8.75 3.125 8.46875 3.40625L2 9.96875C1.71875 10.25 1.71875 10.6875 2 10.9688L8.46875 17.5312C8.59375 17.6562 8.78125 17.75 8.96875 17.75C9.15625 17.75 9.3125 17.6875 9.46875 17.5625C9.75 17.2812 9.75 16.8438 9.46875 16.5625L4.1875 11.2188H17.5C17.875 11.2188 18.1875 10.9062 18.1875 10.5312C18.1875 10.125 17.875 9.8125 17.5 9.8125Z" fill="currentColor" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <template x-for="page in totalPages" :key="page">
+                                <li>
+                                    <button :id="'pageFoto-' + page" @click="goToPage(page)"
+                                        :class="{'bg-primary text-white': currentPage === page, 'hover:bg-primary hover:text-white': currentPage !== page}"
+                                        class="pageFoto-btn flex h-10 min-w-10 items-center justify-center rounded-full px-2 dark:text-white text-dark ">
+                                        <span x-text="page"></span>
+                                    </button>
+                                </li>
+                            </template>
+                            <li>
+                                <button id="nextFoto" @click="nextPage" class="flex h-10 min-w-10 items-center justify-center rounded-full px-2 text-dark dark:text-white hover:text-white hover:bg-primary">
+                                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18 10L11.5312 3.4375C11.25 3.15625 10.8125 3.15625 10.5312 3.4375C10.25 3.71875 10.25 4.15625 10.5312 4.4375L15.7812 9.78125H2.5C2.125 9.78125 1.8125 10.0937 1.8125 10.4688C1.8125 10.8438 2.125 11.1875 2.5 11.1875H15.8437L10.5312 16.5938C10.25 16.875 10.25 17.3125 10.5312 17.5938C10.6562 17.7188 10.8437 17.7812 11.0312 17.7812C11.2187 17.7812 11.4062 17.7188 11.5312 17.5625L18 11C18.2812 10.7187 18.2812 10.2812 18 10Z" fill="currentColor" />
+                                    </svg>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
+                <!-- Pagination Section End -->
             </section>
             <!-- ====== Cards Section End -->
         </div>
@@ -897,126 +553,7 @@
         <div>
             <!-- konten video -->
             <!-- ====== Cards Section Start -->
-            <section x-data="{ modalOpen: false, modalVideo: '' }" class="bg-gray-2 pb-10 lg:pb-20">
-            <div id="pageVideo-1" class="pageVideo hidden">
-            <div class="container mx-auto">
-                <span>menampilkan halaman 1 dari 2</span>
-                <div class="flex flex-wrap -mx-4">
-                    <div class="w-full px-4 md:w-1/2 xl:w-1/5">
-                        <div class="mb-10 overflow-hidden bg-white rounded-lg shadow-1 hover:shadow-3 relative"
-                            @click="modalOpen = true; modalVideo = 'https://www.youtube.com/embed/zmKZYhLY6jM?si=XaMlOEcjlJOpW3lW?rel=0&enablejsapi=1'">
-                            <img
-                                src="https://img.youtube.com/vi/zmKZYhLY6jM/maxresdefault.jpg"
-                                alt="image"
-                                class="w-full"
-                            />
-                            <!-- Tombol Play -->
-                            <button class="absolute inset-b25rem flex items-center justify-center">
-                                <i class="fas fa-play-circle text-5xl"></i>
-                            </button>
-                            <div class="p-4 text-center sm:p-9 md:p-7 xl:p-9">
-                                <p class="text-base leading-relaxed text-body-color">
-                                    Lorem ipsum dolor sit amet pretium consectetur adipiscing elit. Lorem consectetur adipiscing elit.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            </div>
-            <div id="pageVideo-2" class="pageVideo hidden">
-                <div class="container mx-auto">
-                <span>menampilkan halaman 2 dari 2</span>
-                <div class="flex flex-wrap -mx-4">
-                    <div class="w-full px-4 md:w-1/2 xl:w-1/5">
-                        <div class="mb-10 overflow-hidden bg-white rounded-lg shadow-1 hover:shadow-3 relative"
-                            @click="modalOpen = true; modalVideo = 'https://www.youtube.com/embed/wYjY74zgcLY?si=qX5fOQnJyk4O9r8d?rel=0&enablejsapi=1'">
-                            <img
-                                src="https://img.youtube.com/vi/wYjY74zgcLY/maxresdefault.jpg"
-                                alt="image"
-                                class="w-full"
-                            />
-                            <!-- Tombol Play -->
-                            <button class="absolute inset-b25rem flex items-center justify-center">
-                                <i class="fas fa-play-circle text-5xl"></i>
-                            </button>
-                            <div class="p-4 text-center sm:p-9 md:p-7 xl:p-9">
-                                <p class="text-base leading-relaxed text-body-color">
-                                    Lorem ipsum dolor sit amet pretium consectetur adipiscing elit. Lorem consectetur adipiscing elit.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            </div>
-                        <!-- ====== Pagination Section Start -->
-            <div class="bg-white dark:bg-dark py-10 text-center ">
-            <div
-                class="inline-flex gap-1 rounded-full border border-stroke p-3 "
-            >
-                <ul class="flex items-center gap-1">
-                <li>
-                    <button
-                    id="prevVideo"
-                    class="flex h-10 min-w-10 items-center justify-center rounded-full px-2 text-dark dark:text-white hover:text-white hover:bg-primary "
-                    >
-                    <svg
-                        width="20"
-                        height="21"
-                        viewBox="0 0 20 21"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                        d="M17.5 9.8125H4.15625L9.46875 4.40625C9.75 4.125 9.75 3.6875 9.46875 3.40625C9.1875 3.125 8.75 3.125 8.46875 3.40625L2 9.96875C1.71875 10.25 1.71875 10.6875 2 10.9688L8.46875 17.5312C8.59375 17.6562 8.78125 17.75 8.96875 17.75C9.15625 17.75 9.3125 17.6875 9.46875 17.5625C9.75 17.2812 9.75 16.8438 9.46875 16.5625L4.1875 11.2188H17.5C17.875 11.2188 18.1875 10.9062 18.1875 10.5312C18.1875 10.125 17.875 9.8125 17.5 9.8125Z"
-                        fill="currentColor"
-                        />
-                    </svg>
-                    </button>
-                </li>
-                <li>
-                    <button
-                    id="pageVideo-1"
-                    class="pageVideo-btn flex h-10 min-w-10 items-center justify-center rounded-full bg-primary px-2 text-dark dark:text-white hover:text-white hover:bg-primary "
-                    >
-                    1
-                    </button>
-                </li>
-                <li>
-                    <button
-                    id="pageVideo-2"
-                    class="pageVideo-btn flex h-10 min-w-10 items-center justify-center rounded-full px-2 text-dark dark:text-white hover:text-white hover:bg-primary"
-                    >
-                    2
-                    </button>
-                </li>
-
-                <li>
-                    <button
-                    id="nextVideo"
-                    class="flex h-10 min-w-10 items-center justify-center rounded-full px-2 text-dark dark:text-white hover:text-white hover:bg-primary "
-                    >
-                    <svg
-                        width="20"
-                        height="21"
-                        viewBox="0 0 20 21"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                        d="M18 10L11.5312 3.4375C11.25 3.15625 10.8125 3.15625 10.5312 3.4375C10.25 3.71875 10.25 4.15625 10.5312 4.4375L15.7812 9.78125H2.5C2.125 9.78125 1.8125 10.0937 1.8125 10.4688C1.8125 10.8438 2.125 11.1875 2.5 11.1875H15.8437L10.5312 16.5938C10.25 16.875 10.25 17.3125 10.5312 17.5938C10.6562 17.7188 10.8437 17.7812 11.0312 17.7812C11.2187 17.7812 11.4062 17.7188 11.5312 17.5625L18 11C18.2812 10.7187 18.2812 10.2812 18 10Z"
-                        fill="currentColor"
-                        />
-                    </svg>
-                    </button>
-                </li>
-                </ul>
-            </div>
-            </div>
-            <!-- ====== Pagination Section End -->
+            <section class="bg-gray-2 pb-10 lg:pb-20" x-data="videoPagination()">
             <!-- Modal Overlay -->
             <div x-show="modalOpen"       
             x-transition
@@ -1026,6 +563,62 @@
                     <iframe id="modalVideo" @click.outside="closeModalAndPauseVideo" width="560" height="315" :src="modalVideo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
+                <template x-for="(page, pageIndex) in paginatedGalleryVideo" :key="pageIndex">
+                    <div :class="{'hidden': currentPage !== (pageIndex + 1)}">
+                        <div class="container mx-auto">
+                            <span x-text="'menampilkan halaman ' + (pageIndex + 1) + ' dari ' + totalPages"></span>
+                            <div class="flex flex-wrap -mx-4">
+                                <template x-for="item in page" :key="item.url">
+                                    <div class="w-full mb-4 px-4 md:w-1/2 xl:w-1/5">
+                                        <div class="mb-10 h-full overflow-hidden duration-300 bg-white rounded-lg shadow-1 hover:shadow-3 relative"
+                                            @click="Openmodal(item.url)">
+                                            <img :src="item.thumbnail" alt="image" class="w-full" />
+                                            <!-- Tombol Play -->
+                                            <button class="absolute inset-b25rem flex items-center justify-center">
+                                                <i class="fas fa-play-circle text-5xl"></i>
+                                            </button>
+                                            <div class="p-4 text-center sm:p-9 md:p-7 xl:p-9">
+                                                <p class="text-base leading-relaxed text-body-color" x-text="item.title"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </template>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+
+                <!-- Pagination Section Start -->
+                <div class="bg-white dark:bg-dark py-10 text-center">
+                    <div class="inline-flex gap-1 rounded-full border border-stroke p-3">
+                        <ul class="flex items-center gap-1">
+                            <li>
+                                <button id="prevFoto" @click="prevPage" class="flex h-10 min-w-10 items-center justify-center rounded-full px-2 dark:text-white text-dark hover:text-white hover:bg-primary">
+                                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17.5 9.8125H4.15625L9.46875 4.40625C9.75 4.125 9.75 3.6875 9.46875 3.40625C9.1875 3.125 8.75 3.125 8.46875 3.40625L2 9.96875C1.71875 10.25 1.71875 10.6875 2 10.9688L8.46875 17.5312C8.59375 17.6562 8.78125 17.75 8.96875 17.75C9.15625 17.75 9.3125 17.6875 9.46875 17.5625C9.75 17.2812 9.75 16.8438 9.46875 16.5625L4.1875 11.2188H17.5C17.875 11.2188 18.1875 10.9062 18.1875 10.5312C18.1875 10.125 17.875 9.8125 17.5 9.8125Z" fill="currentColor" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <template x-for="page in totalPages" :key="page">
+                                <li>
+                                    <button :id="'pageFoto-' + page" @click="goToPage(page)"
+                                        :class="{'bg-primary text-white': currentPage === page, 'hover:bg-primary hover:text-white': currentPage !== page}"
+                                        class="pageFoto-btn flex h-10 min-w-10 items-center justify-center rounded-full px-2 dark:text-white text-dark ">
+                                        <span x-text="page"></span>
+                                    </button>
+                                </li>
+                            </template>
+                            <li>
+                                <button id="nextFoto" @click="nextPage" class="flex h-10 min-w-10 items-center justify-center rounded-full px-2 text-dark dark:text-white hover:text-white hover:bg-primary">
+                                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18 10L11.5312 3.4375C11.25 3.15625 10.8125 3.15625 10.5312 3.4375C10.25 3.71875 10.25 4.15625 10.5312 4.4375L15.7812 9.78125H2.5C2.125 9.78125 1.8125 10.0937 1.8125 10.4688C1.8125 10.8438 2.125 11.1875 2.5 11.1875H15.8437L10.5312 16.5938C10.25 16.875 10.25 17.3125 10.5312 17.5938C10.6562 17.7188 10.8437 17.7812 11.0312 17.7812C11.2187 17.7812 11.4062 17.7188 11.5312 17.5625L18 11C18.2812 10.7187 18.2812 10.2812 18 10Z" fill="currentColor" />
+                                    </svg>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Pagination Section End -->
             </section>
             <!-- ====== Cards Section End -->
         </div>
@@ -1072,12 +665,12 @@
                 Call Center: 1500-444
                 Email: info@bekasikota.go.id
               </p>
-              <p class="max-w-[270px] text-base text-gray-7 flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-4 h-4 mr-2"> <!-- Ubah ukuran ikon menjadi w-4 h-4 -->
+              <p class="max-w-[270px] text-base text-white border-white text-gray-7 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 512 512" class="w-4 h-4 mr-1"> <!-- Ubah ukuran ikon menjadi w-4 h-4 -->
                   <!-- Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
                   <path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM199.4 312.6c-31.2-31.2-31.2-81.9 0-113.1s81.9-31.2 113.1 0c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9c-50-50-131-50-181 0s-50 131 0 181s131 50 181 0c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0c-31.2 31.2-81.9 31.2-113.1 0z"/>
                 </svg>
-                <span class="text-jomhuria text-2xl">2024 PEMERINTAH KOTA BEKASI</span> 
+                <span class="">2024 PEMERINTAH KOTA BEKASI</span> 
               </p>              
             </div>
           </div>
@@ -1085,59 +678,59 @@
             <div class="mb-10 w-full">
               <div class="mb-10 w-full flex flex-wrap justify-center items-center">
                 <!-- Bagian Atas -->
-                <div class="w-full flex flex-wrap justify-center items-center mb-4">
+                <div class="w-full flex flex-wrap justify-center items-center mb-1">
                   <!-- Facebook -->
-                  <a href="javascript:void(0)" class="px-3 my-1 text-gray-7 hover:text-white">
+                  <a href="https://www.facebook.com/pemkotbekasi" class="px-3 my-2 text-gray-7 hover:text-white">
                     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 512 512" fill="currentColor">
                       <path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/>
                     </svg>
                   </a>
                   <!-- YouTube -->
-                  <a href="javascript:void(0)" class="px-3 my-1 text-gray-7 hover:text-white">
+                  <a href="https://www.youtube.com/channel/UCj8YSC3qXltFmHuiYU2Afqg" class="px-3 my-2 text-gray-7 hover:text-white">
                     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 576 512" fill="currentColor">
                       <path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"/>
                     </svg>
                   </a>
                   <!-- Instagram -->
-                  <a href="javascript:void(0)" class="px-3 my-1 text-gray-7 hover:text-white">
+                  <a href="https://www.instagram.com/pemkot_bekasi/" class="px-3 my-2 text-gray-7 hover:text-white">
                     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 512 512" fill="currentColor">
                       <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
                     </svg>
                   </a>
                   <!-- LinkedIn -->
-                  <a href="javascript:void(0)" class="px-3 my-1 text-gray-7 hover:text-white">
+                  <a href="https://www.linkedin.com/company/pemerintahkotabekasi/" class="px-3 my-2 text-gray-7 hover:text-white">
                     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 512 512" fill="currentColor">
                       <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/>
                     </svg>
                   </a>
                   <!-- x -->
-                  <a href="javascript:void(0)" class="px-3 my-1 text-gray-7 hover:text-white">
+                  <a href="https://x.com/pemkotbekasi" class="px-3 my-2 text-gray-7 hover:text-white">
                     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 512 512" fill="currentColor">
                       <path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm297.1 84L257.3 234.6 379.4 396H283.8L209 298.1 123.3 396H75.8l111-126.9L69.7 116h98l67.7 89.5L313.6 116h47.5zM323.3 367.6L153.4 142.9H125.1L296.9 367.6h26.3z"/>
                     </svg>
                   </a>
                   <!-- diskominfo logo-diskominfostandi.png -->
-                  <a href="javascript:void(0)" class="mx-4 my-1 p-3  hover:bg-white bg-gray-7 rounded-xl">
+                  <a href="https://diskominfo.bekasikota.go.id/profile/struktur-organisasi" class="mx-4 my-2 p-3  hover:bg-white bg-gray-7 rounded-xl">
                     <img src="./assets/images/logo-diskominfostandi.png" alt="diskominfo" style="height: 30px;" />
                   </a>
                   <!-- danta  logo-dantaNew.png -->
-                  <a href="javascript:void(0)" class="mx-4 my-1 px-3  hover:bg-white bg-gray-7 p-1 rounded-xl">
+                  <a href="javascript:void(0)" class="mx-4 my-2 px-3  hover:bg-white bg-gray-7 p-1 rounded-xl">
                     <img src="./assets/images/logo-dantaNew.png" alt="danta" style="height: 50px;" />
                   </a>
                 </div>
                 
                 <!-- Bagian Bawah -->
-                <div class="w-full flex flex-wrap justify-center items-center mt-4">
+                <div class="w-full flex flex-wrap justify-center items-center">
                   <!-- lapor logo-white-lapor.png-->
-                  <a href="javascript:void(0)" class="mx-4 my-1 px-3  hover:bg-white bg-gray-7 rounded-xl">
+                  <a href="https://bekasikota.lapor.go.id/" class="mx-4 my-2 px-3  hover:bg-white bg-gray-7 rounded-xl">
                     <img src="./assets/images/logo-lapor.png" alt="lapor" style="height: 50px;" />
                   </a>
                   <!-- ppid onhover belum-->
-                  <a href="javascript:void(0)" class=" h-[50px] hover:bg-white hover:text-dark bg-gray-7 flex text-center items-center justify-center my-1 px-3 p-1 rounded-xl">
+                  <a href="http://ppid.bekasikota.go.id/" class=" h-[50px] hover:bg-white hover:text-dark bg-gray-7 flex text-center items-center justify-center my-2 px-3 p-1 rounded-xl">
                     PPID Bekasi Kota
                   </a>
                   <!-- jdih logo-new-jdih.png-->
-                  <a href="javascript:void(0)" class="mx-4 my-1 px-3  hover:bg-white bg-gray-7 p-1 rounded-xl">
+                  <a href="https://jdih.bekasikota.go.id/" class="mx-4 my-2 px-3  hover:bg-white bg-gray-7 p-1 rounded-xl">
                     <img src="./assets/images/jdihdprd.png" alt="jdih" style="height: 50px;" />
                   </a>
                 </div>
@@ -1188,7 +781,7 @@
                     target="_blank"
                     class="text-gray-1 hover:underline"
                   >
-                    TailGrids and UIdeck
+                    Kelompok 8 3SI3
                   </a>
                 </p>
               </div>
@@ -1472,23 +1065,10 @@
   </a>
   <!-- ====== Back To Top End -->
 
-  <!-- ====== Made With Button Start -->
-  <a target="_blank" rel="nofollow noopener"
-    class="inline-flex items-center gap-[10px] py-2 px-[14px] rounded-lg bg-white dark:bg-dark-2 shadow-2 fixed bottom-8 left-4 sm:left-9 z-[999]"
-    href="https://tailgrids.com/">
-    <span class="text-base font-medium text-dark-3 dark:text-dark-6">
-      Made with
-    </span>
-    <span class="block w-px h-4 bg-stroke dark:bg-dark-3"></span>
-    <span class="block max-w-[88px] w-full">
-      <img src="./assets/images/brands/tailgrids.svg" alt="tailgrids" class="dark:hidden">
-      <img src="./assets/images/brands/tailgrids-white.svg" alt="tailgrids" class="hidden dark:block">
-    </span>
-  </a>
-  <!-- ====== Made With Button End -->
-
   <!-- ====== All Scripts -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/media.js"></script>
+  <script src="assets/js/galleryFoto.js"></script>
+  <script src="assets/js/galleryVideo.js"></script>
 </body>
 </html>

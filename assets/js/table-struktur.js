@@ -1,9 +1,106 @@
         // Variabel data JSON
-        var data = [
-            { "no": 1, "walikota": "soedjono.jpg", "namaWalikota": "Nama 1", "masaJabatanWalikota": "Masa Jabatan 1", "wakilWalikota": "andi-sukardi.jpg", "namaWakilWalikota": "Nama Wakil 1", "masaJabatanWakilWalikota": "Masa Jabatan Wakil 1" },
-            { "no": 2, "walikota": "andi-sukardi.jpg", "namaWalikota": "Nama 2", "masaJabatanWalikota": "Masa Jabatan 2", "wakilWalikota": "kailani.jpg", "namaWakilWalikota": "Nama Wakil 2", "masaJabatanWakilWalikota": "Masa Jabatan Wakil 2" },
-            { "no": 3, "walikota": "kailani.jpg", "namaWalikota": "Nama 3", "masaJabatanWalikota": "Masa Jabatan 3", "wakilWalikota": "soedjono.jpg", "namaWakilWalikota": "Nama Wakil 3", "masaJabatanWakilWalikota": "Masa Jabatan Wakil 3" }
-        ];
+var data = [
+    { 
+        "no": 1, 
+        "walikota": "soedjono.jpg", 
+        "namaWalikota": "H. SOEDJONO", 
+        "masaJabatanWalikota": "Walikota Administratif Bekasi Periode 1982-1988", 
+        "wakilWalikota": "", 
+        "namaWakilWalikota": "", 
+        "masaJabatanWakilWalikota": "" 
+    },
+    { 
+        "no": 2, 
+        "walikota": "andi-sukardi.jpg", 
+        "namaWalikota": "Drs. ANDI SUKARDI", 
+        "masaJabatanWalikota": "Walikota Administratif Bekasi Periode 1988-1991", 
+        "wakilWalikota": "", 
+        "namaWakilWalikota": "", 
+        "masaJabatanWakilWalikota": "" 
+    },
+    { 
+        "no": 3, 
+        "walikota": "kailani.jpg", 
+        "namaWalikota": "Drs. H. KAILANI. AR", 
+        "masaJabatanWalikota": "Walikota Administratif Bekasi Periode 1991-1997, Walikota Bekasi Periode Maret 1997 - Oktober 1997", 
+        "wakilWalikota": "", 
+        "namaWakilWalikota": "", 
+        "masaJabatanWakilWalikota": "" 
+    },
+    { 
+        "no": 4, 
+        "walikota": "sonthanie.jpg", 
+        "namaWalikota": "H. N. SONTHANIE", 
+        "masaJabatanWalikota": "Walikota Bekasi Periode 1998-2003", 
+        "wakilWalikota": "", 
+        "namaWakilWalikota": "", 
+        "masaJabatanWakilWalikota": "" 
+    },
+    { 
+        "no": 5, 
+        "walikota": "akhmad zurfaih.jpg", 
+        "namaWalikota": "AKHMAD ZURFAIH", 
+        "masaJabatanWalikota": "Walikota Bekasi Periode 2003-2008", 
+        "wakilWalikota": "mochtar mohamad.jpg", 
+        "namaWakilWalikota": "MOCHTAR MOHAMAD", 
+        "masaJabatanWakilWalikota": "Wakil Walikota Bekasi Periode 2003-2008" 
+    },
+    { 
+        "no": 6, 
+        "walikota": "mochtar mohamad.jpg", 
+        "namaWalikota": "MOCHTAR MOHAMAD", 
+        "masaJabatanWalikota": "Walikota Bekasi Periode 2008-2011", 
+        "wakilWalikota": "rahmat-effendi.jpg", 
+        "namaWakilWalikota": "Dr. RAHMAT EFFENDI", 
+        "masaJabatanWakilWalikota": "Wakil Walikota Bekasi Periode 2008-2011" 
+    },
+    { 
+        "no": 7, 
+        "walikota": "rahmat-effendi.jpg", 
+        "namaWalikota": "Dr. RAHMAT EFFENDI", 
+        "masaJabatanWalikota": "Plt. Walikota Bekasi Periode 2011-2012", 
+        "wakilWalikota": "", 
+        "namaWakilWalikota": "", 
+        "masaJabatanWakilWalikota": "" 
+    },
+    { 
+        "no": 8, 
+        "walikota": "rahmat-effendi2.jpg", 
+        "namaWalikota": "Dr. RAHMAT EFFENDI", 
+        "masaJabatanWalikota": "Walikota Bekasi Periode 2012-2013", 
+        "wakilWalikota": "", 
+        "namaWakilWalikota": "", 
+        "masaJabatanWakilWalikota": "" 
+    },
+    { 
+        "no": 9, 
+        "walikota": "rahmat-effendi2.jpg", 
+        "namaWalikota": "Dr. RAHMAT EFFENDI", 
+        "masaJabatanWalikota": "Walikota Bekasi Periode 2013-2018", 
+        "wakilWalikota": "ahmad-syaikhu.jpg", 
+        "namaWakilWalikota": "AHMAD SYAIKHU", 
+        "masaJabatanWakilWalikota": "Wakil Walikota Bekasi Periode 2013-2018" 
+    },
+    { 
+        "no": 10, 
+        "walikota": "rahmat-effendi2.jpg", 
+        "namaWalikota": "Dr. RAHMAT EFFENDI", 
+        "masaJabatanWalikota": "Walikota Bekasi Periode 2018-2022", 
+        "wakilWalikota": "tri-adhianto-tjahyono.jpg", 
+        "namaWakilWalikota": "Dr. TRI ADHIANTO TJAHYONO", 
+        "masaJabatanWakilWalikota": "Wakil Walikota Bekasi Periode 2018-2022" 
+    },
+    { 
+        "no": 11, 
+        "walikota": "tri-adhianto-tjahyono.jpg", 
+        "namaWalikota": "Dr. TRI ADHIANTO TJAHYONO", 
+        "masaJabatanWalikota": "Plt. Walikota Bekasi", 
+        "wakilWalikota": "", 
+        "namaWakilWalikota": "", 
+        "masaJabatanWakilWalikota": "" 
+    }
+];
+
 
       // Function untuk mengisi tabel dengan data
         function populateTable() {
@@ -11,13 +108,17 @@
             if (tableBody){
                             data.forEach(item => {
                 var row = document.createElement('tr');
-                    row.innerHTML = `
-                        <td class="text-dark border-b border-l border-[#E8E8E8] bg-[#F3F6FF] dark:bg-dark-3 dark:border-dark dark:text-dark-7 py-5 px-2 text-center text-base font-medium">${item.no}</td>
-                        <td class="text-dark border-b border-l border-[#E8E8E8] bg-[#F3F6FF] dark:bg-dark-3 dark:border-dark dark:text-dark-7 py-5 px-2 text-center text-base font-medium"><div class="max-w-[88px] mx-auto"><img src="assets/images/${item.walikota}" alt="Walikota"></div></td>
-                        <td class="text-dark border-b border-l border-[#E8E8E8] bg-[#F3F6FF] dark:bg-dark-3 dark:border-dark dark:text-dark-7 py-5 px-2 text-center text-base font-medium"><div>${item.namaWalikota}</div><div>${item.masaJabatanWalikota}</div></td>
-                        <td class="text-dark border-b border-l border-[#E8E8E8] bg-[#F3F6FF] dark:bg-dark-3 dark:border-dark dark:text-dark-7 py-5 px-2 text-center text-base font-medium"><div class="max-w-[88px] mx-auto"><img src="assets/images/${item.wakilWalikota}" alt="Wakil Walikota"></div></td>
-                        <td class="text-dark border-b border-l border-[#E8E8E8] bg-[#F3F6FF] dark:bg-dark-3 dark:border-dark dark:text-dark-7 py-5 px-2 text-center text-base font-medium"><div>${item.namaWakilWalikota}</div><div>${item.masaJabatanWakilWalikota}</div></td>
-                    `;
+                row.innerHTML = `
+                    <td class="text-dark border-b border-l border-[#E8E8E8] bg-[#F3F6FF] dark:bg-dark-3 dark:border-dark dark:text-dark-7 py-5 px-2 text-center text-base font-medium">${item.no}</td>
+                    <td class="text-dark border-b border-l border-[#E8E8E8] bg-[#F3F6FF] dark:bg-dark-3 dark:border-dark dark:text-dark-7 py-5 px-2 text-center text-base font-medium"><div class="max-w-[88px] mx-auto"><img src="assets/images/${item.walikota}" alt="Walikota"></div></td>
+                    <td class="text-dark border-b border-l border-[#E8E8E8] bg-[#F3F6FF] dark:bg-dark-3 dark:border-dark dark:text-dark-7 py-5 px-2 text-center text-base font-medium"><div class="font-bold">${item.namaWalikota}</div><span>${item.masaJabatanWalikota}</span></td>
+                    <td class="text-dark border-b border-l border-[#E8E8E8] bg-[#F3F6FF] dark:bg-dark-3 dark:border-dark dark:text-dark-7 py-5 px-2 text-center text-base font-medium">
+                        ${item.wakilWalikota ? `<div class="max-w-[88px] mx-auto"><img src="assets/images/${item.wakilWalikota}" alt="Wakil Walikota"></div>` : ''}
+                    </td>
+                    <td class="text-dark border-b border-l border-[#E8E8E8] bg-[#F3F6FF] dark:bg-dark-3 dark:border-dark dark:text-dark-7 py-5 px-2 text-center text-base font-medium">
+                        ${item.namaWakilWalikota ? `<div class="font-bold">${item.namaWakilWalikota}</div><span>${item.masaJabatanWakilWalikota}</span>` : ''}
+                    </td>
+                `;
                 tableBody.appendChild(row);
             });
             }

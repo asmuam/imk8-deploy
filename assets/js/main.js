@@ -1,3 +1,4 @@
+
 (function () {
   "use strict";
 
@@ -55,31 +56,53 @@ function fadeout() {
   };
 
   // ===== responsive navbar
-  let navbarToggler = document.querySelector("#navbarToggler");
-  const navbarCollapse = document.querySelector("#navbarCollapse");
+  const navbarToggler = document.getElementById("navbarToggler");
+const navbarCollapse = document.getElementById("navbarCollapse");
 
-  navbarToggler.addEventListener("click", () => {
-    navbarToggler.classList.toggle("navbarTogglerActive");
-    navbarCollapse.classList.toggle("hidden");
+navbarToggler.addEventListener("click", () => {
+  navbarToggler.classList.toggle("navbarTogglerActive");
+  navbarCollapse.classList.toggle("hidden");
+});
+
+// Tutup navbar-collapse saat item menu utama diklik
+document.querySelectorAll("#navbarCollapse ul li:not(.submenu-item) a").forEach((link) => {
+  link.addEventListener("click", () => {
+    navbarToggler.classList.remove("navbarTogglerActive");
+    navbarCollapse.classList.add("hidden");
   });
+});
 
-  //===== close navbar-collapse when a  clicked
-  document
-    .querySelectorAll("#navbarCollapse ul li:not(.submenu-item) a")
-    .forEach((e) =>
-      e.addEventListener("click", () => {
-        navbarToggler.classList.remove("navbarTogglerActive");
-        navbarCollapse.classList.add("hidden");
-      })
-    );
+// Perilaku submenu
+const submenuItems = document.querySelectorAll(".submenu-item");
 
-  // ===== Sub-menu
-  const submenuItems = document.querySelectorAll(".submenu-item");
-  submenuItems.forEach((el) => {
-    el.querySelector("a").addEventListener("click", () => {
-      el.querySelector(".submenu").classList.toggle("hidden");
+submenuItems.forEach((item) => {
+  const submenu = item.querySelector(".submenu");
+  const submenuToggle = item.querySelector("a");
+
+  submenuToggle.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    // Tutup submenu yang lain sebelum membuka yang baru
+    submenuItems.forEach((otherItem) => {
+      const otherSubmenu = otherItem.querySelector(".submenu");
+      if (otherItem !== item && !otherSubmenu.classList.contains("hidden")) {
+        otherSubmenu.classList.add("hidden");
+      }
     });
+
+    submenu.classList.toggle("hidden");
   });
+});
+
+// Tutup submenu saat klik di luar submenu
+document.addEventListener("click", (e) => {
+  submenuItems.forEach((item) => {
+    const submenu = item.querySelector(".submenu");
+    if (!item.contains(e.target)) {
+      submenu.classList.add("hidden");
+    }
+  });
+});
 
   // ===== Faq accordion
   const faqs = document.querySelectorAll(".single-faq");
@@ -164,3 +187,5 @@ function fadeout() {
   themeCheck();
   /* ========  themeSwitcher End ========= */
 })();
+
+
