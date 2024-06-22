@@ -138,14 +138,25 @@ function searchPagination() {
             const urlParams = new URLSearchParams(window.location.search);
             const query = urlParams.get('query');
             const tag = urlParams.get('tag');
+            // Retrieve search query from localStorage
+            const storedQuery = localStorage.getItem('searchQuery');
 
+            // Set the search input value to the stored query if it exists
+            console.log(query);
+            if (storedQuery) {
+                if (query !== null){
+
+                    searchInput.value = storedQuery;
+                }
+            }
             if (searchQueryElement) {
                 searchQueryElement.textContent = query ? `${query}` : (tag ? `${tag}` : '');
             }
 
+            
             if (searchTitleElement) {
                 if (query) {
-                    searchTitleElement.textContent = `Mencari berita dengan kata kunci "${query}"`;
+                    searchTitleElement.textContent = `Pencarian dengan kata kunci "${query}"`;
                 } else if (tag) {
                     searchTitleElement.textContent = `Mencari berita berdasarkan tag "${tag}"`;
                 } else {
