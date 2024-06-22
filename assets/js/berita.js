@@ -9,8 +9,13 @@ judul = judul.replace('.html', '');
 judul = decodeURIComponent(judul);
 
   function berita(param) {
-        // Cari berita berdasarkan judul yang sesuai dengan param
-        const selectedBerita = beritaData.find(berita => berita.title === param);
+    const selectedBerita = beritaData.find(berita => {
+    // Hilangkan karakter '/' di awal dan '.html' di akhir dari berita.url
+    const urlWithoutSlashAndHtml = berita.url.replace(/^\//, '').replace(/\.html$/, '');
+    // Bandingkan judul dengan bagian akhir URL yang telah dibersihkan
+    return param === urlWithoutSlashAndHtml;
+});
+
         const tagsArray = selectedBerita ? selectedBerita.tags.split(',').map(tag => tag.trim()) : [];
         const isiBeritaHTML = selectedBerita.isi.replace(/\n\n/g, '<br><br>');
     return {
