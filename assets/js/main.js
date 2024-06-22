@@ -16,14 +16,7 @@ function fadeout() {
   // ======= Sticky
   window.onscroll = function () {
     const ud_header = document.querySelector(".ud-header");
-    const sticky = ud_header.offsetTop;
     const logo = document.querySelectorAll(".header-logo");
-
-    if (window.pageYOffset > sticky) {
-      ud_header.classList.add("sticky");
-    } else {
-      ud_header.classList.remove("sticky");
-    }
 
     if(logo.length) {
       // === logo change
@@ -94,15 +87,21 @@ submenuItems.forEach((item) => {
   });
 });
 
-// Tutup submenu saat klik di luar submenu
-document.addEventListener("click", (e) => {
-  submenuItems.forEach((item) => {
-    const submenu = item.querySelector(".submenu");
-    if (!item.contains(e.target)) {
-      submenu.classList.add("hidden");
+  // Menutup navbarCollapse saat klik di luar area navbarCollapse
+  document.addEventListener("click", function(e) {
+    if (!navbarCollapse.contains(e.target) && e.target !== navbarToggler) {
+      navbarToggler.classList.remove("navbarTogglerActive");
+      navbarCollapse.classList.add("hidden");
+
+      // Tutup semua submenu yang terbuka
+      submenuItems.forEach((item) => {
+        const submenu = item.querySelector(".submenu");
+        if (!submenu.classList.contains("hidden")) {
+          submenu.classList.add("hidden");
+        }
+      });
     }
   });
-});
 
   // ===== Faq accordion
   const faqs = document.querySelectorAll(".single-faq");
