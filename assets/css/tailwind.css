@@ -943,6 +943,10 @@ body {
   margin-left: 1rem;
 }
 
+.ml-8{
+  margin-left: 2rem;
+}
+
 .mb-0{
   margin-bottom: 0px;
 }
@@ -1113,6 +1117,7 @@ body {
 
 .inline-flex{
   display: inline-flex;
+  flex-direction: row-reverse;
 }
 
 .grid{
@@ -1133,6 +1138,10 @@ body {
 
 .h-10{
   height: 2.5rem;
+}
+
+.min-w-10{
+  min-width: 2.5rem;
 }
 
 .h-11{

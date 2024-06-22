@@ -13,62 +13,121 @@ function searchPagination() {
         totalPages: 1,
         paginatedResult: [],
         query: '',
+        filterType: 'all', // Default filter type
+        sortOption: 'newest', // Default sorting option
 
         init() {
-            this.result = this.getFilteredResults();
+            this.getFilteredResults();
             this.totalPages = Math.ceil(this.result.length / this.itemsPerPage);
             this.paginatedResult = this.getPaginatedResult();
         },
 
+                changeFilterType(newFilterType) {
+                    this.filterType = newFilterType;
+                    this.updateFilteredResults(); // Memperbarui hasil setelah perubahan filter
+                },
+
+                changeSortOption(newSortOption) {
+                    this.sortOption = newSortOption;
+                    this.updateFilteredResults(); // Memperbarui hasil setelah perubahan pengurutan
+                },
+
         getFilteredResults() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const query = urlParams.get('query') || '';
-            const tag = urlParams.get('tag') || '';
-            this.query = query;
-            // Dummy content for search results (replace with actual dynamic data fetching)
-            let beritaResults = [];
-            let galleryResults = [];
-            let videoResults = [];
+    const urlParams = new URLSearchParams(window.location.search);
+    const query = urlParams.get('query') || '';
+    const tag = urlParams.get('tag') || '';
+    this.query = query;
 
-            if (query === '' && tag !== '') {
-                // Search only by tag for news
-                beritaResults = beritaData.filter(item => item.tags.includes(tag));
-            } else {
-                // Search by query for all types or by both query and tag for news
-                beritaResults = beritaData.filter(item => item.title.toLowerCase().includes(query.toLowerCase()) && (tag === '' || item.tags.includes(tag)));
-                galleryResults = galleryData.filter(item => item.title.toLowerCase().includes(query.toLowerCase()));
-                videoResults = galleryVideo.filter(item => item.title.toLowerCase().includes(query.toLowerCase()));
-            }
+    let beritaResults = [];
+    let galleryResults = [];
+    let videoResults = [];
 
-            // Combine and map the results
-            return [
-                ...beritaResults.map(item => ({
-                    type: "berita",
-                    title: item.title,
-                    link: item.url,
-                    image: item.img,
-                    date: item.time,
-                    excerpt: item.overview,
-                })),
-                ...galleryResults.map(item => ({
-                    type: "foto",
-                    title: item.title,
-                    link: item.url,
-                    image: item.url,
-                    date: item.time,
-                    excerpt: '', // Assuming no excerpt is available for gallery images
-                })),
-                ...videoResults.map(item => ({
-                    type: "video",
-                    title: item.title,
-                    link: item.url,
-                    image: item.thumbnail,
-                    date: item.time,
-                    excerpt: '', // Assuming no excerpt is available for videos
-                }))
-            ];
-        },
+    if (query === '' && tag !== '') {
+        // Search only by tag for news
+        beritaResults = beritaData.filter(item => item.tags.includes(tag));
+    } else {
+        // Search by query for all types or by both query and tag for news
+        beritaResults = beritaData.filter(item => item.title.toLowerCase().includes(query.toLowerCase()) && (tag === '' || item.tags.includes(tag)));
+        galleryResults = galleryData.filter(item => item.title.toLowerCase().includes(query.toLowerCase()));
+        videoResults = galleryVideo.filter(item => item.title.toLowerCase().includes(query.toLowerCase()));
+    }
 
+    // Combine and sort the results
+    if (this.filterType == "all") {
+        this.result = this.combineAndSortResults(beritaResults, galleryResults, videoResults);
+    } else if (this.filterType == "foto") {
+        this.result = this.combineAndSortResults([], galleryResults, []);
+    } else if (this.filterType == "video") {
+        this.result = this.combineAndSortResults([], [], videoResults);
+    } else if (this.filterType == "berita") {
+        this.result = this.combineAndSortResults(beritaResults, [], []);
+    }
+},
+
+combineAndSortResults(beritaResults = [], galleryResults = [], videoResults = []) {
+    const combinedResults = [
+        ...beritaResults.map(item => ({
+            type: "berita",
+            title: item.title,
+            link: item.url,
+            image: item.img,
+            date: item.time,
+            excerpt: item.overview,
+        })),
+        ...galleryResults.map(item => ({
+            type: "foto",
+            title: item.title,
+            link: item.url,
+            image: item.url,
+            date: item.time,
+            excerpt: '', // Assuming no excerpt is available for gallery images
+        })),
+        ...videoResults.map(item => ({
+            type: "video",
+            title: item.title,
+            link: item.url,
+            image: item.thumbnail,
+            date: item.time,
+            excerpt: '', // Assuming no excerpt is available for videos
+        }))
+    ];
+
+    // Function to parse date string into Date object
+    function parseDateString(dateString) {
+        const parts = dateString.trim().split(' ');
+        const day = parseInt(parts[0], 10);
+        const monthName = parts[1];
+        const year = parseInt(parts[2], 10);
+        const monthNames = [
+            'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni',
+            'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'
+        ];
+        const month = monthNames.findIndex(name => name.toLowerCase() === monthName.toLowerCase());
+        return new Date(year, month, day);
+    }
+
+    function sortByDateDescending(a, b) {
+        const dateA = parseDateString(a.date);
+        const dateB = parseDateString(b.date);
+        return dateB - dateA; // Urutkan dari yang terbaru ke yang terlama
+    }
+
+    function sortByDateAscending(a, b) {
+        const dateA = parseDateString(a.date);
+        const dateB = parseDateString(b.date);
+        return dateA - dateB; // Urutkan dari yang terlama ke yang terbaru
+    }
+
+    // Sorting function to sort by date
+    if (this.sortOption == 'newest') {
+        combinedResults.sort(sortByDateDescending);
+    } else {
+        combinedResults.sort(sortByDateAscending);
+    }
+    return combinedResults;
+},
+
+        
         getPaginatedResult() {
             let paginatedSearch = [];
             for (let i = 0; i < this.totalPages; i++) {
@@ -123,44 +182,52 @@ function searchPagination() {
 
         hasResults() {
             return this.result.length > 0;
-        }
+        },
+        updateFilteredResults() {
+                    this.getFilteredResults();
+                    this.currentPage = 1; // Reset to first page after filter/sort change
+                    this.updatePaginationButtons(1);
+                    this.paginatedResult = this.getPaginatedResult();
+
+                },
+
     };
 }
 
 
-        document.addEventListener('DOMContentLoaded', function() {
-            const searchInput = document.getElementById('searchInput');
-            const searchResultsElement = document.getElementById('searchResults');
-            const searchQueryElement = document.getElementById('searchQuery');
-            const searchTitleElement = document.getElementById('searchTitle');
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('searchInput');
+    const searchResultsElement = document.getElementById('searchResults');
+    const searchQueryElement = document.getElementById('searchQuery');
+    const searchTitleElement = document.getElementById('searchTitle');
 
-            // Update search query text and page title
-            const urlParams = new URLSearchParams(window.location.search);
-            const query = urlParams.get('query');
-            const tag = urlParams.get('tag');
-            // Retrieve search query from localStorage
-            const storedQuery = localStorage.getItem('searchQuery');
+    // Update search query text and page title
+    const urlParams = new URLSearchParams(window.location.search);
+    const query = urlParams.get('query');
+    const tag = urlParams.get('tag');
+    // Retrieve search query from localStorage
+    const storedQuery = localStorage.getItem('searchQuery');
 
-            // Set the search input value to the stored query if it exists
-            console.log(query);
-            if (storedQuery) {
-                if (query !== null){
+    // Set the search input value to the stored query if it exists
+    if (storedQuery) {
+        if (query !== null){
 
-                    searchInput.value = storedQuery;
-                }
-            }
-            if (searchQueryElement) {
-                searchQueryElement.textContent = query ? `${query}` : (tag ? `${tag}` : '');
-            }
+            searchInput.value = storedQuery;
+        }
+    }
+    if (searchQueryElement) {
+        searchQueryElement.textContent = query ? `${query}` : (tag ? `${tag}` : '');
+    }
 
-            
-            if (searchTitleElement) {
-                if (query) {
-                    searchTitleElement.textContent = `Pencarian dengan kata kunci "${query}"`;
-                } else if (tag) {
-                    searchTitleElement.textContent = `Mencari berita berdasarkan tag "${tag}"`;
-                } else {
-                    searchTitleElement.textContent = 'Mencari berita...'; // Default text if both query and tag are empty
-                }
-            }
-        });
+    
+    if (searchTitleElement) {
+        if (query) {
+            searchTitleElement.textContent = `Pencarian dengan kata kunci "${query}"`;
+        } else if (tag) {
+            searchTitleElement.textContent = `Mencari berita berdasarkan tag "${tag}"`;
+        } else {
+            searchTitleElement.textContent = 'Mencari berita...'; // Default text if both query and tag are empty
+        }
+    }
+});
+
