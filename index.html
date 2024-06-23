@@ -2151,7 +2151,8 @@
                                         <div class="w-full dark:bg-dark my-2 overflow-hidden duration-300 bg-white rounded-lg shadow-1 hover:shadow-3">
                                             <img :src="berita.img" alt="image" class="w-full h-[300px]" />
                                             <div class="swiper-container p-4 text-left sm:p-9 md:p-7 xl:p-9 ">
-                                                <h2 class="text-xl font-bold mb-2 dark:text-white" x-text="berita.title"></h2>
+                                                <div class="h-[300px] overflow-y-hidden mb-4">
+                                                  <h2 class="text-xl font-bold mb-2 dark:text-white" x-text="berita.title"></h2>
                                                 <div class="flex items-center text-sm text-gray-500 mb-4 dark:text-white">
                                                     <span class="flex items-center mr-4">
                                                         <i class="far fa-clock icon-spacing"></i><span x-text="berita.time"></span>
@@ -2161,6 +2162,7 @@
                                                     </span>
                                                 </div>
                                                 <p class="text-base leading-relaxed text-body-color mb-6 dark:text-white" x-text="berita.overview"></p>
+                                                </div>
                                                 <div class="text-right object-right align-right">
                                                     <a :href="berita.url" class="bg-dark border-dark dark:border-dark-2 border rounded-md inline-flex items-center justify-center py-3 px-7 text-center text-base font-medium text-white hover:bg-body-color hover:border-body-color disabled:bg-gray-3 disabled:border-gray-3 disabled:text-dark-5">
                                                         Lihat Selengkapnya
@@ -2779,7 +2781,7 @@ function beritaSwiper() {
                 spaceBetween: 30,
                 loop: true,
                 autoplay: {
-                    delay: 7000,
+                    delay: 5000,
                     disableOnInteraction: false,
                 },
                 navigation: {
