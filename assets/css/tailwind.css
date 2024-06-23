@@ -10,6 +10,17 @@
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
 */
 
+.centered-image {
+        text-align: center; /* Pusatkan gambar secara horizontal */
+    }
+    .centered-image img {
+        max-width: 100%; /* Maksimum lebar gambar adalah lebar kontainer */
+        max-height: 100px; /* Maksimum tinggi gambar */
+        margin: 0 auto; /* Margin otomatis di kedua sisi untuk memusatkan gambar */
+        display: block; /* Menghilangkan spasi tambahan di sekitar gambar */
+        border-radius: 8px; /* Sudut bulat */
+    }
+
 .navbar-family-font{
   font-family: "Jomhuria";
 }
@@ -26,6 +37,11 @@
 .bold{
   font-style: bold;
 }
+
+.bold-text {
+      font-weight: bold;
+    }
+
 .justify {
   text-align: justify;
 }
@@ -40,13 +56,41 @@
     margin-right: 0.5rem; /* Adjust the spacing as needed */
   }
 
-
+  .list-decimal {
+      list-style-type: decimal;
+    }
+    .list-inside {
+      list-style-position: inside;
+    }
+    .list-disc {
+      list-style-type: disc;
+    }
 
 .label {
   width: 100px; /* Atur sesuai kebutuhan Anda */
   display: inline-block;
   font-weight: bold;
 }
+
+
+.label-nobold {
+      font-weight: normal; /* Mengatur font-weight normal untuk label */
+      width: 100px; /* Atur sesuai kebutuhan Anda */
+      display: inline-block;
+    }
+
+    .label-nobold-long {
+      font-weight: normal; /* Mengatur font-weight normal untuk label */
+      width: 180px; /* Atur sesuai kebutuhan Anda */
+      display: inline-block;
+    }    
+    .label-nobold-semilong {
+      font-weight: normal; /* Mengatur font-weight normal untuk label */
+      width: 120px; /* Atur sesuai kebutuhan Anda */
+      display: inline-block;
+    } 
+
+
 .inset-b25rem {
   top: 0;
   right: 0;
