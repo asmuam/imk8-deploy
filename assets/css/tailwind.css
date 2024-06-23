@@ -3906,3 +3906,7 @@ body {
 .whitespace-pre-line {
     white-space: pre-line;
 }
+
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
