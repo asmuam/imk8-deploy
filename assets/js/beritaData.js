@@ -23,7 +23,7 @@ const beritaData = [
     url: "/Aplikasi SIMODALINDAG_ Pj_ Wali Kota Bekasi_ Mempermudah Pelayanan Perindustrian dan Perdagangan.html",
     time: "22 Juni 2024",
     img:"https://bekasikota.go.id/uploads/post/9efb5a6b435fcb8ca9adc9825cfc20de.jpg",
-    overview: "    Kota Bekasi - Bertempat di Aula Nonon Sonthanie, Pj. Wali Kota Bekasi, Gani Muhamad, meresmikan pelincuran Aplikasi Sistem Informasi Monitoring dan Pengendalian Perindustrian dan Pergadangan (SIMODALINDAG) yang digagas oleh Dinas Perdagangan dan Perindustrian (Disdagperin) Kota Bekasi pada Jum'at (21/06).",
+    overview: "Kota Bekasi - Bertempat di Aula Nonon Sonthanie, Pj. Wali Kota Bekasi, Gani Muhamad, meresmikan pelincuran Aplikasi Sistem Informasi Monitoring dan Pengendalian Perindustrian dan Pergadangan (SIMODALINDAG) yang digagas oleh Dinas Perdagangan dan Perindustrian (Disdagperin) Kota Bekasi pada Jum'at (21/06).",
     author: "By Admin",
     view: "13 Views",
     tags: "Simodalindah, Disdagperin, Diskominfostandi, DPMPTSP, PJ. Wali Kota Bekasi",

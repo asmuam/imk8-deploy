@@ -113,10 +113,10 @@ var data = [
                     <td class="text-dark border-b border-l border-[#E8E8E8] bg-[#F3F6FF] dark:bg-dark-3 dark:border-dark dark:text-dark-7 py-5 px-2 text-center text-base font-medium"><div class="max-w-[88px] mx-auto"><img src="assets/images/${item.walikota}" alt="Walikota"></div></td>
                     <td class="text-dark border-b border-l border-[#E8E8E8] bg-[#F3F6FF] dark:bg-dark-3 dark:border-dark dark:text-dark-7 py-5 px-2 text-center text-base font-medium"><div class="font-bold">${item.namaWalikota}</div><span>${item.masaJabatanWalikota}</span></td>
                     <td class="text-dark border-b border-l border-[#E8E8E8] bg-[#F3F6FF] dark:bg-dark-3 dark:border-dark dark:text-dark-7 py-5 px-2 text-center text-base font-medium">
-                        ${item.wakilWalikota ? `<div class="max-w-[88px] mx-auto"><img src="assets/images/${item.wakilWalikota}" alt="Wakil Walikota"></div>` : ''}
+                        ${item.wakilWalikota ? `<div class="max-w-[88px] mx-auto"><img src="assets/images/${item.wakilWalikota}" alt="Wakil Walikota"></div>` : '-'}
                     </td>
                     <td class="text-dark border-b border-l border-[#E8E8E8] bg-[#F3F6FF] dark:bg-dark-3 dark:border-dark dark:text-dark-7 py-5 px-2 text-center text-base font-medium">
-                        ${item.namaWakilWalikota ? `<div class="font-bold">${item.namaWakilWalikota}</div><span>${item.masaJabatanWakilWalikota}</span>` : ''}
+                        ${item.namaWakilWalikota ? `<div class="font-bold">${item.namaWakilWalikota}</div><span>${item.masaJabatanWakilWalikota}</span>` : '-'}
                     </td>
                 `;
                 tableBody.appendChild(row);

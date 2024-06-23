@@ -286,6 +286,12 @@
                         RLPPD
                       </a>
                       <a
+                        href="berita.html"
+                        class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
+                      >
+                        Berita
+                      </a>
+                      <a
                         href="https://corona.bekasikota.go.id/"
                         class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
                       >
@@ -477,8 +483,7 @@
                 <span x-text="data.title"></span>
               </a>
             </h3>
-            <p class="max-w-[370px] text-base text-body-color dark:text-dark-6">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            <p x-text="getFirstParagraph(data.isi)" class="max-w-[370px] text-base text-body-color dark:text-dark-6">
             </p>
             <h3>
               <span @click="Openmodal(data)"

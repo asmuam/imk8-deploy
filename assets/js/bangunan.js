@@ -88,14 +88,17 @@ const bangunanData = [
 
 
  function bangunanFunc() {
-    console.log("start");
     return {
       bangunan: bangunanData,
       modalOpen: false,
       modalContent: '',
+      
       Openmodal(data) {
         this.modalContent = data.isi;
         this.modalOpen = true;
-      }
+      },
+      getFirstParagraph(text) {
+      return text.trim().split('\n')[0]+"...";
+    }
     };
   }
